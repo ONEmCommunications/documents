@@ -1,25 +1,55 @@
 site_name: Documentation
+# nav:
+#     - Home: index.md
+#     - Introduction:
+#         - What are ONEm apps?: intro.md
+#         - Core concepts: concepts.md
+#         - High level overview: high-level-overview.md
+#         - Build your first app: buildfirstapp.md
+#     - Getting Started:
+#         - Node.js: getting-started/getting-started-nodejs.md
+#         - Python: getting-started/getting-started-python.md
+#     - Building:
+#         - Webhooks: building/webhooks.md
+#         - Menus: building/menus.md
+#         - Forms: building/forms.md
+#         - Raw: building/raw.md
+#         # - Verbs: verbs.md
+#         # - Using the API: usingapi.md
+#     - SDK:
+#         - Node.js: SDK/NodeJS.md
+#     - API Reference: http://172.16.38.113:6212/redoc
+#     - Developer Portal: http://testtool.dhq.onem:6060/
 nav:
-    - Home: index.md
+    - Home: home.md
     - Introduction:
-        - What are ONEm apps?: intro.md
-        - Core concepts: concepts.md
-        - High level overview: high-level-overview.md
-        - Build your first app: buildfirstapp.md
-    - Getting Started:
-        - Node.js: getting-started/getting-started-nodejs.md
-        - Python: getting-started/getting-started-python.md
+        - What is ONEm Platform?: intro/onem_platform.md
+        - What are ONEm apps?: intro/onem_apps.md
+        - Core concepts: intro/core_concepts.md
+    - Getting started:
+        - At a glance: getting_started/glance.md
+        - Python tutorial: getting_started/python.md
+        - Node.js tutorial: getting_started/nodejs.md
     - Building:
-        - Webhooks: building/webhooks.md
-        - Menus: building/menus.md
-        - Forms: building/forms.md
-        - Raw: building/raw.md
-        # - Verbs: verbs.md
-        # - Using the API: usingapi.md
-    - SDK:
-        - Node.js: SDK/NodeJS.md
-    - API Reference: http://172.16.38.113:6212/redoc
-    - Developer Portal: http://testtool.dhq.onem:6060/
+        - How to register your app: building/register.md
+        - Structure:
+            - Bits: building/bits.md
+            - Menus: building/menus.md
+            - Forms: building/forms.md
+            - Raw: building/raw.md
+        - SDK:
+            - HTML: building/html.md
+
+    - API:
+        - Purpose: api/purpose.md
+        - Documentation: api/documentation.md
+
+    - Limitations and resource usage:
+        - Public and private apps: limits/pub_prv_apps.md
+        - App naming: limits/app_naming.md
+        - Topup for messages: limits/topup.md
+        - System verbs: limits/sys_verbs.md
+
 theme:
     name: material
     highlightjs: true
@@ -47,7 +77,3 @@ extra_css:
     - 'assets/stylesheets/styles.css'
 extra_javascript:
     - 'assets/js/opensidenav.js'
-
-
-
-
