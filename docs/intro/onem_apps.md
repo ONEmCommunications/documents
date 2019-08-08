@@ -1,3 +1,21 @@
+# What are ONEm apps?
+
+The ONEm Framework provides a set of APIs and tools that allow you to rapidly build local or global SMS and web based applications that solve a myriad of business problems.
+ONEm Framework is a layer on top of ONEm's cloud-based Platform that provides SMS connectivity to mobile networks around the globe.
+Once you register as a developer, based on ONEm principles, you can create your own application and reach the ONEm ecosystem.
+
+The great thing about ONEm Framework is that you can use your favourite programming language and with one codebase, quickly deploy an easy-to-use, dynamic application that is instantly available on SMS and the Web.
+
+## How services work
+
+ONEm's goal is to have a service that is easy and intuitive to use. It is important for users to have a seamless experience when accessing the ONEm platform.
+Different functionalities and content types are grouped in applications, also called services, accessible through the Platform, similar to websites via internet. Each service is defined by a unique name, similar to a web-address, and follows a general structure, allowing users to easily interact with the platform via text messages.
+Similar to a website, the application will have a landing page and will provide a navigation structure using menus, selectable outlines, paging mechanism and the possibility to capture user input.
+
+To access a certain application/service, users will use # before application name, eg #my_application. The Platform will automatically recognise the user input and will display the application's landing screen. Usability principles are implemented, so in case of an unrecognised user input, the Platform will respond with the best feedback or guideline.
+
+To allow us to create an ecosystem, the users will be automatically registered when sending their first message to the platform. Their profile will be created and based on setup they will be able to access the available applications. Obviously, an opt out mechanism is in place.
+
 ## Let's dig further into the anatomy of a ONEm application
 
 Before dissecting the structure of applications, keep in mind that SMS does not facilitate the use of images or media files as web does. Though ONEm applications work also over internet, we offer users the same experience and interface.
@@ -64,10 +82,3 @@ Another important topic to talk about regards capturing user input. Any webpage 
 To see all these concepts at work, with real ONEm examples, and much more you can watch this Platform Demo
 <!-- video here about services and how they work -->
 
-# What are ONEm apps?
-
-The ONEm Framework provides a set of APIs and tools that allow you to rapidly build local or global SMS and web based applications that solve a myriad of business problems.
-ONEm Framework is a layer on top of ONEm's cloud-based Platform that provides SMS connectivity to mobile networks around the globe.
-Once you register as a developer, based on ONEm principles, you can create your own application and reach the ONEm ecosystem.
-
-The great thing about ONEm Framework is that you can use your favourite programming language and with one codebase, quickly deploy an easy-to-use, dynamic application that is instantly available on SMS and the Web.

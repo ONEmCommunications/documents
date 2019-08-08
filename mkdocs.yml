@@ -21,7 +21,7 @@ site_name: Documentation
 #     - API Reference: http://172.16.38.113:6212/redoc
 #     - Developer Portal: http://testtool.dhq.onem:6060/
 nav:
-    - Home: home.md
+    - Home: index.md
     - Introduction:
         - What is ONEm Platform?: intro/onem_platform.md
         - What are ONEm apps?: intro/onem_apps.md
@@ -42,7 +42,7 @@ nav:
 
     - API:
         - Purpose: api/purpose.md
-        - Documentation: api/documentation.md
+        - Documentation: http://172.16.38.113:6212/redoc
 
     - Limitations and resource usage:
         - Public and private apps: limits/pub_prv_apps.md
