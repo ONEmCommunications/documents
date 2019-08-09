@@ -7,7 +7,7 @@ Ok, let's create a Todo application in Python. We will be using Ubuntu 18.04, Py
 
 So once virtualenvwrapper is installed we will create our virtual environment:
 
-```
+```bash
 mkvirtualenv todo
 ```
 
@@ -15,7 +15,7 @@ The above will create the virtual environment and activate it at the same time.
 
 Now let's install Django and start our project in our home folder:
 
-```
+```bash
 pip install Django==2.2.3
 cd ~
 django-admin startproject todo
@@ -23,7 +23,7 @@ django-admin startproject todo
 
 Next step is for us to create a Django app:
 
-```
+```bash
 cd ~/todo/todo
 django-admin startapp todo
 ```
@@ -32,7 +32,7 @@ Now open `settings.py` and add `todo.todo` to `INSTALLED_APPS`
 
 Next step is to create a model for our Todos. We will place it in `~todo/todo/todo/models.py` and will call it `Task`
 
-```
+```python
 from django.db import models                                                    
 from django.contrib.auth.models import User                                     
 from django.urls import reverse                                                 
@@ -58,7 +58,7 @@ class Task(models.Model):
 
 Now we need to create a migration for the above model and apply it:
 
-```
+```bash
 cd ~/todo
 python manage.py makemigrations todo.todo
 python manage.py migrate
@@ -70,7 +70,7 @@ Open `~/todo/todo/urls.py` and add `path('', include('todo.urls'))` to your exis
 
 Your `~/todo/todo/todo/urls.py` should look like this:
 
-```
+```python
 from django.urls import path                                                    
 from . import views                                                             
                                                                                 

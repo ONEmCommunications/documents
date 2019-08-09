@@ -30,8 +30,13 @@ extra:
 
 ## Running on localhost
 
-```
-$ mkdocs serve
+```bash
+// create ".env" file based on "example.env" file
+// the example file contains the staging env vars
+$ cp example.env .env
+
+// start the doc server with env vars loaded
+$ eval $(egrep -v '^#' .env | xargs) mkdocs serve
 ```
 
 ## Running via npm

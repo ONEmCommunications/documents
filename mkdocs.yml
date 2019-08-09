@@ -42,7 +42,7 @@ nav:
 
     - API:
         - Purpose: api/purpose.md
-        - Documentation: http://172.16.38.113:6212/redoc
+        - Documentation: !!python/object/apply:os.getenv ['RESTDAPI_REDOC']
 
     - Limitations and resource usage:
         - Public and private apps: limits/pub_prv_apps.md
@@ -71,9 +71,11 @@ plugins:
     - markdownextradata #https://github.com/rosscdh/mkdocs-markdownextradata-plugin
 extra:
   links:
-    portal: https://developer-portal-poc.onem.zone/
-    api: https://developer-api-poc.onem.zone/docs
+    portal: !!python/object/apply:os.getenv ['DEV_PORTAL_SITE']
+    api: !!python/object/apply:os.getenv ['RESTDAPI_DOCS']
 extra_css:
     - 'assets/stylesheets/styles.css'
 extra_javascript:
     - 'assets/js/opensidenav.js'
+markdown_extensions:
+    - codehilite
