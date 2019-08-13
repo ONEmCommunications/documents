@@ -40,4 +40,8 @@ RUN adduser --home /documents --shell /bin/bash --disabled-password documents
 RUN chown -R documents. /documents
 
 USER documents
+
 ENV HOME /documents
+ENV RESTDAPI_REDOC http://172.16.38.113:6212/redoc
+ENV RESTDAPI_DOCS http://172.16.38.113:6212/docs
+ENV DEV_PORTAL_SITE http://testtool.dhq.onem:6060
