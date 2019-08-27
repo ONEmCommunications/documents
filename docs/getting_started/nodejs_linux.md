@@ -7,13 +7,6 @@ you have installed the following:
 - ngrok
 - optionally, an IDE that supports JavaScript language if you want to edit the source code
 
-### Install nodejs
-Please follow one of the next articles to install the latest NodeJS:
-
- - Debian: [How to Install Latest Nodejs & NPM on Debian](https://tecadmin.net/install-latest-nodejs-npm-on-debian/)
- - Centos: [How To Install Latest Nodejs on CentOS](https://tecadmin.net/install-latest-nodejs-and-npm-on-centos/)
-
-
 ### Install git
 Run the following command in your terminal
 
@@ -24,6 +17,29 @@ Run the following command in your terminal
 - Centos: 
 
         $ sudo yum install git
+
+- Mac OS:
+
+        $ brew install git
+
+### Install NodeJS
+
+We will use `nvm` to easily install any version of NodeJS. You can install it directly on
+your machine following the [official page](https://nodejs.org/en/download/).
+
+#### Install `nvm`:
+
+- Linux, Mac OS
+
+    Please follow the nvm installing steps as provided by [nvm repo](https://github.com/nvm-sh/nvm#install--update-script).
+
+#### Install Node >= 8.1.x
+
+Example:
+
+        $ nvm install 10
+
+Please note that `nvm install node` will install the latest Node version.
 
 ### Install ngrok
 Please download and install `ngrok` as described on [the official website](https://ngrok.com/download).
