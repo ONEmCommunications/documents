@@ -1,5 +1,3 @@
-# Getting Started with Node.js
-
 <!-- Inline <img src="/assets/nodejs-new-pantone-black.png" width=50> With Reference Link -->
 ## Introduction
 This tutorial will have you deploying a Node.js app to ONEm in minutes.

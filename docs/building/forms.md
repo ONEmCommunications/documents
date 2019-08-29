@@ -6,33 +6,96 @@ The form items are being processed in a successive manner. After all the form it
 
 ## Json Structure
 
-Your server must return a JSON response with a structure similar to the one below:
+Your server must return a JSON response with the following structure:
 
 ```
-{'body': [{'type': 'string',
-           'name': 'descr',
-           'description': 'Provide a description',
-           'method': 'POST',
-           'path': '/callback-path'},
-          {'type': 'date'
-           'name': 'due_date',
-           'header': 'due date',
-           'description': 'Provide a due date'},
-          {'type': 'menu',
-           'name': 'prio',
-           'header': 'priority',
-           'body': [{'type': 'option',
-                     'value': 'high',
-                     'description': 'High priority'},
-                    {'type': 'option',
-                     'value': 'low',
-                     'description': 'Low priority'}]],
- 'header': 'create task',
- 'footer': None,
- 'meta': {'confirmation_needed': False},
- 'method': 'POST',
- 'path': '/task/create',
- 'type': 'form'}
+Form
+    type   - (string) defaults to "form"
+    header - (string) The header of the firn
+    body   - (array) FormItem or FormItemMenu objects - see below
+    footer - (string) The footer of the form
+    path   - (string) Next route callback path, accessed after form is finished
+    method - (string) Http method indicating how to trigger the path
+    meta   - (object) FormMeta object - see below
+
+FormMeta
+    completion_status_show      - (bool) indicates a form completion status
+    completion_status_in_header - (bool) indicates the status in the header
+    confirmation_needed         - (bool) shows e menu at the end of the form
+                                         so user can confirm the choices
+    
+FormItem
+    type           - (string) enum: "string", "int", "float", "date", "datetime"
+        "string"   - the user should enter a string during this step
+        "int"      - the user should enter a valid number
+        "float"    - the user could enter a floating number
+        "date"     - the user should enter a date
+        "datetime" - the user should enter a date and time
+
+    name        - (string) the name of this FormItem, used in form serialization
+    description - (string) the description of this FormItem
+    header      - (string) if provided will overwrite the Form.header
+    footer      - (string) if provided will overwrite the Form.footer
+
+FormItemMenu
+    type        - (string) defaults to "form-menu"
+    name        - (string) the name of this FormItemMenu, used in form serialization
+    header      - (string) if provided will overwrite the Form.header
+    footer      - (string) if provided will overwrite the Form.footer
+    body        - (array) FormItemMenuItem objects - see below
+
+
+FormItemMenuItem
+    type        - (string) defaults to "menu"
+    value       - (string) the value of this FormItemMenuItem, used in form
+                           serialization
+    description - (string) the description of this FormItemMenuItem
+
+```
+
+Example:
+
+```
+{
+    "body": [
+        {
+            "type": "string",
+            "name": "descr",
+            "description": "Provide a description",
+        },
+        {
+            "type": "date",
+            "name": "due_date",
+            "header": "due date",
+            "description": "Provide a due date"
+        },
+        {
+            "type": "menu",
+            "name": "prio",
+            "header": "priority",
+            "body": [
+                {
+                    "type": "option",
+                    "value": "high",
+                    "description": "High priority"
+                },
+                {
+                    "type": "option",
+                    "value": "low",
+                    "description": "Low priority"
+                }
+            ]
+        }
+    ],
+    "header": "create task",
+    "footer": null,
+    "meta": {
+        "confirmation_needed": false
+    },
+    "method": "POST",
+    "path": "/task/create",
+    "type": "form"
+}
 ```
 
 Notice the **'type': 'form'** key value pair, which indicates the form response.
@@ -66,16 +129,16 @@ B Low priority
 
 This is the last step and the user needs to choose one option.
 
-After all steps have been processed, as indicated through **method** and **path**, an HTTP POST will be sent to the path which is relative to the callback url: **http://your-callback.url/task/create/** under the mapping **form_item_name=user_choice**
+After all steps have been processed, as indicated through **method** and **path**, the form will be serialized and an HTTP POST will be sent to the path which is relative to the callback url: **http://your-callback.url/task/create/**
 
-So the POST will look like: **?name=some_description&date=2019-10-10&prio=high**
+So the POST will look like: **?descr=some_description&due_date=2019-10-10&prio=high**
 
 
 ## Type
 The response **type** should be equal to **form** to indicate a form response.
 
 ## Meta
-The **meta** key holds a dictionary which can contain one of the following keys:
+The **meta** key holds an object which can contain one of the following keys:
 
 - **confirmation_needed** - if set to false, there won't be any confirmation screen at the end of the form (defaults to true)
 - **completion_status_show** - if set to true, there will be a completion status shown (defaults to false)

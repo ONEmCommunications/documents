@@ -6,28 +6,66 @@ When an option is being accessed, ONEm platform will perform an HTTP request to 
 
 ## Json Structure
 
-Your server must return a JSON response with a structure similar to the one below:
+Your server must return a JSON response with the following structure:
 
 ```
-{'body': [{'description': 'New todo',
-           'method': 'GET',
-           'path': '/task/create/',
-           'type': 'option'},
-          {'description': 'Done(0)',
-           'method': 'GET',
-           'path': '/task/list/done/',
-           'type': 'option'},
-          {'description': 'Todo(1)',
-           'method': None,
-           'path': None,
-           'type': 'content'},
-          {'description': 'buy coffee 2019-07-01',
-           'method': 'GET',
-           'path': '/task/7/',
-           'type': 'option'}],
- 'footer': None,
- 'header': 'home',
- 'type': 'menu'}
+Menu
+    type   - (string) defaults to "menu"
+    header - (string) The header of the menu
+    body   - (array) MenuItem objects - see below
+    footer - (string) The footer of the menu
+    meta   - (object) MenuMeta object - see below
+
+MenuItem
+    type        - (string) enum: "option", "content"
+        "option"  - indicates an option and needs a path - see below
+        "content" - shows content as indicated in description - see below
+
+    description - (string) The description of this MenuItem
+    path        - (string) Next route callback path, accessed upon user selection
+    method      - (string) Http method indicating how to trigger the path
+
+MenuMeta
+    auto_select - (bool) Auto selects option if the Menu has only one MenuItem
+                         of type option
+```
+
+
+Example:
+
+
+```javascript
+{
+    "body": [
+        {
+            "description": "New todo",
+            "method": "GET",
+            "path": "/task/create/",
+            "type": "option"
+        },
+        {
+            "description": "Done(0)",
+            "method": "GET",
+            "path": "/task/list/done/",
+            "type": "option"
+        },
+        {
+            "description": "Todo(1)",
+            "method": null,
+            "path": null,
+            "type": "content"
+        },
+        {
+            "description": "buy coffee 2019-07-01",
+            "method": "GET",
+            "path": "/task/7/",
+            "type": "option"
+        }
+    ],
+    "footer": null,
+    "header": "home",
+    "type": "menu"
+}
 ```
 
 Notice the **'type': 'menu'** key value pair, which indicates the menu response.
