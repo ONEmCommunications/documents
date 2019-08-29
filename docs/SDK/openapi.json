@@ -1,0 +1,379 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "title" : "ONEm HTTP REST Specification API",
+    "description" : "This specification defines the HTTP REST interface that is used when applications receive callbacks to the URL specified in the service registration.",
+    "contact" : {
+      "name" : "ONEm",
+      "email" : "developer@onem.com"
+    },
+    "version" : "1.1-oas3"
+  },
+  "servers" : [ {
+    "url" : "http://developer-onem.com",
+    "description" : "Main (production) server"
+  }, {
+    "url" : "http://testtool.skor.games:9000",
+    "description" : "Staging server"
+  } ],
+  "paths" : {
+    "/service" : {
+      "post" : {
+        "description" : "Register or re-register a service",
+        "operationId" : "register",
+        "requestBody" : {
+          "description" : "Provide the apikey given to you by your ONEm contact.  callbackPath is the base path of your host server where you want to receive callbacks arising from user inputs",
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/body"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Added or updated successfully",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/inline_response_200"
+                }
+              }
+            }
+          }
+        },
+        "callbacks" : {
+          "userAction" : {
+            "User action callback" : {
+              "get" : {
+                "parameters" : [ {
+                  "name" : "param1",
+                  "in" : "query",
+                  "description" : "The first optional space-separated parameter provided by the user in service switching events",
+                  "required" : false,
+                  "style" : "form",
+                  "explode" : true,
+                  "schema" : {
+                    "type" : "string"
+                  }
+                }, {
+                  "name" : "param2",
+                  "in" : "query",
+                  "description" : "The second optional space-separated parameter provided by the user in service switching events",
+                  "required" : false,
+                  "style" : "form",
+                  "explode" : true,
+                  "schema" : {
+                    "type" : "string"
+                  }
+                }, {
+                  "name" : "paramn",
+                  "in" : "query",
+                  "description" : "The nth optional space-separated parameter provided by the user in service switching events",
+                  "required" : false,
+                  "style" : "form",
+                  "explode" : true,
+                  "schema" : {
+                    "type" : "string"
+                  }
+                } ],
+                "responses" : {
+                  "200" : {
+                    "description" : "JSON formatted object containing the response object that should be sent to the user (menu or form)",
+                    "content" : {
+                      "application/json" : {
+                        "schema" : {
+                          "required" : [ "body", "type" ],
+                          "type" : "object",
+                          "properties" : {
+                            "type" : {
+                              "type" : "string",
+                              "description" : "Indicates whether to render a menu or a form",
+                              "enum" : [ "menu", "form" ]
+                            },
+                            "header" : {
+                              "type" : "string",
+                              "description" : "The value of the header which will be prefixed automatically with and convered to upper case"
+                            },
+                            "footer" : {
+                              "type" : "string",
+                              "description" : "The value of the footer if required if omitted the platform will include a default footer'"
+                            },
+                            "body" : {
+                              "description" : "Array of either content or menu objects",
+                              "oneOf" : [ {
+                                "$ref" : "#/components/schemas/Menu"
+                              }, {
+                                "$ref" : "#/components/schemas/Form"
+                              } ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "security" : [ {
+                  "bearerAuth" : [ ]
+                } ]
+              },
+              "post" : {
+                "requestBody" : {
+                  "description" : "When user completes a form, the body contains a json object with names properties and values.  The property names are taken from the 'name' property of the Form schema",
+                  "content" : {
+                    "application/json" : {
+                      "schema" : {
+                        "type" : "object",
+                        "properties" : {
+                          "[object Object]" : {
+                            "type" : "string",
+                            "example" : "dueDate"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "responses" : {
+                  "200" : {
+                    "description" : "JSON formatted object containing the response object that should be sent to the user (menu or form)",
+                    "content" : {
+                      "application/json" : {
+                        "schema" : {
+                          "required" : [ "body", "type" ],
+                          "type" : "object",
+                          "properties" : {
+                            "type" : {
+                              "type" : "string",
+                              "description" : "Indicates whether to render a menu or a form",
+                              "enum" : [ "menu", "form" ]
+                            },
+                            "header" : {
+                              "type" : "string",
+                              "description" : "The value of the header which will be prefixed automatically with and convered to upper case"
+                            },
+                            "footer" : {
+                              "type" : "string",
+                              "description" : "The value of the footer if required. If omitted the platform will include a default footer"
+                            },
+                            "body" : {
+                              "description" : "Array of either content or menu objects",
+                              "oneOf" : [ {
+                                "$ref" : "#/components/schemas/Menu"
+                              }, {
+                                "$ref" : "#/components/schemas/Form"
+                              } ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "security" : [ {
+                  "bearerAuth" : [ ]
+                } ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "Menu" : {
+        "type" : "array",
+        "example" : {
+          "type" : "menu",
+          "header" : "TODO MENU",
+          "body" : [ {
+            "type" : "option",
+            "description" : "New todo",
+            "nextRoute" : "/todo/form/desc/"
+          }, {
+            "type" : "option",
+            "description" : "Done(0)",
+            "nextRoute" : "/todoListdone/"
+          }, {
+            "type" : "content",
+            "description" : "Todo (2):"
+          }, {
+            "type" : "option",
+            "description" : "Desc 234",
+            "nextRoute" : "/todo/view/5c9a505d37655e6c74c93f0d"
+          }, {
+            "type" : "option",
+            "description" : "Sdfg 123",
+            "nextRoute" : "/todo/view/5c9a5537ccafb76cc39b1a75"
+          } ]
+        },
+        "items" : {
+          "oneOf" : [ {
+            "required" : [ "description", "type" ],
+            "type" : "object",
+            "properties" : {
+              "type" : {
+                "type" : "string",
+                "enum" : [ "content" ]
+              },
+              "description" : {
+                "type" : "string",
+                "description" : "Value to be rendered"
+              }
+            },
+            "description" : "Content only"
+          }, {
+            "required" : [ "description", "nextRoute", "type" ],
+            "type" : "object",
+            "properties" : {
+              "type" : {
+                "type" : "string",
+                "enum" : [ "option" ]
+              },
+              "description" : {
+                "type" : "string",
+                "description" : "Value to be rendered"
+              },
+              "nextRoute" : {
+                "type" : "string",
+                "description" : "relative URL from base path to use as callback when user chooses this option"
+              },
+              "method" : {
+                "type" : "string",
+                "description" : "HTTP method to use in callback",
+                "default" : "GET",
+                "enum" : [ "GET", "POST", "PUT", "DELETE" ]
+              }
+            },
+            "description" : "Menu option"
+          } ]
+        }
+      },
+      "Form" : {
+        "required" : [ "formItems", "nextRoute" ],
+        "type" : "object",
+        "properties" : {
+          "nextRoute" : {
+            "type" : "string",
+            "description" : "relative URL from base path to use as callback when user selects this option"
+          },
+          "method" : {
+            "type" : "string",
+            "description" : "HTTP method that should be used in the callback",
+            "default" : "POST",
+            "enum" : [ "GET", "POST", "PUT", "DELETE" ]
+          },
+          "confirm" : {
+            "type" : "boolean",
+            "description" : "TRUE if wizard confirmation menu should be displayed at the end of the form",
+            "default" : false
+          },
+          "formItems" : {
+            "type" : "array",
+            "description" : "Array of form items",
+            "example" : {
+              "type" : "form",
+              "header" : "TODO MENU",
+              "body" : {
+                "nextRoute" : "todoAddDesc",
+                "method" : "POST",
+                "items" : [ {
+                  "name" : "description",
+                  "description" : "Provide a description for the task",
+                  "type" : "string"
+                }, {
+                  "name" : "dueDate",
+                  "description" : "Provide a due date",
+                  "type" : "date"
+                } ]
+              }
+            },
+            "items" : {
+              "$ref" : "#/components/schemas/Form_formItems"
+            }
+          }
+        }
+      },
+      "service_verbs" : {
+        "required" : [ "name", "route" ],
+        "type" : "object",
+        "properties" : {
+          "name" : {
+            "type" : "string",
+            "example" : "menu"
+          },
+          "route" : {
+            "type" : "string",
+            "example" : "/todo"
+          },
+          "footer" : {
+            "type" : "boolean",
+            "description" : "indicates whether this verb should appear in footers",
+            "default" : false
+          }
+        }
+      },
+      "body" : {
+        "type" : "object",
+        "properties" : {
+          "apiKey" : {
+            "type" : "string",
+            "example" : "gklgjiljwejfjoweWEWEOGJWEGW"
+          },
+          "serviceName" : {
+            "type" : "string",
+            "example" : "todo"
+          },
+          "callbackPath" : {
+            "type" : "string",
+            "example" : "http://myappsite.com"
+          },
+          "verbs" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/service_verbs"
+            }
+          }
+        }
+      },
+      "inline_response_200" : {
+        "type" : "object",
+        "properties" : {
+          "result" : {
+            "type" : "boolean",
+            "description" : "Indicates success or failure"
+          }
+        }
+      },
+      "Form_formItems" : {
+        "required" : [ "description", "name", "type" ],
+        "type" : "object",
+        "properties" : {
+          "name" : {
+            "type" : "string",
+            "description" : "Name of the form property"
+          },
+          "description" : {
+            "type" : "string",
+            "description" : "User prompt"
+          },
+          "type" : {
+            "type" : "string",
+            "description" : "Used for form property validation",
+            "enum" : [ "string", "integer", "date" ]
+          }
+        }
+      }
+    },
+    "securitySchemes" : {
+      "bearerAuth" : {
+        "type" : "http",
+        "scheme" : "bearer",
+        "bearerFormat" : "JWT"
+      }
+    }
+  }
+}
