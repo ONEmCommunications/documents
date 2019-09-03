@@ -80,14 +80,14 @@ Here's what you need to do.
 
 #### Install `pyenv`:
 
-- Debian
+- Debian, Ubuntu, Deepin, LinuxMint, CentOS, Fedora:
 
         $ curl https://pyenv.run | bash
 
     Restart your shell so the path changes take effect. See [pyenv-installer](https://github.com/pyenv/pyenv-installer) 
     for more info.
 
-- Mac os:
+- Mac OS:
 
         $ brew install pyenv
 
@@ -99,7 +99,7 @@ Here's what you need to do.
 
         $ source ~/.bash_profile
 
-- Windows
+- Windows:
 
     Please note that `pyenv` is not currently supported on Windows.
     
@@ -116,11 +116,11 @@ Example:
 
 #### Install `pipenv` for an easier virtual environment management
 
-- Debian
+- Debian, Ubuntu, Deepin, LinuxMint, CentOS, Fedora:
 
         $ sudo pip install pipenv
 
-- Mac OS
+- Mac OS:
 
         $ brew install pipenv
 
@@ -128,7 +128,7 @@ Example:
     
         $ pip install pipenv --user python
 
-- Windows
+- Windows:
 
     Download the latest Python version available for Windows from 
     [official website](https://www.python.org/downloads/windows/). Run the 

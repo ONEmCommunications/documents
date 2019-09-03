@@ -10,11 +10,11 @@ you have installed the following:
 ### Install git
 Run the following command in your terminal
 
-- Debian: 
+- Debian, Ubuntu, Deepin, LinuxMint:
 
         $ sudo apt-get install git
 
-- Centos: 
+- Centos, Fedora:
 
         $ sudo yum install git
 
@@ -22,7 +22,7 @@ Run the following command in your terminal
 
         $ brew install git
 
-- Windows
+- Windows:
 
     There are a few ways to install Git on Windows.
 
@@ -41,12 +41,12 @@ your machine following the [official page](https://nodejs.org/en/download/).
 
 #### Install `nvm`:
 
-- Linux, Mac OS
+- Debian, Ubuntu, Deepin, LinuxMint, CentOS, Fedora, Mac OS:
 
     Please follow the nvm installing steps as provided by 
     [nvm repo](https://github.com/nvm-sh/nvm#install--update-script).
 
-- Windows
+- Windows:
 
     Please note that `nvm` does not support Windows. If you want to use a version
     manager for Windows, you can give it a try to 
@@ -58,7 +58,7 @@ your machine following the [official page](https://nodejs.org/en/download/).
 
 #### Install Node >= 8.1.x
 
-- Linux, Max OS
+- Debian, Ubuntu, Deepin, LinuxMint, CentOS, Fedora, Mac OS:
 
     Example:
 
@@ -66,7 +66,7 @@ your machine following the [official page](https://nodejs.org/en/download/).
 
     Please note that `nvm install node` will install the latest Node version.
 
-- Windows
+- Windows:
     
     Download the latest Node version available for your Windows from 
     [official website](https://nodejs.org/en/download/). Run the installer following 
