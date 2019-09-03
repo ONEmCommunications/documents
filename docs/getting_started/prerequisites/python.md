@@ -1,4 +1,3 @@
-## Pre requisites
 In order to be able to run a Python application for ONEm on your machine please make sure
 you have installed the following:
 
@@ -149,41 +148,3 @@ list of IDEs in no particular order:
 - [Atom](https://atom.io/) - free and open source
 - [Visual Studio Code](https://code.visualstudio.com/) - free and open source
 - etc
-
-## Run an existing application
-<!-- to be detailed -->
-
-### Download source code
-<!-- to be detailed -->
-
-### Install dependencies
-<!-- to be detailed -->
-
-### Start the server
-<!-- to be detailed -->
-
-### Expose your server publicly
-<!-- to be detailed -->
-
-#### Run ngrok
-<!-- to be detailed -->
-
-#### Obtain callback URL
-<!-- to be detailed -->
-
-
-## Access the applications
-<!-- to be detailed -->
-
-### Register the application
-<!-- to be detailed -->
-
-### Access simulator
-<!-- to be detailed -->
-
-
-## Tweak the application
-<!-- to be detailed -->
-
-### Redeploy
-<!-- to be detailed -->
