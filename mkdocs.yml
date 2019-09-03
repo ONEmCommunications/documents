@@ -84,3 +84,5 @@ extra_javascript:
     - 'assets/js/opensidenav.js'
 markdown_extensions:
     - codehilite
+    - markdown_include.include:
+        base_path: docs
