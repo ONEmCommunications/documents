@@ -106,12 +106,26 @@ Here's what you need to do.
     try to [pyenv-win](https://pypi.org/project/pyenv-win/).
 
 #### Install `python 3.7` or above using `pyenv`
-  
-Example:
 
-    $ pyenv install 3.7.0
+- Debian, Ubuntu, Deepin, LinuxMint, CentOS, Fedora, Mac OS:  
 
-<!-- $ SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk pyenv install 3.7.0 -->
+    Example:
+    
+        $ pyenv install 3.7.0
+    
+    <!-- $ SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk pyenv install 3.7.0 -->
+    
+- Windows:
+    
+    Example with `pyenv-win`:
+
+        $ pyenv install 3.7.0
+
+    Alternatively, download the latest Python version available for Windows from
+    [official website](https://www.python.org/downloads/windows/). Run the 
+    installer and make sure to check the box that says **Add Python 3.x to PATH** 
+    to ensure that the interpreter will be placed in the execution path.
+    Then click **Install Now** and that should be all.
 
 #### Install `pipenv` for an easier virtual environment management
 
@@ -126,14 +140,6 @@ Example:
     or use:
     
         $ pip install pipenv --user python
-
-- Windows:
-
-    Download the latest Python version available for Windows from 
-    [official website](https://www.python.org/downloads/windows/). Run the 
-    installer and make sure to check the box that says **Add Python 3.x to PATH** 
-    to ensure that the interpreter will be placed in the execution path.
-    Then click **Install Now** and that should be all.
 
 ### Install ngrok
 
