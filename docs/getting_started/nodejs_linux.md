@@ -22,6 +22,18 @@ Run the following command in your terminal
 
         $ brew install git
 
+- Windows
+
+    There are a few ways to install Git on Windows.
+
+    The official build is available on the Git website; go to 
+    [git-scm.com/download/win](https://git-scm.com/download/win) and the download 
+    will start automatically. Run the setup and follow the instructions.
+
+    If you use **Chocolatey** manager on Windows, then you can install the git 
+    package as instructed [here](https://chocolatey.org/packages/git). Note that the
+    **Chocolatey** package is community maintained.
+
 ### Install NodeJS
 
 We will use `nvm` to easily install any version of NodeJS. You can install it directly on
@@ -31,15 +43,34 @@ your machine following the [official page](https://nodejs.org/en/download/).
 
 - Linux, Mac OS
 
-    Please follow the nvm installing steps as provided by [nvm repo](https://github.com/nvm-sh/nvm#install--update-script).
+    Please follow the nvm installing steps as provided by 
+    [nvm repo](https://github.com/nvm-sh/nvm#install--update-script).
+
+- Windows
+
+    Please note that `nvm` does not support Windows. If you want to use a version
+    manager for Windows, you can give it a try to 
+    [nvm-windows](https://github.com/coreybutler/nvm-windows) or 
+    [nodist](https://github.com/nullivex/nodist).
+
+    If you use **Chocolatey** manager on Windows, then you can also use the `nvm` 
+    package as instructed [here](https://chocolatey.org/packages/nvm).
 
 #### Install Node >= 8.1.x
 
-Example:
+- Linux, Max OS
+
+    Example:
 
         $ nvm install 10
 
-Please note that `nvm install node` will install the latest Node version.
+    Please note that `nvm install node` will install the latest Node version.
+
+- Windows
+    
+    Download the latest Node version available for your Windows from 
+    [official website](https://nodejs.org/en/download/). Run the installer following 
+    the steps and that should be all.
 
 ### Install ngrok
 Please download and install `ngrok` as described on [the official website](https://ngrok.com/download).
