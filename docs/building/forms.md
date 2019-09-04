@@ -39,7 +39,6 @@ FormItem
     chunking_footer            - (string) shown in the footer of the sms chunks
     confirmation_label         - (string) shown in the confirmation menu
     description                - (string) the description of this FormItem
-    editable                   - (bool) indicates this form item is editable or not
     footer                     - (string) if provided will overwrite the Form.footer
     header                     - (string) if provided will overwrite the Form.header
     max_length                 - (int) validates the user input - for type=string
