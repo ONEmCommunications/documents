@@ -39,8 +39,8 @@ nav:
           - At a glance: getting_started/glance.md
           - Run an application remotely: getting_started/run_heroku.md
           - Run and edit an application locally:
-                - Python how to: getting_started/python_linux.md
-                - Node.js how to: getting_started/nodejs_linux.md
+                - Python how to: getting_started/python.md
+                - Node.js how to: getting_started/nodejs.md
     - Building:
         - How to register your app: building/register.md
         - Structure:
@@ -84,3 +84,5 @@ extra_javascript:
     - 'assets/js/opensidenav.js'
 markdown_extensions:
     - codehilite
+    - markdown_include.include:
+        base_path: docs
