@@ -36,7 +36,7 @@
     
     
       
-        <title>Python - Documentation</title>
+        <title>Run remotely - Documentation</title>
       
     
     
@@ -106,7 +106,7 @@
               Documentation
             </span>
             <span class="md-header-nav__topic">
-              Python
+              Run remotely
             </span>
           
         </div>
@@ -364,10 +364,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Getting started
@@ -395,11 +397,68 @@
           
           
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" checked>
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
 
   <li class="md-nav__item">
-    <a href="../run_heroku/" title="Run an application remotely" class="md-nav__link">
-      Run an application remotely
+    <a href="../python_prereq/" title="Pre-requisites" class="md-nav__link">
+      Pre-requisites
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_run_local/" title="Run locally" class="md-nav__link">
+      Run locally
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="Run remotely" class="md-nav__link md-nav__link--active">
+      Run remotely
+    </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -413,11 +472,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
     
     <label class="md-nav__link" for="nav-4-3">
-      Run and edit an application locally
+      Node.js
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-4-3">
-        Run and edit an application locally
+        Node.js
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -428,8 +487,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../python_linux/" title="Python how to" class="md-nav__link">
-      Python how to
+    <a href="../nodejs_prereq/" title="Pre-requisites" class="md-nav__link">
+      Pre-requisites
     </a>
   </li>
 
@@ -440,8 +499,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../nodejs_linux/" title="Node.js how to" class="md-nav__link">
-      Node.js how to
+    <a href="../nodejs_run_local/" title="Run locally" class="md-nav__link">
+      Run locally
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nodejs_run_remote/" title="Run remotely" class="md-nav__link">
+      Run remotely
     </a>
   </li>
 
@@ -505,18 +576,6 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../building/bits.md" title="Bits" class="md-nav__link">
-      Bits
-    </a>
-  </li>
-
         
           
           
@@ -661,83 +720,17 @@
               
                 
                 
-                  <h1>Python</h1>
+                  <h1>Run remotely</h1>
                 
-                <p>Ok, let's create a Todo application in Python. We will be using Ubuntu 18.04, Python 3.6.8 and the following:</p>
+                <p>To run the application remotely we will have to deploy our webserver on a publicly accessible machine.</p>
+<p>There are multiple ways to do that:</p>
 <ul>
-<li><a href="https://virtualenvwrapper.readthedocs.io/en/latest/">virtualenvwrapper</a> to create a virtual environment</li>
-<li><a href="https://www.djangoproject.com/">Django</a> to quickly build our web server</li>
-<li><a href="https://ngrok.com">ngrok</a> to expose our web server publicly so ONEm platform can communicate with it</li>
+<li><a href="https://nginx.org/">Nginx</a> with <a href="https://gunicorn.org/">Gunicorn</a> and <a href="http://supervisord.org/">Supervisor</a></li>
+<li><a href="https://httpd.apache.org/">Apache</a> and <a href="https://modwsgi.readthedocs.io/en/develop/">mod_wsgi</a></li>
+<li>etc ...</li>
 </ul>
-<p>So once virtualenvwrapper is installed we will create our virtual environment:</p>
-<div class="codehilite"><pre><span></span>mkvirtualenv todo
-</pre></div>
-
-
-<p>The above will create the virtual environment and activate it at the same time.</p>
-<p>Now let's install Django and start our project in our home folder:</p>
-<div class="codehilite"><pre><span></span>pip install <span class="nv">Django</span><span class="o">==</span><span class="m">2</span>.2.3
-<span class="nb">cd</span> ~
-django-admin startproject todo
-</pre></div>
-
-
-<p>Next step is for us to create a Django app:</p>
-<div class="codehilite"><pre><span></span><span class="nb">cd</span> ~/todo/todo
-django-admin startapp todo
-</pre></div>
-
-
-<p>Now open <code>settings.py</code> and add <code>todo.todo</code> to <code>INSTALLED_APPS</code></p>
-<p>Next step is to create a model for our Todos. We will place it in <code>~todo/todo/todo/models.py</code> and will call it <code>Task</code></p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>                                                    
-<span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">User</span>                                     
-<span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">reverse</span>                                                 
-
-
-<span class="k">class</span> <span class="nc">Task</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>                                                       
-    <span class="n">user</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">)</span>                                 
-    <span class="n">descr</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>                                        
-    <span class="n">due_date</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateField</span><span class="p">()</span>                                                  
-    <span class="n">done</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>                                      
-
-    <span class="n">HIGH</span> <span class="o">=</span> <span class="s1">&#39;high&#39;</span>                                                                  
-    <span class="n">LOW</span> <span class="o">=</span> <span class="s1">&#39;low&#39;</span>                                                                    
-    <span class="n">PRIO</span> <span class="o">=</span> <span class="p">(</span>                                                                       
-        <span class="p">(</span><span class="n">HIGH</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">),</span>                                                              
-        <span class="p">(</span><span class="n">LOW</span><span class="p">,</span> <span class="n">LOW</span><span class="p">),</span>                                                                
-    <span class="p">)</span>                                                                              
-    <span class="n">prio</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">choices</span><span class="o">=</span><span class="n">PRIO</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">LOW</span><span class="p">)</span>               
-
-    <span class="k">def</span> <span class="nf">get_absolute_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>                                                    
-        <span class="k">return</span> <span class="n">reverse</span><span class="p">(</span><span class="s1">&#39;task_detail&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,))</span> 
-</pre></div>
-
-
-<p>Now we need to create a migration for the above model and apply it:</p>
-<div class="codehilite"><pre><span></span><span class="nb">cd</span> ~/todo
-python manage.py makemigrations todo.todo
-python manage.py migrate
-</pre></div>
-
-
-<p>We are almost there. We need to add some urls and views to handle the urls.</p>
-<p>Open <code>~/todo/todo/urls.py</code> and add <code>path('', include('todo.urls'))</code> to your existing <code>urlpatterns</code></p>
-<p>Your <code>~/todo/todo/todo/urls.py</code> should look like this:</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>                                                    
-<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">views</span>                                                             
-
-<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>                                                                 
-    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">HomeView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;home&#39;</span><span class="p">),</span>                             
-    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;task/create/&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">TaskCreateView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;task_create&#39;</span><span class="p">),</span>    
-    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;task/list/done/&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">TaskListDoneView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;task_list_done&#39;</span><span class="p">),</span>
-    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;task/&lt;int:id&gt;/&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">TaskDetailView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;task_detail&#39;</span><span class="p">),</span> 
-<span class="p">]</span>
-</pre></div>
-
-
-<p>Last step is to create the <code>views.py</code> file. </p>
-<p>This will be a rather larger file and the content is omitted here, but it can be found at this <a href="https://raw.githubusercontent.com/mvnm/django-onem-todo/master/todo/todo/views.py">link</a></p>
+<p>However, the easiest way is to use Heroku. Just head over to <a href="None">Github</a>, fork the project and hit the Deploy to Heroku button.</p>
+<p>You will first have to register for a free <a href="https://www.heroku.com/">Heroku</a> account.</p>
                 
                   
                 
@@ -754,6 +747,41 @@ python manage.py migrate
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../python_run_local/" title="Run locally" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Run locally
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../nodejs_prereq/" title="Pre-requisites" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Pre-requisites
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
