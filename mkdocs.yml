@@ -37,14 +37,17 @@ nav:
 
     - Getting started:
           - At a glance: getting_started/glance.md
-          - Run an application remotely: getting_started/run_heroku.md
-          - Run and edit an application locally:
-                - Python how to: getting_started/python.md
-                - Node.js how to: getting_started/nodejs.md
+          - Python:
+              - Pre-requisites: getting_started/python_prereq.md
+              - Run locally: getting_started/python_run_local.md
+              - Run remotely: getting_started/python_run_remote.md
+          - Node.js:
+              - Pre-requisites: getting_started/nodejs_prereq.md
+              - Run locally: getting_started/nodejs_run_local.md
+              - Run remotely: getting_started/nodejs_run_remote.md
     - Building:
         - How to register your app: building/register.md
         - Structure:
-            - Bits: building/bits.md
             - Menus: building/menus.md
             - Forms: building/forms.md
             - Raw: building/raw.md
@@ -78,6 +81,9 @@ extra:
   links:
     portal: !!python/object/apply:os.getenv ['DEV_PORTAL_SITE']
     api: !!python/object/apply:os.getenv ['RESTDAPI_DOCS']
+  todo_app:
+    github_py_url: !!python/object/apply:os.getenv ['TODO_APP_GITHUB_PY_URL']
+
 extra_css:
     - 'assets/stylesheets/styles.css'
 extra_javascript:

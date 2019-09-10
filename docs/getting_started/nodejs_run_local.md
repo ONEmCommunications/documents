@@ -1,6 +1,3 @@
-## Pre requisites
-{!getting_started/prerequisites/python.md!}
-
 ## Run an existing application
 <!-- to be detailed -->
 
