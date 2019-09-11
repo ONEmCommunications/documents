@@ -1,37 +1,35 @@
 If you are an absolute beginner please read the [prerequisites](/getting_started/python_prereq/) first.
 
-First let's create our virtual environment. We will be using Ubuntu 18.04 in this tutorial.
-
-```bash
-onem@local:~$ mkvirtualenv todo
-...  # skipped for brevity
-(todo) onem@local:~$ 
-
-```
-The above will create the virtual environment and activate it at the same time.
-
 ### Download source code
 
 Clone the project from github.com:
 
 ```bash
-(todo) onem@local:~$ git clone {{ todo_app.github_py_url }}
+onem@local:~$ git clone {{ todo_app.github_py_url }}
 ```
+
+Now let's create our virtual environment. We will be using Ubuntu 18.04 in this tutorial.
+
+```bash
+onem@local:~$ cd django-onem-todo ; pipenv shell --python 3.7
+```
+
+The above will create the virtual environment and activate it at the same time.
+
 
 ### Dependencies
 
 We first need to install the dependencies and create the database.
 
 ```bash
-(todo) onem@local:~$ cd django-onem-todo
-(todo) onem@local:~$ pip install -r requirements.txt
-(todo) onem@local:~$ python manage.py migrate
+(django-onem-todo) onem@local:~/django-onem-todo$ pip install -r requirements.txt
+(django-onem-todo) onem@local:~/django-onem-todo$ python manage.py migrate
 ```
 
 ### Start the server
 
 ```bash
-(todo) onem@local:~$ python manage.py runserver
+(django-onem-todo) onem@local:~/django-onem-todo$ python manage.py runserver
 ```
 
 The above command will run the server locally at `http://127.0.0.1:8000`

@@ -1,4 +1,5 @@
 # Python prerequisites
+
 In order to be able to run a Python application for ONEm on your machine please make sure
 you have installed the following:
 
@@ -10,17 +11,29 @@ you have installed the following:
 ### Install git
 Run the following command in your terminal
 
-- Debian: 
+- Debian, Ubuntu, Deepin, LinuxMint: 
 
         $ sudo apt-get install git
 
-- Centos: 
+- Centos, Fedora: 
 
         $ sudo yum install git
 
 - Mac OS:
 
         $ brew install git
+
+- Windows:
+
+    There are a few ways to install Git on Windows.
+    
+    The official build is available on the Git website; go to 
+    [git-scm.com/download/win](https://git-scm.com/download/win) and the download 
+    will start automatically. Run the setup and follow the instructions.
+    
+    If you use **Chocolatey** manager on Windows, then you can install the git 
+    package as instructed [here](https://chocolatey.org/packages/git). Note that the
+    **Chocolatey** package is community maintained.
 
 ### Install python >= 3.7
 
@@ -33,7 +46,7 @@ Before you install pyenv itself, you need to install some dependencies that are 
 because pyenv installs Python by building from source.
 Here's what you need to do.
 
-- Debian:
+- Debian, Ubuntu, Deepin, LinuxMint:
 
         $ sudo apt-get update
         $ sudo apt-get upgrade
@@ -44,7 +57,7 @@ Here's what you need to do.
         $ sudo apt-get install zlib1g-dev libsqlite3-dev tk-dev
         $ sudo apt-get install libssl-dev openssl
 
-- Centos:
+- Centos, Fedora:
 
         $ sudo yum install zlib-devel bzip2 bzip2-devel readline-devel sqlite \
                            sqlite-devel openssl-devel xz xz-devel libffi-devel
@@ -68,14 +81,14 @@ Here's what you need to do.
 
 #### Install `pyenv`:
 
-- Debian
+- Debian, Ubuntu, Deepin, LinuxMint, CentOS, Fedora:
 
         $ curl https://pyenv.run | bash
 
     Restart your shell so the path changes take effect. See [pyenv-installer](https://github.com/pyenv/pyenv-installer) 
     for more info.
 
-- Mac os:
+- Mac OS:
 
         $ brew install pyenv
 
@@ -87,21 +100,52 @@ Here's what you need to do.
 
         $ source ~/.bash_profile
 
+- Windows:
+
+    Please note that `pyenv` is not currently supported on Windows.
+    
+    If you do want to use a Python version manager for Windows, you can give it a
+    try to [pyenv-win](https://pypi.org/project/pyenv-win/).
+
 #### Install `python 3.7` or above using `pyenv`
-  
-Example:
 
-    $ pyenv install 3.7.0
+- Debian, Ubuntu, Deepin, LinuxMint, CentOS, Fedora, Mac OS:  
 
-<!-- $ SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk pyenv install 3.7.0 -->
+    Example:
+    
+        $ pyenv install 3.7.0
+    
+    <!-- $ SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk pyenv install 3.7.0 -->
+    
+- Windows:
+    
+    Example with `pyenv-win`:
 
-#### Install `virtualenvwrapper` for an easier virtual environment management
+        $ pyenv install 3.7.0
 
-Follow the instructions [here](https://virtualenvwrapper.readthedocs.io/en/latest/install.html)
+    Alternatively, download the latest Python version available for Windows from
+    [official website](https://www.python.org/downloads/windows/). Run the 
+    installer and make sure to check the box that says **Add Python 3.x to PATH** 
+    to ensure that the interpreter will be placed in the execution path.
+    Then click **Install Now** and that should be all.
+
+#### Install `pipenv` for an easier virtual environment management
+
+- Debian, Ubuntu, Deepin, LinuxMint, CentOS, Fedora:
+
+        $ sudo pip install pipenv
+
+- Mac OS:
+
+        $ brew install pipenv
+
+    or use:
+    
+        $ pip install pipenv --user python
 
 ### Install ngrok
 
-If you are planning to run the application on your local machine, please download and install `ngrok` as described on [the official website](https://ngrok.com/download).
+Please download and install `ngrok` as described on [the official website](https://ngrok.com/download).
 
 ### Install an IDE
 

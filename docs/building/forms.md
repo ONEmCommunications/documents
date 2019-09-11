@@ -66,8 +66,8 @@ MenuItemFormItem
         "option"  - needs a value
         "content" - does not need a value - shows content as indicated in description
 
-    value       - (string) the value of this FormItemMenuItem, used in form serialization
-    description - (string) the description of this FormItemMenuItem
+    value       - (string) the value of this MenuItemFormItem, used in form serialization
+    description - (string) the description of this MenuItemFormItem
 
 
 MenuFormItemMeta
