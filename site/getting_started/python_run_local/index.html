@@ -853,30 +853,27 @@
                   <h1>Run locally</h1>
                 
                 <p>If you are an absolute beginner please read the <a href="/getting_started/python_prereq/">prerequisites</a> first.</p>
-<p>First let's create our virtual environment. We will be using Ubuntu 18.04 in this tutorial.</p>
-<div class="codehilite"><pre><span></span>onem@local:~$ mkvirtualenv todo
-...  <span class="c1"># skipped for brevity</span>
-<span class="o">(</span>todo<span class="o">)</span> onem@local:~$ 
+<h3 id="download-source-code">Download source code</h3>
+<p>Clone the project from github.com:</p>
+<div class="codehilite"><pre><span></span>onem@local:~$ git clone None
+</pre></div>
+
+
+<p>Now let's create our virtual environment. We will be using Ubuntu 18.04 in this tutorial.</p>
+<div class="codehilite"><pre><span></span>onem@local:~$ <span class="nb">cd</span> django-onem-todo <span class="p">;</span> pipenv shell --python <span class="m">3</span>.7
 </pre></div>
 
 
 <p>The above will create the virtual environment and activate it at the same time.</p>
-<h3 id="download-source-code">Download source code</h3>
-<p>Clone the project from github.com:</p>
-<div class="codehilite"><pre><span></span><span class="o">(</span>todo<span class="o">)</span> onem@local:~$ git clone None
-</pre></div>
-
-
 <h3 id="dependencies">Dependencies</h3>
 <p>We first need to install the dependencies and create the database.</p>
-<div class="codehilite"><pre><span></span><span class="o">(</span>todo<span class="o">)</span> onem@local:~$ <span class="nb">cd</span> django-onem-todo
-<span class="o">(</span>todo<span class="o">)</span> onem@local:~$ pip install -r requirements.txt
-<span class="o">(</span>todo<span class="o">)</span> onem@local:~$ python manage.py migrate
+<div class="codehilite"><pre><span></span><span class="o">(</span>django-onem-todo<span class="o">)</span> onem@local:~/django-onem-todo$ pip install -r requirements.txt
+<span class="o">(</span>django-onem-todo<span class="o">)</span> onem@local:~/django-onem-todo$ python manage.py migrate
 </pre></div>
 
 
 <h3 id="start-the-server">Start the server</h3>
-<div class="codehilite"><pre><span></span><span class="o">(</span>todo<span class="o">)</span> onem@local:~$ python manage.py runserver
+<div class="codehilite"><pre><span></span><span class="o">(</span>django-onem-todo<span class="o">)</span> onem@local:~/django-onem-todo$ python manage.py runserver
 </pre></div>
 
 

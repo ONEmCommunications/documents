@@ -1452,21 +1452,43 @@
 <h3 id="constraints">Constraints</h3>
 <ul>
 <li>cannot be empty</li>
-<li>allowed children: text, <code>&lt;p&gt;</code>, <code>&lt;br/&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;ul&gt;</code>, 
+<li>allowed children: text, <code>&lt;p&gt;</code>, <code>&lt;br/&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;ul&gt;</code>,
 <code>&lt;input&gt;</code>, <code>&lt;label&gt;</code></li>
 </ul>
 <h3 id="attributes">Attributes</h3>
 <ul>
 <li><code>header</code> (string) - alternative to <code>&lt;header&gt;</code> child</li>
 <li><code>footer</code> (string) - alternative to <code>&lt;footer&gt;</code> child</li>
-<li><code>name</code> (string) - identifier within a <code>&lt;form&gt;</code>. If the <code>&lt;section&gt;</code> is not
-part of a form, this attribute is ignored</li>
+<li><code>name</code> (string) - identifier within a <code>&lt;form&gt;</code>. Ignored if not inside a
+<code>&lt;form&gt;</code>.</li>
 <li><code>auto-select</code> (boolean) - whether to select automatically the single option
 in a menu if it's the case</li>
 <li><code>multi-select</code> (boolean) - whether to allow selecting multiple items in a
-list</li>
+list. Ignored if not inside a <code>&lt;form&gt;</code>.</li>
 <li><code>numbered</code> (boolean) - whether to prefix the options with numbers (otherwise
-the prefixes will be letters)</li>
+the prefixes will be letters). Ignored if not inside a <code>&lt;form&gt;</code>.</li>
+<li><code>chunking-footer</code> (string) - shown in the footer of the sms chunks. Ignored if
+not inside a <code>&lt;form&gt;</code>.</li>
+<li><code>confirmation-label</code> (string) - shown in the confirmation menu. Ignored if
+not inside a <code>&lt;form&gt;</code>.</li>
+<li><code>method</code> (string) - http method, how the callback url should be triggered.
+Ignored if not inside a <code>&lt;form&gt;</code>.</li>
+<li><code>required</code> (boolean) - can be skipped if set to false. Ignored if not inside a
+<code>&lt;form&gt;</code>.</li>
+<li><code>status-exclude</code> (boolean) - if true this step will be excluded from the form
+completion status.Ignored if not inside a <code>&lt;form&gt;</code>.</li>
+<li><code>status-prepend</code> (boolean) - if true this step will be prepended to the body
+pre of the response - appended otherwise. Ignored if not inside a <code>&lt;form&gt;</code>.</li>
+<li><code>url</code> (string) - callback url triggered right after the choice has been set
+for this form item. Ignored if not inside a <code>&lt;form&gt;</code>.</li>
+<li><code>validate-type-error</code> (string) - an error message to be shown on basic type
+validation. Ignored if not inside a <code>&lt;form&gt;</code>.</li>
+<li><code>validate-type-error-footer</code> (string) - shown in the error message footer.
+Ignored if not inside a <code>&lt;form&gt;</code>.</li>
+<li><code>validate-url</code> (string) - the callback url path (GET) triggered to validate
+user input with query string <code>?name=user_input</code> - url must return JSON content
+{"valid": true/false, "error": "Some validation error message"}. Ignored if
+not inside a <code>&lt;form&gt;</code>.</li>
 </ul>
 <h3 id="example">Example</h3>
 <div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
@@ -1492,7 +1514,7 @@ the prefixes will be letters)</li>
 
 
 <h2 id="ltheadergt"><strong><code>&lt;header&gt;</code></strong></h2>
-<p>Declares the header of a message. It overwrites the <code>header</code> attribute from 
+<p>Declares the header of a message. It overwrites the <code>header</code> attribute from
 <code>&lt;section&gt;</code>. It is formatted automatically before is sent to the user.</p>
 <h3 id="constraints_2">Constraints</h3>
 <ul>
@@ -1509,8 +1531,8 @@ the prefixes will be letters)</li>
 
 
 <h2 id="ltfootergt"><strong><code>&lt;footer&gt;</code></strong></h2>
-<p>Declares the footer of a message. It overwrites the footer attribute from <section>. It 
-should be relative short line of text and it is shown in the last chunk of a message, 
+<p>Declares the footer of a message. It overwrites the footer attribute from <section>. It
+should be relative short line of text and it is shown in the last chunk of a message,
 preceded by <code>--</code>.</p>
 <h3 id="constraints_3">Constraints</h3>
 <ul>
@@ -1562,7 +1584,7 @@ automatically prefixed  by a letter or a number. See <li> tag.</p>
 
 <h2 id="ltligt"><strong><code>&lt;li&gt;</code></strong></h2>
 <p>Declares a list item. If it contains an <code>&lt;a&gt;</code> tag, it will be selectable,
-prefixed with a letter or a number. Otherwise it’s just an unselectable 
+prefixed with a letter or a number. Otherwise it’s just an unselectable
 separator item.</p>
 <h3 id="constraints_6">Constraints</h3>
 <ul>
@@ -1613,6 +1635,12 @@ a form context</li>
 
 
 <h2 id="ltinputgt"><strong><code>&lt;input&gt;</code></strong></h2>
+<p>Used inside forms to request specific input types from user. Only one
+<code>&lt;input/&gt;</code> tag is permitted per section. If many are present, only the
+first one is considered. Outside <code>&lt;form&gt;</code> tags, the <code>&lt;input/&gt;</code> tag is
+ignored.</p>
+<p>For asking the user to select from a predefined list of options, the
+<code>&lt;ul&gt;...&lt;/ul&gt;</code> tag must be used instead of <code>&lt;input/&gt;</code>.</p>
 <h3 id="constraints_8">Constraints</h3>
 <ul>
 <li>allowed children: no</li>
@@ -1621,7 +1649,25 @@ a form context</li>
 <ul>
 <li><code>type</code> (string) - describes the data type expected by the app as response
 from the user. The platform will convert the text input to the specified type.
-Supported values: "text", "date", "datetime"</li>
+Supported values:<ul>
+<li>"text" - the user input is validated as text</li>
+<li>"date" - the user input is validated as date</li>
+<li>"datetime" - the user input is validated as datetime</li>
+<li>"number" - the user input is validated as any number (if integer is wanted,
+use <code>type="number"</code> with <code>step="1"</code>)</li>
+<li>"hidden" - won't be displayed</li>
+</ul>
+</li>
+<li><code>min</code> (number) - validates the user input - for type=number</li>
+<li><code>min_error</code> (string) - message to be shown on min error</li>
+<li><code>minlength</code> (integer) - validates the user input - for type=text</li>
+<li><code>minlength_error</code> (string) - message to be shown on minlength error</li>
+<li><code>max</code> (number) - validates the user input - for type=number</li>
+<li><code>max_error</code> (string) - message to be shown on max error</li>
+<li><code>maxlength</code> (integer) - validates the user input - for type=text</li>
+<li><code>maxlength_error</code> (string) - message to be shown on maxlength error</li>
+<li><code>step</code> (integer) - specifies the legal number intervals for input field</li>
+<li><code>value</code> (string) - required for type=hidden</li>
 </ul>
 <h3 id="example_8">Example</h3>
 <div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
@@ -1658,7 +1704,7 @@ Supported values: "text", "date", "datetime"</li>
 <h3 id="attributes_4">Attributes</h3>
 <ul>
 <li><code>action</code> (string) - a path in the app where the result of the form is sent</li>
-<li><code>method</code> (string) - the HTTP method used for sending the result of the form. 
+<li><code>method</code> (string) - the HTTP method used for sending the result of the form.
 Allowed values: <code>POST</code>, <code>GET</code>, <code>PATCH</code>, <code>PUT</code>.</li>
 <li><code>header</code> (string) - the header displayed in all the form's items that do not
 declare a header</li>
@@ -1669,7 +1715,7 @@ within the form</li>
 <li><code>completion-status-in-header</code> (boolean) - if <code>true</code>, show the user's
 progress in header, otherwise in body; ignored if <code>completion-status-show</code> is
 false.</li>
-<li><code>confirmation-needed</code> (boolean) - whether to add an additional form item for 
+<li><code>confirmation-needed</code> (boolean) - whether to add an additional form item for
 confirmation.</li>
 </ul>
 <h3 id="example_10">Example</h3>

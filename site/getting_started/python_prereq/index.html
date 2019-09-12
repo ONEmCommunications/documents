@@ -487,8 +487,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#install-virtualenvwrapper-for-an-easier-virtual-environment-management" title="Install virtualenvwrapper for an easier virtual environment management" class="md-nav__link">
-    Install virtualenvwrapper for an easier virtual environment management
+  <a href="#install-pipenv-for-an-easier-virtual-environment-management" title="Install pipenv for an easier virtual environment management" class="md-nav__link">
+    Install pipenv for an easier virtual environment management
   </a>
   
 </li>
@@ -854,8 +854,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#install-virtualenvwrapper-for-an-easier-virtual-environment-management" title="Install virtualenvwrapper for an easier virtual environment management" class="md-nav__link">
-    Install virtualenvwrapper for an easier virtual environment management
+  <a href="#install-pipenv-for-an-easier-virtual-environment-management" title="Install pipenv for an easier virtual environment management" class="md-nav__link">
+    Install pipenv for an easier virtual environment management
   </a>
   
 </li>
@@ -909,14 +909,14 @@ you have installed the following:</p>
 <p>Run the following command in your terminal</p>
 <ul>
 <li>
-<p>Debian: </p>
+<p>Debian, Ubuntu, Deepin, LinuxMint: </p>
 <div class="codehilite"><pre><span></span>$ sudo apt-get install git
 </pre></div>
 
 
 </li>
 <li>
-<p>Centos: </p>
+<p>Centos, Fedora: </p>
 <div class="codehilite"><pre><span></span>$ sudo yum install git
 </pre></div>
 
@@ -929,6 +929,16 @@ you have installed the following:</p>
 
 
 </li>
+<li>
+<p>Windows:</p>
+<p>There are a few ways to install Git on Windows.</p>
+<p>The official build is available on the Git website; go to 
+<a href="https://git-scm.com/download/win">git-scm.com/download/win</a> and the download 
+will start automatically. Run the setup and follow the instructions.</p>
+<p>If you use <strong>Chocolatey</strong> manager on Windows, then you can install the git 
+package as instructed <a href="https://chocolatey.org/packages/git">here</a>. Note that the
+<strong>Chocolatey</strong> package is community maintained.</p>
+</li>
 </ul>
 <h3 id="install-python-37">Install python &gt;= 3.7</h3>
 <p>Developing a ONEm application requires at least python 3.7. Not to mess up with your 
@@ -939,7 +949,7 @@ because pyenv installs Python by building from source.
 Here's what you need to do.</p>
 <ul>
 <li>
-<p>Debian:</p>
+<p>Debian, Ubuntu, Deepin, LinuxMint:</p>
 <div class="codehilite"><pre><span></span>$ sudo apt-get update
 $ sudo apt-get upgrade
 $ sudo apt-get dist-upgrade
@@ -953,7 +963,7 @@ $ sudo apt-get install libssl-dev openssl
 
 </li>
 <li>
-<p>Centos:</p>
+<p>Centos, Fedora:</p>
 <div class="codehilite"><pre><span></span>$ sudo yum install zlib-devel bzip2 bzip2-devel readline-devel sqlite <span class="se">\</span>
                    sqlite-devel openssl-devel xz xz-devel libffi-devel
 </pre></div>
@@ -987,7 +997,7 @@ completed, open a new terminal window and type:</p>
 <h4 id="install-pyenv">Install <code>pyenv</code>:</h4>
 <ul>
 <li>
-<p>Debian</p>
+<p>Debian, Ubuntu, Deepin, LinuxMint, CentOS, Fedora:</p>
 <div class="codehilite"><pre><span></span>$ curl https://pyenv.run <span class="p">|</span> bash
 </pre></div>
 
@@ -996,7 +1006,7 @@ completed, open a new terminal window and type:</p>
 for more info.</p>
 </li>
 <li>
-<p>Mac os:</p>
+<p>Mac OS:</p>
 <div class="codehilite"><pre><span></span>$ brew install pyenv
 </pre></div>
 
@@ -1012,8 +1022,17 @@ for more info.</p>
 
 
 </li>
+<li>
+<p>Windows:</p>
+<p>Please note that <code>pyenv</code> is not currently supported on Windows.</p>
+<p>If you do want to use a Python version manager for Windows, you can give it a
+try to <a href="https://pypi.org/project/pyenv-win/">pyenv-win</a>.</p>
+</li>
 </ul>
 <h4 id="install-python-37-or-above-using-pyenv">Install <code>python 3.7</code> or above using <code>pyenv</code></h4>
+<ul>
+<li>
+<p>Debian, Ubuntu, Deepin, LinuxMint, CentOS, Fedora, Mac OS:  </p>
 <p>Example:</p>
 <div class="codehilite"><pre><span></span>$ pyenv install <span class="m">3</span>.7.0
 </pre></div>
@@ -1021,10 +1040,45 @@ for more info.</p>
 
 <!-- $ SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk pyenv install 3.7.0 -->
 
-<h4 id="install-virtualenvwrapper-for-an-easier-virtual-environment-management">Install <code>virtualenvwrapper</code> for an easier virtual environment management</h4>
-<p>Follow the instructions <a href="https://virtualenvwrapper.readthedocs.io/en/latest/install.html">here</a></p>
+</li>
+<li>
+<p>Windows:</p>
+<p>Example with <code>pyenv-win</code>:</p>
+<div class="codehilite"><pre><span></span>$ pyenv install <span class="m">3</span>.7.0
+</pre></div>
+
+
+<p>Alternatively, download the latest Python version available for Windows from
+<a href="https://www.python.org/downloads/windows/">official website</a>. Run the 
+installer and make sure to check the box that says <strong>Add Python 3.x to PATH</strong> 
+to ensure that the interpreter will be placed in the execution path.
+Then click <strong>Install Now</strong> and that should be all.</p>
+</li>
+</ul>
+<h4 id="install-pipenv-for-an-easier-virtual-environment-management">Install <code>pipenv</code> for an easier virtual environment management</h4>
+<ul>
+<li>
+<p>Debian, Ubuntu, Deepin, LinuxMint, CentOS, Fedora:</p>
+<div class="codehilite"><pre><span></span>$ sudo pip install pipenv
+</pre></div>
+
+
+</li>
+<li>
+<p>Mac OS:</p>
+<div class="codehilite"><pre><span></span>$ brew install pipenv
+</pre></div>
+
+
+<p>or use:</p>
+<div class="codehilite"><pre><span></span>$ pip install pipenv --user python
+</pre></div>
+
+
+</li>
+</ul>
 <h3 id="install-ngrok">Install ngrok</h3>
-<p>If you are planning to run the application on your local machine, please download and install <code>ngrok</code> as described on <a href="https://ngrok.com/download">the official website</a>.</p>
+<p>Please download and install <code>ngrok</code> as described on <a href="https://ngrok.com/download">the official website</a>.</p>
 <h3 id="install-an-ide">Install an IDE</h3>
 <p>If you don't already have a preferred IDE, there is plenty you can choose from. Here is a
 list of IDEs in no particular order:</p>
