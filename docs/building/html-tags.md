@@ -12,30 +12,36 @@ A `<section>` body represents the SMS sent to the user by a micro-app.
 
 - `header` (string) - alternative to `<header>` child
 - `footer` (string) - alternative to `<footer>` child
-- `name` (string) - identifier within a `<form>`. If the `<section>` is not
-part of a form, this attribute is ignored
+- `name` (string) - identifier within a `<form>`. Ignored if not inside a
+`<form>`.
 - `auto-select` (boolean) - whether to select automatically the single option
 in a menu if it's the case
 - `multi-select` (boolean) - whether to allow selecting multiple items in a
-list
+list. Ignored if not inside a `<form>`.
 - `numbered` (boolean) - whether to prefix the options with numbers (otherwise
-the prefixes will be letters)
-- `chunking-footer` (string) - shown in the footer of the sms chunks
-- `confirmation-label` (string) - shown in the confirmation menu
-- `method` (string) - http method, how the callback url should be triggered
-- `required` (boolean) - can be skipped if set to false
+the prefixes will be letters). Ignored if not inside a `<form>`.
+- `chunking-footer` (string) - shown in the footer of the sms chunks. Ignored if
+not inside a `<form>`.
+- `confirmation-label` (string) - shown in the confirmation menu. Ignored if
+not inside a `<form>`.
+- `method` (string) - http method, how the callback url should be triggered.
+Ignored if not inside a `<form>`.
+- `required` (boolean) - can be skipped if set to false. Ignored if not inside a
+`<form>`.
 - `status-exclude` (boolean) - if true this step will be excluded from the form
-completion status
+completion status.Ignored if not inside a `<form>`.
 - `status-prepend` (boolean) - if true this step will be prepended to the body
-pre of the response - appended otherwise
+pre of the response - appended otherwise. Ignored if not inside a `<form>`.
 - `url` (string) - callback url triggered right after the choice has been set
-for this form item
+for this form item. Ignored if not inside a `<form>`.
 - `validate-type-error` (string) - an error message to be shown on basic type
-validation
-- `validate-type-error-footer` (string) - shown in the error message footer
+validation. Ignored if not inside a `<form>`.
+- `validate-type-error-footer` (string) - shown in the error message footer.
+Ignored if not inside a `<form>`.
 - `validate-url` (string) - the callback url path (GET) triggered to validate
 user input with query string `?name=user_input` - url must return JSON content
-{"valid": true/false, "error": "Some validation error message"}
+{"valid": true/false, "error": "Some validation error message"}. Ignored if
+not inside a `<form>`.
 
 ### Example
 
