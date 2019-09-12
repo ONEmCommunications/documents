@@ -201,6 +201,14 @@ It is used for redirection to other locations.
 
 ## **`<input>`**
 
+Used inside forms to request specific input types from user. Only one
+`<input/>` tag is permitted per section. If many are present, only the
+first one is considered. Outside `<form>` tags, the `<input/>` tag is
+ignored.
+
+For asking the user to select from a predefined list of options, the
+`<ul>...</ul>` tag must be used instead of `<input/>`.
+
 ### Constraints
 - allowed children: no
 
