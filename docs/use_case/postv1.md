@@ -1,6 +1,13 @@
 This initial version of the demo #post app will allow you to create and visualise your own post(s). It will also showcase examples of the ONEM's python SDK usage.
 
-So let's activate our virtualenv and navigate to the **postv1** folder. Make sure that:
+So let's navigate to the **postv1** folder and create/activate our virtual environment:
+
+```bash
+onem@local:~$ cd ~/postv1 ; pipenv shell --python 3.7
+```
+
+
+Also please make sure that:
 
  - the database is created (even if we will store the posts in-memory).
  - local django server is started.
@@ -8,7 +15,14 @@ So let's activate our virtualenv and navigate to the **postv1** folder. Make sur
  - the application is registered.
 All of the above steps are explained in the [run locally](/getting_started/python_run_local/) section of the docs.
 
-Now we can access the app from the test client. We should get the below menu:
+
+To register your application please open [ONEm Developer Portal]({{ links.portal }}) and register for a free account.
+
+Once that is done, you will have an option to create an app. Hit that button and place the url obtaine from ngrok as the callback url.
+
+In the developer portal there is a `Test Client` section. This is a phone simulator from where you can test the app.
+We can now access the application by placing a hashtag in front of the name. So let's send: `#name-of-your-app`
+
 ```bash
 #POSTV1 MENU
 Please choose a username
@@ -23,11 +37,13 @@ B My posts
 --Reply A-B
 ```
 
+_*the name of your app will be different, as chosen in the developer portal_
+
 You can go ahead and create a post or two which you can later visualise in the **My post** section of the app.
 
 Code-wise you can inspect the below classes from the *views.py* file:
 
- - *class AddPostView(View)* - used for creating a new post and caching it in-memory. This class uses the SDK's **Form** structure. A **Form** contains **FormItemsContent** items which have specific properties like **name**, **description**, **header** etc:
+ - *class AddPostView(View)* - used for creating a new post and caching it in-memory. This class uses the SDK's **Form** structure. A **Form** contains **FormItems** items which have specific properties like **name**, **description**, **header** etc:
 ```
 FormItemContent(type=FormItemContentType.string,
         name='title',
