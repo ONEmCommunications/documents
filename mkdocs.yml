@@ -69,6 +69,7 @@ extra:
   links:
     portal: !!python/object/apply:os.getenv ['DEV_PORTAL_SITE']
     api: !!python/object/apply:os.getenv ['RESTDAPI_DOCS']
+    schema_url: !!python/object/apply:os.getenv ['SWAGGER_SCHEMA_URL']
   todo_app:
     github_py_url: !!python/object/apply:os.getenv ['TODO_APP_GITHUB_PY_URL']
 

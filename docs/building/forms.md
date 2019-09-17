@@ -4,82 +4,87 @@ It is composed by a **header**, a **body** and a **footer**. The body represents
 
 The form items are being processed in a successive manner. After all the form items have been processed, the user can confirm his choices or reset any of them.
 
-## <a name="json-structure"></a> Json Structure
+## JSON Structure
+
+<span style="font-size:13px;">_All fields prefixed with a star (*) are required_</span>
 
 Your server must return a JSON response with the following structure:
 
-```
-Form
-    type   - (string) defaults to "form"
-    header - (string) The header of the firn
-    body   - (array) FormItem or FormItemMenu objects - see below
-    footer - (string) The footer of the form
-    path   - (string) Next route callback path, accessed after form is finished
-    method - (string) Http method indicating how to trigger the path
-    meta   - (object) FormMeta object - see below
+## Form
 
-FormMeta
-    completion_status_show      - (bool) indicates a form completion status
-    completion_status_in_header - (bool) indicates the status in the header
-    confirmation_needed         - (bool) shows a menu at the end of the form so user can confirm the choices
-    
-FormItem
-    type - (string) enum: "string", "hidden", "int", "float", "date", "datetime", "form-menu"
-        "string"    - the user should enter a string during this step
-        "hidden"    - will not be displayed to the user
-        "int"       - the user should enter a valid number
-        "float"     - the user could enter a floating number
-        "date"      - the user should enter a date
-        "datetime"  - the user should enter a date and time
-        "form-menu" - the user should choose an option from the menu
+|  KEY     |  TYPE  | NOTES |
+|----------|--------|------------------------------------------------------|
+| * type   | string | Indicates the type of the object, defaults to `"form"`. |
+| * body   | array  | Composed of [`FormItem`](#formitem) objects. |
+| * path   | string | Callback path url used to send the serialized form data. |
+| method   | string | HTTP method indicating how to trigger the path. Defaults to `POST`. |
+| header   | string | The header of the form. |
+| footer   | string | The footer of the form. |
+| meta     | object | [`FormMeta`](#formmeta) object. |
 
-    name                       - (string) the name of this FormItem, used in form serialization
+### FormMeta
 
-    body                       - (array of objects) MenuItemFormItem objects - see below - required only for type=form-menu
-    chunking_footer            - (string) shown in the footer of the sms chunks
-    confirmation_label         - (string) shown in the confirmation menu
-    description                - (string) the description of this FormItem
-    footer                     - (string) if provided will overwrite the Form.footer
-    header                     - (string) if provided will overwrite the Form.header
-    max_length                 - (int) validates the user input - for type=string
-    max_length_error           - (string) message to be shown on max_length error
-    max_value                  - (int) validates the user input - for type=int|float
-    max_value_error            - (string) message to be shown on max_value error
-    meta                       - (object) MenuFormItemMeta object - see below - applies only for type=form-menu
-    method                     - (string) http method, how the callback url should be triggered
-    min_length                 - (int) validates the user input - for type=string
-    min_length_error           - (string) message to be shown on min_length error
-    min_value                  - (int) validates the user input - for type=int|float
-    min_value_error            - (string) message to be shown on min_value error
-    required                   - (bool) can be skipped if set to false
-    status_exclude             - (bool) if true this step will be excluded from the form completion status
-    status_prepend             - (bool) if true this step will be prepended to the body pre of the response - appended otherwise
-    url                        - (string) callback url triggered right after the choice has been set for this form item
-    validate_type_error        - (string) an error message to be shown on basic type validation
-    validate_type_error_footer - (string) shown in the error message footer
-    validate_url               - (string) the callback url path (GET) triggered to validate user input with query string ?name=user_input - url must return json content {'valid': True/False, 'error': 'Some validation error message'}
-    value                      - (string) required for type=hidden
-    
+|  KEY     |  TYPE  | NOTES |
+|----------|--------|------------------------------------------------------|
+| completion_status_show      | bool | If `true` will show a completion status. Defaults to `false`. |
+| completion_status_in_header | bool | If `true` will indicate the status in the header. Defaults to `false` (shown below header). |
+| confirmation_needed         | bool | If `false` will not ask for confirmation. Defaults to `true`. |
 
-MenuItemFormItem
-    type - (string) enum: "option", "content"
-        "option"  - needs a value
-        "content" - does not need a value - shows content as indicated in description
+### FormItem
 
-    value       - (string) the value of this MenuItemFormItem, used in form serialization
-    description - (string) the description of this MenuItemFormItem
+|  KEY     |  TYPE  | NOTES |
+|----------|--------|------------------------------------------------------|
+| * type | string | Can be one of the following:  <ul> <li>`"string"`    - The user should enter a string during this step.</li> <li>`"hidden"`    - Will not be displayed to the user. Used to pass data in the serialized form. </li> <li>`"int"`       - The user should enter a valid number.  </li> <li>`"float"`     - The user could enter a floating number.  </li> <li>`"date"`      - The user should enter a date. ISO 8601 format or human readable inputs like: "2 days ago", "yesterday", "today", "tomorrow", "in 2 days"  </li> <li>`"datetime"`  - The user should enter a date. ISO 8601 format or human readable inputs like: "2 days ago", "yesterday", "today", "tomorrow", "in 2 days" </li> <li>`"form-menu"` - The user should choose an option from the menu.  </li> <li>`"email"`     - The user should enter a valid email address.  </li> <li>`"url"`       - The user should enter a valid url.  </li> <li>`"location"`  - The user should enter a valid location. </li> </ul> |
+| * name                       | string | The name of this `FormItem` used in form serialization. |
+| ** body                      | array | Composed of [`MenuItemFormItem`](#menuitemformitem) objects <br> ** required only for `"type" : "form-menu"`. |
+| * description                | string | The description of this ``FormItem``. |
+| chunking_footer            | string | Shown in the footer of the sms chunks. |
+| confirmation_label         | string | Shown in the confirmation menu. |
+| footer                     | string | If provided will overwrite the `Form.footer`. |
+| header                     | string | If provided will overwrite the `Form.header`. |
+| max_length                 | int | Validates the user input. <br> Applies only for `"type": "string"` |
+| max_length_error           | string | Message to be shown on max_length error. |
+| max_value                  | int | Validates the user input. <br> Applies only for  `"type": "int, float"` |
+| max_value_error            | string | Message to be shown on max_value error. |
+| meta                       | object | [`MenuFormItemMeta`](#menuformitemmeta) object. <br>Applies only for `"type": "form-menu"` |
+| min_length                 | int | Validates the user input. <br> Applies only for `"type": "string"` |
+| min_length_error           | string | Message to be shown on min_length error. |
+| min_value                  | int | Validates the user input. <br> Applies only for  `"type": "int, float"` |
+| min_value_error            | string | Message to be shown on min_value error. |
+| required                   | bool | User can `SKIP` this `FormItem` if set to `false`. |
+| status_exclude             | bool | If `true` this step will be excluded from the form completion status. |
+| status_prepend             | bool | If `true` this step will be prepended to the body of the response. Appended otherwise. |
+| validate_type_error        | string | An error message to be shown on basic type validation. |
+| validate_type_error_footer | string | Shown in the error message footer. |
+| validate_url               | string | The callback url path `GET` triggered to validate user input. <br> A query string is sent by ONEm: `?form_item_name=user_input` <br> The url must return json response: `{"valid": true/false, "error": "Some message in case of validation errors"}` |
+| value                      | string | Value to pass in the form serialization data. <br> Applies only for `"type": "hidden"` |
 
 
-MenuFormItemMeta
-    auto_select  - (bool) will be automatically selected if set to true and in case of a single option in the menu
-    multi_select - (bool) allows multiple options to be selected
-    numbered     - (bool) display numbers instead of letters for option markers
+### MenuItemFormItem
 
-```
+|  KEY     |  TYPE  | NOTES |
+|----------|--------|------------------------------------------------------|
+| type | string | Can be one of the following: <ul> <li> `"option"`  - Indicates an option and needs a `value` </li> <li> `"content"`  - Does not need a value and it is only used for presentational purposes </li> </ul> |
+| ** value | string | The value for this `MenuItemFormItem` used in form serialization <br> ** required only for `"type": "option"` |
+| description | string | The description for this `MenuItemFormItem`. |
+| text_search | string | If the user does not send a proper option marker and sends some input, this field will be used to search and narrow down the options against the user input. <br> max 1000 chars |
 
-Example:
 
-```
+### MenuFormItemMeta
+
+|  KEY     |  TYPE  | NOTES |
+|----------|--------|------------------------------------------------------|
+| auto_select  | bool | Will be automatically selected if set to true and in case of a single option in the menu. |
+| multi_select | bool | Allows multiple options to be selected. |
+| numbered     | bool | Display numbers instead of letters for option markers. |
+
+## Swagger
+
+The schema can also be found on Swagger Hub [here]({{ links.schema_url }})
+
+## JSON Example
+<div style="max-height:300px;overflow:auto;">
+```javascript
 {
     "body": [
         {
@@ -96,7 +101,7 @@ Example:
             "description": "Provide a due date"
         },
         {
-            "type": "menu",
+            "type": "form-menu",
             "name": "prio",
             "header": "priority",
             "body": [
@@ -123,6 +128,7 @@ Example:
     "type": "form"
 }
 ```
+</div>
 
 Notice the **'type': 'form'** key value pair, which indicates the form response.
 
@@ -160,25 +166,25 @@ After all steps have been processed, as indicated through **method** and **path*
 So the POST will look like: **?descr=some_description&due_date=2019-10-10&prio=high**
 
 
-## Type
+### Type
 The response **type** should be equal to **form** to indicate a form response.
 
 
-## Header
+### Header
 The header of the form is indicated through **header** key. This value is not final and will be altered by the ONEm platform, by making it uppercased and placing the name of your app in front of it.
 
-## Body
+### Body
 The body holds an array of objects. Each object is called a FormItem and it is described in the [Json Structure](#json-structure)
 
-## Footer
+### Footer
 The footer of the form is indicated through **footer** key and like the header of the form, it is not final and will be altered by the ONEm platform. If no footer is specified, a default might be set.
 
-## Path & Method
+### Path & Method
 The path set in the Form object is triggered right after the form has been finished and confirmed by the user.
 
 All the values will be sent to your callback path as a form serialized data, ie object with key value pairs: name_of_the_form_item = user_input
 
 If there is a form-menu FormItem with multi_select set and the user chooses more than one option, then the value of the corresponding pair will be an array of the selected values.
 
-## Meta
+### Meta
 The meta key holds a FormMeta object used to indicate certain behaviors for the Form.

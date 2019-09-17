@@ -4,23 +4,35 @@ This means that no **path** or **method** are needed in the **content** item of 
 
 ## Json Structure
 
+<span style="font-size:13px;">_All fields prefixed with a star (*) are required_</span>
+
 Your server must return a JSON response with the following structure:
 
-```
-Menu
-    type   - (string) defaults to "menu"
-    header - (string) The header of the menu
-    body   - (array) MenuItem objects - see below
-    footer - (string) The footer of the menu
 
-MenuItem
-    type        - (string) enum: "content"
-        "content" - shows content as indicated in description - see below
+## Menu
 
-    description - (string) The description of this MenuItem
-```
+|  KEY     |  TYPE  | NOTES |
+|----------|--------|--------------------------------------------------------|
+| * type   | string | Indicates the type of the object, defaults to `"menu"` |
+| * body   | array  | Composed of [`MenuItem`](#menuitem) objects |
+| header   | string | The header of the menu |
+| footer   | string | The footer of the menu |
 
-Example:
+
+### MenuItem
+
+|  KEY     |  TYPE  | NOTES |
+|----------|--------|------------------------------------------------------|
+| * type | string | Defaults to `"content"` |
+| description | string | The description for this [`MenuItem`](#menuitem). |
+
+Your server must return a JSON response with the following structure:
+
+## Swagger
+
+The schema can also be found on Swagger Hub [here]({{ links.schema_url }})
+
+## JSON Example
 
 ```
 {'body': [{'description': 'Your task has been created!',
