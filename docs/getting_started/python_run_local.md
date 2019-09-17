@@ -25,6 +25,7 @@ We first need to install the dependencies and create the database.
 (django-onem-todo) onem@local:~/django-onem-todo$ pip install -r requirements.txt
 (django-onem-todo) onem@local:~/django-onem-todo$ python manage.py migrate
 ```
+Note: the `migrate` command will create a local sqlite database.
 
 ### Start the server
 

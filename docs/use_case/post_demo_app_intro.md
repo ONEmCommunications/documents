@@ -1,8 +1,10 @@
-In this tutorial we are going to present 3 versions of ONEm's #post application. The apps are written using the Django framework ONEm's Python SDK.
+**#post** micro-app is a collaborative application that serves as a virtual post board where users can post small adds sharing information or services. Users can post, edit and view adds, search by keyword, contact the add owner, comment and rate.
 
-- **postv1** - a stripped down version of the service; we will be able to create, store and view posts
-- **postv2** - on top of v1, we will now add a Search wizard so we can search by keyword/code in all saved posts (ours or others)
-- **postv3** - on top of v2, we will enable interactions with ONEm's restdAPI
+In this tutorial we are going to present 3 versions of ONEm's #post application. The apps are written in the Django framework using ONEm's Python SDK.
+
+- **#postv1** - a stripped down version of the service; we will be able to create, store and view posts
+- **#postv2** - on top of v1, we will now add a Search wizard so we can search by keyword/code in all saved posts (ours or others)
+- **#postv3** - on top of v2, we will enable interactions with ONEm's restdAPI
 
 For prerequisites and running any of the 3 apps locally please refer to: [prerequisites](/getting_started/python_prereq) and [run locally](/getting_started/python_run_local/) tutorials.
 
@@ -10,7 +12,6 @@ For prerequisites and running any of the 3 apps locally please refer to: [prereq
 Notes: 
 
 1) The project containing these 3 apps can be cloned from here: [**post-demo-app**](https://github.com/ONEmCommunications/post-demo-app)
-or
 ```bash
 onem@local:~$ git clone https://github.com/ONEmCommunications/post-demo-app
 ```
@@ -47,7 +48,11 @@ The inner [projectname] folder contains the following files:
     views.py
 ```
 
+
 For our postv1, v2 and v3 apps it is worth mentioning about:
 
 - the **models.py** file - the model for a `post` enitity is described here. Django models define the structure of stored data. We will be using this in **postv2** and **postv3** to store our posts in a local database.
 - the **views.py** file - it is here where most of the code interacting with the ONEm platform and the ONEm SDK will reside. At their simplest, the views are a Python function or class that takes a web request and return a web response. They are used to do things like fetch objects from the database, modify those objects if needed, render forms, return HTML, and much more.
+
+
+For more info about the internals of the Django framework, please visit the oficial documentation here [Django docs](https://docs.djangoproject.com).
