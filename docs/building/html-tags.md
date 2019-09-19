@@ -222,6 +222,9 @@ Supported values:
     - "number" - the user input is validated as any number (if integer is wanted,
     use `type="number"` with `step="1"`)
     - "hidden" - won't be displayed
+    - "email" - the user input is validated as email address
+    - "location" - the user input is validated as location
+    - "url" - the user input is validated as url
 - `min` (number) - validates the user input - for type=number
 - `min_error` (string) - message to be shown on min error
 - `minlength` (integer) - validates the user input - for type=text
