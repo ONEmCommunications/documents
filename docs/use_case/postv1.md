@@ -74,4 +74,4 @@ content = Menu(body=menu_items, footer='Reply MENU')
 For each of these classes you can modify the code to add new items, remove them, show different labels etc and see the result by saving these changes and revisiting the app in the test client.
 
 
-For **post v2** we are going to add a search functionality which will further explain how a **Form** works.
+For **post v2** we are going to add a search functionality which will further explain how a **Form** works and also store our posts in a lightweight local database.
