@@ -20,14 +20,13 @@ nav:
 
     - Getting started:
           - At a glance: getting_started/glance.md
+          - Run in 60 seconds: getting_started/run_remote_60s.md
           - Python:
               - Pre-requisites: getting_started/python_prereq.md
               - Run locally: getting_started/python_run_local.md
-              - Run remotely: getting_started/python_run_remote.md
           - Node.js:
               - Pre-requisites: getting_started/nodejs_prereq.md
               - Run locally: getting_started/nodejs_run_local.md
-              - Run remotely: getting_started/nodejs_run_remote.md
     - Building:
         - How to register your app: building/register.md
         - Structure:
