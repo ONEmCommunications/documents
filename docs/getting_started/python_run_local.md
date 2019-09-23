@@ -101,3 +101,119 @@ The above sms response is rendered based on the HTTP json response returned by o
 If we look in the `todo.todo.views` we can see that `HomeView` view which is handling the `/` route is basically returning a [Menu](/building/menus/) json object.
 
 Every menu item contains a callback path, as described in the json structure [here](/building/menus/#json-structure) and once the user selects one of the menu items, an HTTP request will be made towards that callback path, a new json structure is returned by our web server, so a different sms response is presented to the user.
+
+
+### Tweak the application
+
+Let's tweak the application a little bit. Say we want to allow the user to set the priority for the todo item and at the same time not enforce this.
+
+We first need to ask the user for the priority, when creating the todo item. We do that by adding an extra step in the body form returned by our `TaskCreateView.get` method.
+
+The form item looks like the one below.
+
+```
+onem.FormItem(                                                         
+    type=onem.FormItemType.form_menu,                                  
+    name='prio',                                                       
+    description='Set priority or SKIP',                                
+    required=False,                                                    
+    body=[                                                             
+        onem.MenuItemFormItem('High priority', Task.HIGH),             
+        onem.MenuItemFormItem('Low priority', Task.LOW)                
+    ]                                                                  
+) 
+```
+
+Explained:
+
+- represents a menu inside a form as indicated in the `type` argument
+- the `name` of the item is `prio` and it matches how our `Task` model is defined
+- by making it not `required` the user can skip this step by sending `SKIP` to the platform
+- the `body` contains two menu items mapped to values `Task.HIGH` and `Task.LOW`, strings defined on our `Task` model
+
+The form item should be rendered as follows:
+
+```
+#TODO
+Set priority or SKIP
+A High priority
+B Low priority
+--Reply A-B
+```
+
+Now the user can set the priority for a todo item or skip this step altogether.
+
+Once the form is confirmed, the serialized data is sent to our `/task/create/` callback path through an HTTP POST as mentioned in the form definition.
+
+This means that we need to edit our `TaskCreateView.post` method to take into account the `prio` step.
+
+It should look like this:
+
+```
+ 1 def post(self, request):                                                    
+ 2    descr = request.POST['descr']                                           
+ 3    due_date = request.POST['due_date']                                     
+ 4    prio = request.POST.get('prio') or Task.LOW                                 
+ 5                                                                            
+ 6    Task.objects.create(                                                    
+ 7        user=self.get_user(),                                               
+ 8        descr=descr,                                                           
+ 9        due_date=datetime.datetime.strptime(due_date, '%Y-%m-%d').date(),   
+10        prio=prio                                                           
+11    )                                                                       
+12    return HttpResponseRedirect(reverse('home'))  
+```
+
+Explained:
+
+- we've added the 4th line in order to take into account the `prio` step ... if the step is skipped we default to `Task.LOW`
+- we place the `prio` when creating a `Task` (line 10)
+
+The final code for our `TaskCreateView` should look like:
+
+```
+class TaskCreateView(View):                                                     
+    http_method_names = ['get', 'post']                                         
+                                                                                
+    def get(self, request):                                                     
+        body = [                                                                
+            onem.FormItem(                                                      
+                type=onem.FormItemType.string,
+                name='descr',                                                   
+                description='Please provide a description for the task',           
+                header='description',                                           
+            ),                                                                  
+            onem.FormItem(                                                      
+                type=onem.FormItemType.date,                                    
+                name='due_date',                                                
+                description='Provide a due date',                               
+                header='due date',                                              
+            ),                                                                  
+            onem.FormItem(                                                      
+                type=onem.FormItemType.form_menu,                               
+                name='prio',                                                    
+                description='Set priority or SKIP',                             
+                required=False,                                                 
+                body=[                                                          
+                    onem.MenuItemFormItem('High priority', Task.HIGH),          
+                    onem.MenuItemFormItem('Low priority', Task.LOW)             
+                ]                                                               
+            )                                                                   
+        ]                                                                       
+        return self.to_response(                                                
+            onem.Form(body=body, path=reverse('task_create'), method='POST')       
+        )                                                                       
+                                                                                
+    def post(self, request):                                                    
+        descr = request.POST['descr']                                           
+        due_date = request.POST['due_date']                                     
+        prio = request.POST.get('prio') or Task.LOW                             
+                                                                                
+        Task.objects.create(                                                    
+            user=self.get_user(),                                               
+            descr=descr,                                                           
+            due_date=datetime.datetime.strptime(due_date, '%Y-%m-%d').date(),   
+            prio=prio                                                           
+        )                                                                       
+        return HttpResponseRedirect(reverse('home'))   
+```
