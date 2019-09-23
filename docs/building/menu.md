@@ -8,36 +8,38 @@ When an option is being accessed, ONEm platform will perform an HTTP request to 
 
 <span style="font-size:13px;">_All fields prefixed with a star (*) are required_</span>
 
-Your server must return a JSON response with the following structure:
-
 
 ## Menu
-
-|  KEY     |  TYPE  | NOTES |
-|----------|--------|--------------------------------------------------------|
-| * type   | string | Indicates the type of the object, defaults to `"menu"` |
-| * body   | array  | Composed of [`MenuItem`](#menuitem) objects |
-| header   | string | The header of the menu |
-| footer   | string | The footer of the menu |
-| meta     | object | [`MenuMeta`](#menumeta) object |
-
-
-### MenuItem
-
-|  KEY     |  TYPE  | NOTES |
-|----------|--------|------------------------------------------------------|
-| * type | string | Can be one of the following: <ul> <li> `"option"`  - Indicates an option and needs a `path` </li> <li> `"content"`  - Does not need a value and it is only used for presentational purposes </li> </ul> |
-| ** path | string | Next route callback path, accessed upon user selection <br> ** required only for `"type": "option"` |
-| method   | string | HTTP method indicating how to trigger the callback path. Defaults to `GET`. |
-| description | string | The description for this [`MenuItem`](#menuitem). |
-| text_search | string | If the user does not send a proper option marker and sends some input, this field will be used to search and narrow down the options against the user input. <br> max 1000 chars |
-
-
-### MenuMeta
+A top level component used to display a menu or raw text
 
 | KEY | TYPE | NOTES |
 |-----|------|-------|
-| auto_select  | bool | Will be automatically selected if set to true and in case of a single option in the menu. |
+|*body|array|Composed of [`MenuItem`](#menuitem) objects|
+|footer|string|The header of the menu|
+|header|string|The header of the menu|
+|meta|object|[`MenuMeta`](#menumeta) object. Contains configuration flags|
+|*type|string|Indicates the type of the object, defaults to `"menu"`|
+
+### MenuItem
+[`Menu`](#menu) related component used to display menu items, selectable or
+raw
+
+| KEY | TYPE | NOTES |
+|-----|------|-------|
+|*description|string|The displayed text for this `MenuItem`|
+|method|string|HTTP method indicating how to trigger the callback path. Defaults to `"GET"`<br> _available: `"GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS", "TRACE"`_|
+|path|string|Next route callback path, accessed upon user selection <br> _required only for `type=option`_|
+|text_search|string|If the user does not send a proper option marker and sends some input, this field will be used to search and narrow down the options against the user input. <br> max 1000 chars|
+|*type|string|Indicates the type of the object<br> _available: `"option", "content"`_|
+
+### MenuMeta
+[`Menu`](#menu) related component holding configuration fields for the menu
+ 
+
+| KEY | TYPE | NOTES |
+|-----|------|-------|
+|auto_select|boolean|Will be automatically selected if set to `true` and in case of a single option in the menu|
+
 
 ## Swagger
 

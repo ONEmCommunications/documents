@@ -30,8 +30,9 @@ nav:
     - Building:
         - How to register your app: building/register.md
         - Structure:
-            - Menus: building/menus.md
-            - Forms: building/forms.md
+            - Response: building/response.md
+            - Menu: building/menu.md
+            - Form: building/form.md
             - Raw: building/raw.md
         - SDK:
             - HTML: building/html.md
