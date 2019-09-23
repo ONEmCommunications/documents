@@ -41,6 +41,12 @@ nav:
         - Purpose: api/purpose.md
         - Documentation: !!python/object/apply:os.getenv ['RESTDAPI_REDOC']
 
+    - Use Case:
+        - Introduction: use_case/post_demo_app_intro.md
+        - post v1: use_case/postv1.md
+        - post v2: use_case/postv2.md
+        - post v3: use_case/postv3.md
+
 theme:
     name: material
     highlightjs: true
