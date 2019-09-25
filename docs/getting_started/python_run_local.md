@@ -149,19 +149,19 @@ This means that we need to edit our `TaskCreateView.post` method to take into ac
 
 It should look like this:
 
-```
- 1 def post(self, request):
- 2    descr = request.POST['descr']
- 3    due_date = request.POST['due_date']
- 4    prio = request.POST.get('prio') or Task.LOW
- 5
- 6    Task.objects.create(
- 7        user=self.get_user(),
- 8        descr=descr,
- 9        due_date=datetime.datetime.strptime(due_date, '%Y-%m-%d').date(),
-10        prio=prio
-11    )
-12    return HttpResponseRedirect(reverse('home'))
+```python
+def post(self, request):
+    descr = request.POST['descr']
+    due_date = request.POST['due_date']
+    prio = request.POST.get('prio') or Task.LOW
+
+    Task.objects.create(
+        user=self.get_user(),
+        descr=descr,
+        due_date=datetime.datetime.strptime(due_date, '%Y-%m-%d').date(),
+        prio=prio
+    )
+    return HttpResponseRedirect(reverse('home'))
 ```
 
 Explained:
