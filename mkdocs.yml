@@ -53,6 +53,7 @@ theme:
         - javascript
         - python
         - html
+        - bash
     # custom_dir: theme/material/
     favicon: assets/favicon.ico
     language: en
