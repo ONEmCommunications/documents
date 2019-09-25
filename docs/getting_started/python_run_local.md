@@ -51,7 +51,7 @@ The above command will start ngrok tool, which is basically creating a VPN tunne
 
 The output should be something like:
 
-```bash
+```
 Session Status                online
 Session Expires               7 hours, 59 minutes
 Update                        update available (version 2.3.34, Ctrl-U to update)
@@ -78,15 +78,15 @@ In the developer portal there is a `Test Client` section. This is a phone simula
 
 Head on to the test client and send `#name-of-your-app`. At this point ONEm will request the callback url we've set previously, so if you check the ngrok logs you will see the request there.
 
-```bash
+```
 HTTP Requests
 -------------
-GET /                          200 OK   
+GET /                          200 OK
 ```
 
 In the test client you can see the below response:
 
-```bash
+```
 #TODO MENU
 A New todo
 B Done(0)
@@ -111,17 +111,17 @@ We first need to ask the user for the priority, when creating the todo item. We 
 
 The form item looks like the one below.
 
-```
-onem.FormItem(                                                         
-    type=onem.FormItemType.form_menu,                                  
-    name='prio',                                                       
-    description='Set priority or SKIP',                                
-    required=False,                                                    
-    body=[                                                             
-        onem.MenuItemFormItem('High priority', Task.HIGH),             
-        onem.MenuItemFormItem('Low priority', Task.LOW)                
-    ]                                                                  
-) 
+```python
+onem.FormItem(
+    type=onem.FormItemType.form_menu,
+    name='prio',
+    description='Set priority or SKIP',
+    required=False,
+    body=[
+        onem.MenuItemFormItem('High priority', Task.HIGH),
+        onem.MenuItemFormItem('Low priority', Task.LOW)
+    ]
+)
 ```
 
 Explained:
@@ -150,18 +150,18 @@ This means that we need to edit our `TaskCreateView.post` method to take into ac
 It should look like this:
 
 ```
- 1 def post(self, request):                                                    
- 2    descr = request.POST['descr']                                           
- 3    due_date = request.POST['due_date']                                     
- 4    prio = request.POST.get('prio') or Task.LOW                                 
- 5                                                                            
- 6    Task.objects.create(                                                    
- 7        user=self.get_user(),                                               
- 8        descr=descr,                                                           
- 9        due_date=datetime.datetime.strptime(due_date, '%Y-%m-%d').date(),   
-10        prio=prio                                                           
-11    )                                                                       
-12    return HttpResponseRedirect(reverse('home'))  
+ 1 def post(self, request):
+ 2    descr = request.POST['descr']
+ 3    due_date = request.POST['due_date']
+ 4    prio = request.POST.get('prio') or Task.LOW
+ 5
+ 6    Task.objects.create(
+ 7        user=self.get_user(),
+ 8        descr=descr,
+ 9        due_date=datetime.datetime.strptime(due_date, '%Y-%m-%d').date(),
+10        prio=prio
+11    )
+12    return HttpResponseRedirect(reverse('home'))
 ```
 
 Explained:
@@ -171,49 +171,49 @@ Explained:
 
 The final code for our `TaskCreateView` should look like:
 
-```
-class TaskCreateView(View):                                                     
-    http_method_names = ['get', 'post']                                         
-                                                                                
-    def get(self, request):                                                     
-        body = [                                                                
-            onem.FormItem(                                                      
+```python
+class TaskCreateView(View):
+    http_method_names = ['get', 'post']
+
+    def get(self, request):
+        body = [
+            onem.FormItem(
                 type=onem.FormItemType.string,
-                name='descr',                                                   
-                description='Please provide a description for the task',           
-                header='description',                                           
-            ),                                                                  
-            onem.FormItem(                                                      
-                type=onem.FormItemType.date,                                    
-                name='due_date',                                                
-                description='Provide a due date',                               
-                header='due date',                                              
-            ),                                                                  
-            onem.FormItem(                                                      
-                type=onem.FormItemType.form_menu,                               
-                name='prio',                                                    
-                description='Set priority or SKIP',                             
-                required=False,                                                 
-                body=[                                                          
-                    onem.MenuItemFormItem('High priority', Task.HIGH),          
-                    onem.MenuItemFormItem('Low priority', Task.LOW)             
-                ]                                                               
-            )                                                                   
-        ]                                                                       
-        return self.to_response(                                                
-            onem.Form(body=body, path=reverse('task_create'), method='POST')       
-        )                                                                       
-                                                                                
-    def post(self, request):                                                    
-        descr = request.POST['descr']                                           
-        due_date = request.POST['due_date']                                     
-        prio = request.POST.get('prio') or Task.LOW                             
-                                                                                
-        Task.objects.create(                                                    
-            user=self.get_user(),                                               
-            descr=descr,                                                           
-            due_date=datetime.datetime.strptime(due_date, '%Y-%m-%d').date(),   
-            prio=prio                                                           
-        )                                                                       
-        return HttpResponseRedirect(reverse('home'))   
+                name='descr',
+                description='Please provide a description for the task',
+                header='description',
+            ),
+            onem.FormItem(
+                type=onem.FormItemType.date,
+                name='due_date',
+                description='Provide a due date',
+                header='due date',
+            ),
+            onem.FormItem(
+                type=onem.FormItemType.form_menu,
+                name='prio',
+                description='Set priority or SKIP',
+                required=False,
+                body=[
+                    onem.MenuItemFormItem('High priority', Task.HIGH),
+                    onem.MenuItemFormItem('Low priority', Task.LOW)
+                ]
+            )
+        ]
+        return self.to_response(
+            onem.Form(body=body, path=reverse('task_create'), method='POST')
+        )
+
+    def post(self, request):
+        descr = request.POST['descr']
+        due_date = request.POST['due_date']
+        prio = request.POST.get('prio') or Task.LOW
+
+        Task.objects.create(
+            user=self.get_user(),
+            descr=descr,
+            due_date=datetime.datetime.strptime(due_date, '%Y-%m-%d').date(),
+            prio=prio
+        )
+        return HttpResponseRedirect(reverse('home'))
 ```
