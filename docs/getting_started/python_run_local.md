@@ -25,7 +25,9 @@ We first need to install the dependencies and create the database.
 (django-onem-todo) onem@local:~/django-onem-todo$ pip install -r requirements.txt
 (django-onem-todo) onem@local:~/django-onem-todo$ python manage.py migrate
 ```
-Note: the `migrate` command will create a local sqlite database.
+
+!!! Note
+    The `migrate` command will create a local sqlite database.
 
 ### Start the server
 
@@ -35,7 +37,8 @@ Note: the `migrate` command will create a local sqlite database.
 
 The above command will run the server locally at `http://127.0.0.1:8000`
 
-If you try to access that link you will get a `403` error forbidden response, which is totally fine, since the server is looking into the HTTP headers for specific information sent by ONEm platform.
+!!! Info
+    If you try to access that link you will get a `403` error forbidden response, which is totally fine, since the server is looking into the HTTP headers for specific information sent by ONEm platform.
 
 ### Expose the server publicly
 
@@ -62,7 +65,8 @@ Forwarding                    http://5d283db8.ngrok.io -> http://localhost:8000
 Forwarding                    https://5d283db8.ngrok.io -> http://localhost:8000
 ```
 
-The important bit here is the `http://5d283db8.ngrok.io` link. We will be using this as our callback url when we will register our app on ONEm developer portal.
+!!! important
+    The important bit here is the `http://5d283db8.ngrok.io` link. We will be using this as our callback url when we will register our app on ONEm developer portal.
 
 ### Register the application
 
@@ -70,7 +74,8 @@ To register your application please open [ONEm Developer Portal]({{ links.portal
 
 Once that is done, you will have an option to create an app. Hit that button and place `http://5d283db8.ngrok.io` as the callback url.
 
-That is it. We can now access the application by placing a hashtag in front of the name.
+!!! success
+    That is it. We can now access the application by placing a hashtag in front of the name.
 
 ### Run it
 
@@ -94,7 +99,8 @@ Todo(0)
 --Reply A-B
 ```
 
-_*the name of your app will be different, as chosen in the developer portal_
+!!! important
+    The name of your app will be different, as chosen in the developer portal
 
 The above sms response is rendered based on the HTTP json response returned by our `/` url.
 
