@@ -15,7 +15,7 @@ nav:
         - Accessing your micro-app: core/accessing_your_micro_app.md
         - Reserved verbs: core/reserved_verbs.md
         - Framework capabilities: 
-            - (callback vs RestDAPI): core/todo.md
+            - (callback vs RestDAPI): core/callback_api.md
             - Validation: core/todo.md
 
     - Getting started:
@@ -28,23 +28,26 @@ nav:
               - Pre-requisites: getting_started/nodejs_prereq.md
               - Run locally: getting_started/nodejs_run_local.md
     - Building:
-        - How to register your app: building/register.md
         - Structure:
-            - Menus: building/menus.md
-            - Forms: building/forms.md
+            - Response: building/response.md
+            - Menu: building/menu.md
+            - Form: building/form.md
             - Raw: building/raw.md
         - SDK:
-            - HTML: building/html.md
-
-    - API:
-        - Purpose: api/purpose.md
-        - Documentation: !!python/object/apply:os.getenv ['RESTDAPI_REDOC']
+            - About: building/about_sdk.md
+            - HTML tags: building/html.md
+            - HTML to Response: building/html_to_response.md
+            - How to use the SDKs: building/how_to_use_sdk.md
 
     - Use Case:
         - Introduction: use_case/post_demo_app_intro.md
         - post v1: use_case/postv1.md
         - post v2: use_case/postv2.md
         - post v3: use_case/postv3.md
+
+    - API:
+        - Purpose: api/purpose.md
+        - Documentation: !!python/object/apply:os.getenv ['RESTDAPI_REDOC']
 
 theme:
     name: material
@@ -69,6 +72,7 @@ extra:
   links:
     portal: !!python/object/apply:os.getenv ['DEV_PORTAL_SITE']
     api: !!python/object/apply:os.getenv ['RESTDAPI_DOCS']
+    schema_url: !!python/object/apply:os.getenv ['SWAGGER_SCHEMA_URL']
   todo_app:
     github_py_url: !!python/object/apply:os.getenv ['TODO_APP_GITHUB_PY_URL']
 
