@@ -54,7 +54,7 @@ The above command will start ngrok tool, which is basically creating a VPN tunne
 
 The output should be something like:
 
-```
+<pre>
 Session Status                online
 Session Expires               7 hours, 59 minutes
 Update                        update available (version 2.3.34, Ctrl-U to update)
@@ -63,7 +63,7 @@ Region                        United States (us)
 Web Interface                 http://127.0.0.1:4040
 Forwarding                    http://5d283db8.ngrok.io -> http://localhost:8000
 Forwarding                    https://5d283db8.ngrok.io -> http://localhost:8000
-```
+</pre>
 
 !!! important
     The important bit here is the `http://5d283db8.ngrok.io` link. We will be using this as our callback url when we will register our app on ONEm developer portal.
@@ -83,21 +83,21 @@ In the developer portal there is a `Test Client` section. This is a phone simula
 
 Head on to the test client and send `#name-of-your-app`. At this point ONEm will request the callback url we've set previously, so if you check the ngrok logs you will see the request there.
 
-```
+<pre>
 HTTP Requests
 -------------
 GET /                          200 OK
-```
+</pre>
 
 In the test client you can see the below response:
 
-```
+<pre>
 #TODO MENU
 A New todo
 B Done(0)
 Todo(0)
 --Reply A-B
-```
+</pre>
 
 !!! important
     The name of your app will be different, as chosen in the developer portal
@@ -139,13 +139,13 @@ Explained:
 
 The form item should be rendered as follows:
 
-```
+<pre>
 #TODO
 Set priority or SKIP
 A High priority
 B Low priority
 --Reply A-B
-```
+</pre>
 
 Now the user can set the priority for a todo item or skip this step altogether.
 
