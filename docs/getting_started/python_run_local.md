@@ -25,7 +25,9 @@ We first need to install the dependencies and create the database.
 (django-onem-todo) onem@local:~/django-onem-todo$ pip install -r requirements.txt
 (django-onem-todo) onem@local:~/django-onem-todo$ python manage.py migrate
 ```
-Note: the `migrate` command will create a local sqlite database.
+
+!!! Note
+    The `migrate` command will create a local sqlite database.
 
 ### Start the server
 
@@ -35,7 +37,8 @@ Note: the `migrate` command will create a local sqlite database.
 
 The above command will run the server locally at `http://127.0.0.1:8000`
 
-If you try to access that link you will get a `403` error forbidden response, which is totally fine, since the server is looking into the HTTP headers for specific information sent by ONEm platform.
+!!! Info
+    If you try to access that link you will get a `403` error forbidden response, which is totally fine, since the server is looking into the HTTP headers for specific information sent by ONEm platform.
 
 ### Expose the server publicly
 
@@ -51,7 +54,7 @@ The above command will start ngrok tool, which is basically creating a VPN tunne
 
 The output should be something like:
 
-```bash
+<pre>
 Session Status                online
 Session Expires               7 hours, 59 minutes
 Update                        update available (version 2.3.34, Ctrl-U to update)
@@ -60,9 +63,10 @@ Region                        United States (us)
 Web Interface                 http://127.0.0.1:4040
 Forwarding                    http://5d283db8.ngrok.io -> http://localhost:8000
 Forwarding                    https://5d283db8.ngrok.io -> http://localhost:8000
-```
+</pre>
 
-The important bit here is the `http://5d283db8.ngrok.io` link. We will be using this as our callback url when we will register our app on ONEm developer portal.
+!!! important
+    The important bit here is the `http://5d283db8.ngrok.io` link. We will be using this as our callback url when we will register our app on ONEm developer portal.
 
 ### Register the application
 
@@ -70,7 +74,8 @@ To register your application please open [ONEm Developer Portal]({{ links.portal
 
 Once that is done, you will have an option to create an app. Hit that button and place `http://5d283db8.ngrok.io` as the callback url.
 
-That is it. We can now access the application by placing a hashtag in front of the name.
+!!! success
+    That is it. We can now access the application by placing a hashtag in front of the name.
 
 ### Run it
 
@@ -78,23 +83,24 @@ In the developer portal there is a `Test Client` section. This is a phone simula
 
 Head on to the test client and send `#name-of-your-app`. At this point ONEm will request the callback url we've set previously, so if you check the ngrok logs you will see the request there.
 
-```bash
+<pre>
 HTTP Requests
 -------------
-GET /                          200 OK   
-```
+GET /                          200 OK
+</pre>
 
 In the test client you can see the below response:
 
-```bash
+<pre>
 #TODO MENU
 A New todo
 B Done(0)
 Todo(0)
 --Reply A-B
-```
+</pre>
 
-_*the name of your app will be different, as chosen in the developer portal_
+!!! important
+    The name of your app will be different, as chosen in the developer portal
 
 The above sms response is rendered based on the HTTP json response returned by our `/` url.
 
@@ -111,17 +117,17 @@ We first need to ask the user for the priority, when creating the todo item. We 
 
 The form item looks like the one below.
 
-```
-onem.FormItem(                                                         
-    type=onem.FormItemType.form_menu,                                  
-    name='prio',                                                       
-    description='Set priority or SKIP',                                
-    required=False,                                                    
-    body=[                                                             
-        onem.MenuItemFormItem('High priority', Task.HIGH),             
-        onem.MenuItemFormItem('Low priority', Task.LOW)                
-    ]                                                                  
-) 
+```python
+onem.FormItem(
+    type=onem.FormItemType.form_menu,
+    name='prio',
+    description='Set priority or SKIP',
+    required=False,
+    body=[
+        onem.MenuItemFormItem('High priority', Task.HIGH),
+        onem.MenuItemFormItem('Low priority', Task.LOW)
+    ]
+)
 ```
 
 Explained:
@@ -133,13 +139,13 @@ Explained:
 
 The form item should be rendered as follows:
 
-```
+<pre>
 #TODO
 Set priority or SKIP
 A High priority
 B Low priority
 --Reply A-B
-```
+</pre>
 
 Now the user can set the priority for a todo item or skip this step altogether.
 
@@ -149,19 +155,19 @@ This means that we need to edit our `TaskCreateView.post` method to take into ac
 
 It should look like this:
 
-```
- 1 def post(self, request):                                                    
- 2    descr = request.POST['descr']                                           
- 3    due_date = request.POST['due_date']                                     
- 4    prio = request.POST.get('prio') or Task.LOW                                 
- 5                                                                            
- 6    Task.objects.create(                                                    
- 7        user=self.get_user(),                                               
- 8        descr=descr,                                                           
- 9        due_date=datetime.datetime.strptime(due_date, '%Y-%m-%d').date(),   
-10        prio=prio                                                           
-11    )                                                                       
-12    return HttpResponseRedirect(reverse('home'))  
+```python
+def post(self, request):
+    descr = request.POST['descr']
+    due_date = request.POST['due_date']
+    prio = request.POST.get('prio') or Task.LOW
+
+    Task.objects.create(
+        user=self.get_user(),
+        descr=descr,
+        due_date=datetime.datetime.strptime(due_date, '%Y-%m-%d').date(),
+        prio=prio
+    )
+    return HttpResponseRedirect(reverse('home'))
 ```
 
 Explained:
@@ -171,49 +177,49 @@ Explained:
 
 The final code for our `TaskCreateView` should look like:
 
-```
-class TaskCreateView(View):                                                     
-    http_method_names = ['get', 'post']                                         
-                                                                                
-    def get(self, request):                                                     
-        body = [                                                                
-            onem.FormItem(                                                      
+```python
+class TaskCreateView(View):
+    http_method_names = ['get', 'post']
+
+    def get(self, request):
+        body = [
+            onem.FormItem(
                 type=onem.FormItemType.string,
-                name='descr',                                                   
-                description='Please provide a description for the task',           
-                header='description',                                           
-            ),                                                                  
-            onem.FormItem(                                                      
-                type=onem.FormItemType.date,                                    
-                name='due_date',                                                
-                description='Provide a due date',                               
-                header='due date',                                              
-            ),                                                                  
-            onem.FormItem(                                                      
-                type=onem.FormItemType.form_menu,                               
-                name='prio',                                                    
-                description='Set priority or SKIP',                             
-                required=False,                                                 
-                body=[                                                          
-                    onem.MenuItemFormItem('High priority', Task.HIGH),          
-                    onem.MenuItemFormItem('Low priority', Task.LOW)             
-                ]                                                               
-            )                                                                   
-        ]                                                                       
-        return self.to_response(                                                
-            onem.Form(body=body, path=reverse('task_create'), method='POST')       
-        )                                                                       
-                                                                                
-    def post(self, request):                                                    
-        descr = request.POST['descr']                                           
-        due_date = request.POST['due_date']                                     
-        prio = request.POST.get('prio') or Task.LOW                             
-                                                                                
-        Task.objects.create(                                                    
-            user=self.get_user(),                                               
-            descr=descr,                                                           
-            due_date=datetime.datetime.strptime(due_date, '%Y-%m-%d').date(),   
-            prio=prio                                                           
-        )                                                                       
-        return HttpResponseRedirect(reverse('home'))   
+                name='descr',
+                description='Please provide a description for the task',
+                header='description',
+            ),
+            onem.FormItem(
+                type=onem.FormItemType.date,
+                name='due_date',
+                description='Provide a due date',
+                header='due date',
+            ),
+            onem.FormItem(
+                type=onem.FormItemType.form_menu,
+                name='prio',
+                description='Set priority or SKIP',
+                required=False,
+                body=[
+                    onem.MenuItemFormItem('High priority', Task.HIGH),
+                    onem.MenuItemFormItem('Low priority', Task.LOW)
+                ]
+            )
+        ]
+        return self.to_response(
+            onem.Form(body=body, path=reverse('task_create'), method='POST')
+        )
+
+    def post(self, request):
+        descr = request.POST['descr']
+        due_date = request.POST['due_date']
+        prio = request.POST.get('prio') or Task.LOW
+
+        Task.objects.create(
+            user=self.get_user(),
+            descr=descr,
+            due_date=datetime.datetime.strptime(due_date, '%Y-%m-%d').date(),
+            prio=prio
+        )
+        return HttpResponseRedirect(reverse('home'))
 ```

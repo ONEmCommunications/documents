@@ -56,6 +56,7 @@ theme:
         - javascript
         - python
         - html
+        - bash
     # custom_dir: theme/material/
     favicon: assets/favicon.ico
     language: en
@@ -81,6 +82,10 @@ extra_css:
 extra_javascript:
     - 'assets/js/opensidenav.js'
 markdown_extensions:
-    - codehilite
+    - admonition
+    - toc:
+        permalink: true
+    - codehilite:
+        linenums: true
     - markdown_include.include:
         base_path: docs
