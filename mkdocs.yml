@@ -34,7 +34,7 @@ nav:
             - Form: building/form.md
             - Raw: building/raw.md
         - SDK:
-            - About: building/about_sdk.md
+            - SDK Essentials: building/essentials.md
             - HTML tags: building/html.md
             - HTML to Response: building/html_to_response.md
             - How to use the SDKs: building/how_to_use_sdk.md
@@ -74,6 +74,8 @@ extra:
     portal: !!python/object/apply:os.getenv ['DEV_PORTAL_SITE']
     api: !!python/object/apply:os.getenv ['RESTDAPI_DOCS']
     schema_url: !!python/object/apply:os.getenv ['SWAGGER_SCHEMA_URL']
+    nodejs_sdk_repo: !!python/object/apply:os.getenv ['NODEJS_SDK_REPO']
+    python_sdk_repo: !!python/object/apply:os.getenv ['PYTHON_SDK_REPO']
   todo_app:
     github_py_url: !!python/object/apply:os.getenv ['TODO_APP_GITHUB_PY_URL']
 
@@ -83,6 +85,7 @@ extra_javascript:
     - 'assets/js/jquery-3.4.1.min.js'
     - 'assets/js/opensidenav.js'
 markdown_extensions:
+    - pymdownx.superfences
     - admonition
     - toc:
         permalink: true
