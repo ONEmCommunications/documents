@@ -51,6 +51,8 @@ nav:
 
 theme:
     name: material
+    feature:
+        tabs: false
     highlightjs: true
     hljs_languages:
         - javascript
@@ -63,8 +65,8 @@ theme:
     palette:
         primary: white
         accent: blue
-    # feature:
-    #     tabs: true
+    feature:
+         tabs: true
     logo: assets/onem-logo.svg
 plugins:
     - search
@@ -83,7 +85,7 @@ extra_css:
     - 'assets/stylesheets/styles.css'
 extra_javascript:
     - 'assets/js/jquery-3.4.1.min.js'
-    - 'assets/js/opensidenav.js'
+    #- 'assets/js/opensidenav.js'
 markdown_extensions:
     - pymdownx.superfences
     - admonition
