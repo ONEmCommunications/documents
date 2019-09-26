@@ -644,8 +644,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../building/about_sdk.md" title="About" class="md-nav__link">
-      About
+    <a href="../../building/essentials/" title="SDK Essentials" class="md-nav__link">
+      SDK Essentials
     </a>
   </li>
 
@@ -849,15 +849,14 @@
 </ul>
 <p>For prerequisites and running any of the 3 apps locally please refer to: <a href="/getting_started/python_prereq">prerequisites</a> and <a href="/getting_started/python_run_local/">run locally</a> tutorials.</p>
 <p>Notes: </p>
-<p>1) The project containing these 3 apps can be cloned from here: <a href="https://github.com/ONEmCommunications/post-demo-app"><strong>post-demo-app</strong></a></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>onem@local:~$ git clone https://github.com/ONEmCommunications/post-demo-app
+<p>1) The project containing these 3 apps can be cloned from here: <a href="https://github.com/ONEmCommunications/post-demo-app"><strong>post-demo-app</strong></a>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>onem@local:~$ git clone https://github.com/ONEmCommunications/post-demo-app
 </pre></div>
-</td></tr></table>
-
+</td></tr></table></p>
 <p>2) We will only need to create one virtualenv, containing the packages listed in the requirements.txt file in the project's root folder and this virtual env will be used by all 3 versions of the app.</p>
 <p>All 3 versions of the #post application contained in this repo(<strong>postv1</strong>, <strong>v2</strong> &amp; <strong>v3</strong>) are Django apps. Below you can find a few details on the structure of a Django project, its key files and their purpose.</p>
-<p>The root folder of a Django project:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<p>The root folder of a Django project:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -871,15 +870,14 @@
 │   └── wsgi.py
 └── manage.py
 </pre></div>
-</td></tr></table>
-
+</td></tr></table></p>
 <ul>
 <li>the <strong>manage.py</strong> file is the command line utility of the project. This file contains the code for starting the server, migrating and controlling the project through command-line.</li>
 <li>the <strong>settings.py</strong> is the main file where we will be adding all our applications and middleware applications. As the name suggests this is the main settings file of the Django project. This file contains the installed applications and middleware information.</li>
 <li>the <strong>urls.py</strong> file contains the project level URL information. The main purpose of this file is to connect the web-apps with the project. Anything you will be typing in the URL bar will be processed by this urls.py file. Then, it will correspond your request to the designated app you connected to it.</li>
 </ul>
 <p>The inner [projectname] folder contains the following files:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -975,6 +973,8 @@
       <script src="../../assets/javascripts/application.2ba8dec4.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../assets/js/jquery-3.4.1.min.js"></script>
       
         <script src="../../assets/js/opensidenav.js"></script>
       

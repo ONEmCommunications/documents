@@ -728,8 +728,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../building/about_sdk.md" title="About" class="md-nav__link">
-      About
+    <a href="../../building/essentials/" title="SDK Essentials" class="md-nav__link">
+      SDK Essentials
     </a>
   </li>
 
@@ -989,19 +989,19 @@
                 <p>If you are an absolute beginner please read the <a href="/getting_started/python_prereq/">prerequisites</a> first.</p>
 <h3 id="download-source-code">Download source code<a class="headerlink" href="#download-source-code" title="Permanent link">&para;</a></h3>
 <p>Clone the project from github.com:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>onem@local:~$ git clone None
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>onem@local:~$ git clone None
 </pre></div>
 </td></tr></table>
 
 <p>Now let's create our virtual environment. We will be using Ubuntu 18.04 in this tutorial.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>onem@local:~$ <span class="nb">cd</span> django-onem-todo <span class="p">;</span> pipenv shell --python <span class="m">3</span>.7
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>onem@local:~$ <span class="nb">cd</span> django-onem-todo <span class="p">;</span> pipenv shell --python <span class="m">3</span>.7
 </pre></div>
 </td></tr></table>
 
 <p>The above will create the virtual environment and activate it at the same time.</p>
 <h3 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h3>
 <p>We first need to install the dependencies and create the database.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">(</span>django-onem-todo<span class="o">)</span> onem@local:~/django-onem-todo$ pip install -r requirements.txt
 <span class="o">(</span>django-onem-todo<span class="o">)</span> onem@local:~/django-onem-todo$ python manage.py migrate
 </pre></div>
@@ -1012,7 +1012,7 @@
 <p>The <code>migrate</code> command will create a local sqlite database.</p>
 </div>
 <h3 id="start-the-server">Start the server<a class="headerlink" href="#start-the-server" title="Permanent link">&para;</a></h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">(</span>django-onem-todo<span class="o">)</span> onem@local:~/django-onem-todo$ python manage.py runserver
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">(</span>django-onem-todo<span class="o">)</span> onem@local:~/django-onem-todo$ python manage.py runserver
 </pre></div>
 </td></tr></table>
 
@@ -1024,7 +1024,7 @@
 <h3 id="expose-the-server-publicly">Expose the server publicly<a class="headerlink" href="#expose-the-server-publicly" title="Permanent link">&para;</a></h3>
 <p>Since our server is now running on your local interface, ONEm platform cannot reach it. But we can work around this by using ngrok.</p>
 <p>Open a new terminal and start up ngrok on localhost port 8000.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>onem@local:~$ ngrok http <span class="m">8000</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>onem@local:~$ ngrok http <span class="m">8000</span>
 </pre></div>
 </td></tr></table>
 
@@ -1081,7 +1081,7 @@ Todo(0)
 <p>Let's tweak the application a little bit. Say we want to allow the user to set the priority for the todo item and at the same time not enforce this.</p>
 <p>We first need to ask the user for the priority, when creating the todo item. We do that by adding an extra step in the body form returned by our <code>TaskCreateView.get</code> method.</p>
 <p>The form item looks like the one below.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1123,7 +1123,7 @@ B Low priority
 <p>Once the form is confirmed, the serialized data is sent to our <code>/task/create/</code> callback path through an HTTP POST as mentioned in the form definition.</p>
 <p>This means that we need to edit our <code>TaskCreateView.post</code> method to take into account the <code>prio</code> step.</p>
 <p>It should look like this:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1155,7 +1155,7 @@ B Low priority
 <li>we place the <code>prio</code> when creating a <code>Task</code> (line 10)</li>
 </ul>
 <p>The final code for our <code>TaskCreateView</code> should look like:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1316,6 +1316,8 @@ B Low priority
       <script src="../../assets/javascripts/application.2ba8dec4.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../assets/js/jquery-3.4.1.min.js"></script>
       
         <script src="../../assets/js/opensidenav.js"></script>
       

@@ -648,8 +648,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../building/about_sdk.md" title="About" class="md-nav__link">
-      About
+    <a href="../../building/essentials/" title="SDK Essentials" class="md-nav__link">
+      SDK Essentials
     </a>
   </li>
 
@@ -984,28 +984,27 @@
 <p>To start with, we will be running all commands locally on your own PC.  Your app will initially be hosted there for local development, then later you will learn how to host your app with a hosting provider for use on production.</p>
 <p>Before you continue, check that you have the prerequisites installed properly. Type each command below and make sure it displays the version you have installed. Your versions might differ from the example. If an error is returned, go back check the installation before continuing.</p>
 <p>This tutorial will work for any version of Node greater than 8 - check that it’s there:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ node --version
 v10.15.3
 </pre></div>
 </td></tr></table>
 
 <p>npm is installed with Node, so check that it’s there. If you don’t have it, install a more recent version of Node:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ npm --version
 <span class="m">6</span>.9.0
 </pre></div>
 </td></tr></table>
-
-<p>Now check that you have git installed:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+Now check that you have git installed:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ git --version
 git version <span class="m">2</span>.15.1
 </pre></div>
 </td></tr></table>
 
 <p>We will use <em>ngrok</em> to provide a secure tunnel between your app running on <em>localhost</em> and the ONEm servers. Check it's installed:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ ./ngrok --version
 ngrok version <span class="m">2</span>.3.29
 </pre></div>
@@ -1013,47 +1012,47 @@ ngrok version <span class="m">2</span>.3.29
 
 <h2 id="prepare-the-app">Prepare the app<a class="headerlink" href="#prepare-the-app" title="Permanent link">&para;</a></h2>
 <p>In this step, you will prepare a simple <em>Hello World</em> application.  To clone a local version of the sample application, execute the following command in your local command shell or terminal:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ git clone https://github.com/chrishornmem/hello-world.git <span class="o">&amp;&amp;</span> <span class="nb">cd</span> hello-world
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ git clone https://github.com/chrishornmem/hello-world.git <span class="o">&amp;&amp;</span> <span class="nb">cd</span> hello-world
 </pre></div>
 </td></tr></table>
 
 <p>You now have a functioning git repository that contains the <em>Hello World</em> application as well as a <code>package.json</code> file, which is used by npm (Node’s dependency manager).</p>
 <p>Install the package dependencies with npm:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ npm install
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ npm install
 </pre></div>
 </td></tr></table>
 
 <h2 id="configure-the-app">Configure the app<a class="headerlink" href="#configure-the-app" title="Permanent link">&para;</a></h2>
 <p>The <em>Hello World</em> example application listens on the HTTP port defined by the environment variable <code>PORT</code> or 8080 by default.  You can change the port by creating a <code>.env</code> file in your app's root directory and specifying the desired port value:</p>
 <h3 id="port">Port<a class="headerlink" href="#port" title="Permanent link">&para;</a></h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>PORT=8080
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>PORT=8080
 </pre></div>
 </td></tr></table>
 
 <h3 id="token-secret">Token secret<a class="headerlink" href="#token-secret" title="Permanent link">&para;</a></h3>
 <p>Webhooks triggered by the ONEm platform contain a JWT token in the authorzation header.  The JWT token carries the unique identity of the ONEm user so that your app can differentiate requests from different users.  In order to verify jwt tokens that are sent by the ONEm platform, the token secret should be configured.  For the sandbox, this secret is <code>87654321</code>.  Configure the secret in the <code>.env</code> file:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>TOKEN_SECRET=87654321
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>TOKEN_SECRET=87654321
 </pre></div>
 </td></tr></table>
 
 <h2 id="run-the-app">Run the app<a class="headerlink" href="#run-the-app" title="Permanent link">&para;</a></h2>
 <p>Start the app with:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ npm run start
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ npm run start
 </pre></div>
 </td></tr></table>
 
 <p>You should see output similar to the following in the console:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Listening on port 8080
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Listening on port 8080
 </pre></div>
 </td></tr></table>
 
 <p>Now run ngrok so that your app is visible to the ONEm servers.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ ./ngrok http <span class="m">8080</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ ./ngrok http <span class="m">8080</span>
 </pre></div>
 </td></tr></table>
 
 <p>ngrok will launch a continuous display to the console.  Make a note of the http or https forwarding address.  In the example below the address is <code>http://6e3f3fce.ngrok.io</code>:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Forwarding                    http://6e3f3fce.ngrok.io -&gt; http://localhost:8080
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Forwarding                    http://6e3f3fce.ngrok.io -&gt; http://localhost:8080
 </pre></div>
 </td></tr></table>
 
@@ -1074,7 +1073,7 @@ ngrok version <span class="m">2</span>.3.29
 <h2 id="test-the-app">Test the app<a class="headerlink" href="#test-the-app" title="Permanent link">&para;</a></h2>
 <p>Head over to our <a href="https://poc.onem.zone" target="_blank" rel="noopener noreferrer">sandbox test tool</a>, we call it <em>ONEm Zone</em>.  Sign-up and then in the input field, enter <code>#</code> followed by your app's name, for example <code>#HELLO</code> if your app is called <em>hello</em>.</p>
 <p>If you have completed everything correctly, the ONEm system should respond with a menu, similar to the below:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1106,7 +1105,7 @@ C Third option
 </ul>
 <h3 id="install-and-deploy-your-app-on-production">Install and deploy your app on production<a class="headerlink" href="#install-and-deploy-your-app-on-production" title="Permanent link">&para;</a></h3>
 <p>Make sure your app is deployed and running on your favourite provider.  For example to deploy on heroku you would use:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ heroku create
 $ git push heroku master
 </pre></div>
@@ -1155,6 +1154,8 @@ $ git push heroku master
       <script src="../../assets/javascripts/application.2ba8dec4.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../assets/js/jquery-3.4.1.min.js"></script>
       
         <script src="../../assets/js/opensidenav.js"></script>
       

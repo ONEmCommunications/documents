@@ -644,8 +644,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../building/about_sdk.md" title="About" class="md-nav__link">
-      About
+    <a href="../../building/essentials/" title="SDK Essentials" class="md-nav__link">
+      SDK Essentials
     </a>
   </li>
 
@@ -845,32 +845,28 @@
 <p>First, we will need an API key to be able to authenticate our requests towards the restdAPI. Head over to the developer portal by clicking <a href="https://developer-portal-poc.onem.zone/">here</a>. First create the app then click on <strong>Details</strong> --&gt; <strong>API key &amp; permissions</strong>, check the <strong>Notification</strong> box and click on <strong>Generate API key</strong>:</p>
 <p><img alt="" src="/assets/api_key_screenshot.png" /></p>
 <p>Copy the freshly generated API key and head over to the settings file in our Django project:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>onem@local:~$ <span class="nb">cd</span> ~/postv3/postv3/
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>onem@local:~$ <span class="nb">cd</span> ~/postv3/postv3/
 </pre></div>
 </td></tr></table>
-
-<p>Now we can edit the <strong>settings.py</strong> file located here and replace the value of the <strong>APP_APIKEY_POC</strong> variable with the key we have generated earlier:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+Now we can edit the <strong>settings.py</strong> file located here and replace the value of the <strong>APP_APIKEY_POC</strong> variable with the key we have generated earlier:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># permissions granted for notification/messaging</span>
 <span class="nv">APP_APIKEY_POC</span> <span class="o">=</span> <span class="s1">&#39;W6LmGDsM.eca6e9e1-df2c-4307-bd75-8889a74e32f8&#39;</span>
 </pre></div>
-</td></tr></table>
-
-<p>Start the local server for your app:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+</td></tr></table></p>
+<p>Start the local server for your app:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>onem@local:~$ <span class="nb">cd</span> ~/postv3
 onem@local:~$ python manage.py runserver
 </pre></div>
 </td></tr></table>
-
-<p>Expose the server publicly:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ngrok http <span class="m">8000</span>
+Expose the server publicly:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ngrok http <span class="m">8000</span>
 </pre></div>
-</td></tr></table>
-
+</td></tr></table></p>
 <p>Go to <code>Test Client</code> section in the developer portal and send <code>#name-of-your-app</code>. This should be the name the app was given when we created earlier.
-Now we simply have to look for posts from other users and select one of them for viewing:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+Now we simply have to look for posts from other users and select one of them for viewing:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -888,10 +884,9 @@ Views: <span class="m">5</span>
 A Send message
 --Reply MENU/BACK
 </pre></div>
-</td></tr></table>
-
-<p>Send <code>A</code> and compose your message for the post owner. Behind the scene, your request will use ONEm's restdAPI to send the message. You can inspect the code in our <strong>views.py</strong> file in the <strong>SendMessageView</strong> class:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+</td></tr></table></p>
+<p>Send <code>A</code> and compose your message for the post owner. Behind the scene, your request will use ONEm's restdAPI to send the message. You can inspect the code in our <strong>views.py</strong> file in the <strong>SendMessageView</strong> class:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -929,7 +924,7 @@ A Send message
 
     <span class="k">return</span> HttpResponseRedirect<span class="o">(</span>reverse<span class="o">(</span><span class="s1">&#39;post_detail&#39;</span>, <span class="nv">args</span><span class="o">=[</span>id<span class="o">]))</span>
 </pre></div>
-</td></tr></table>
+</td></tr></table></p>
                 
                   
                 
@@ -1002,6 +997,8 @@ A Send message
       <script src="../../assets/javascripts/application.2ba8dec4.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../assets/js/jquery-3.4.1.min.js"></script>
       
         <script src="../../assets/js/opensidenav.js"></script>
       
