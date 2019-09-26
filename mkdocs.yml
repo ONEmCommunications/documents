@@ -66,7 +66,7 @@ theme:
         primary: white
         accent: blue
     feature:
-         tabs: true
+         tabs: false
     logo: assets/onem-logo.svg
 plugins:
     - search
