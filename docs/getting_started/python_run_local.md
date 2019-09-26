@@ -1,5 +1,7 @@
 If you are an absolute beginner please read the [prerequisites](/getting_started/python_prereq/) first.
 
+## Run an existing application
+
 ### Download source code
 
 Clone the project from github.com:
@@ -17,7 +19,7 @@ onem@local:~$ cd django-onem-todo ; pipenv shell --python 3.7
 The above will create the virtual environment and activate it at the same time.
 
 
-### Dependencies
+### Install dependencies
 
 We first need to install the dependencies and create the database.
 
@@ -28,6 +30,15 @@ We first need to install the dependencies and create the database.
 
 !!! Note
     The `migrate` command will create a local sqlite database.
+
+
+!!! Info
+    On MacOS you might get a pg_config related error that’s solved by installing postgresql package:
+
+        brew install postgresql
+
+    Once you've installed it, install the requirements again.
+
 
 ### Start the server
 
@@ -44,10 +55,10 @@ The above command will run the server locally at `http://127.0.0.1:8000`
 
 Since our server is now running on your local interface, ONEm platform cannot reach it. But we can work around this by using ngrok.
 
-Open a new terminal and start up ngrok on localhost port 8000.
+Open a new terminal, go to the folder where your ngrok is and start it up on localhost port 8000. 
 
 ```bash
-onem@local:~$ ngrok http 8000
+onem@local:~$ ./ngrok http 8000
 ```
 
 The above command will start ngrok tool, which is basically creating a VPN tunnel so our webserver can be publicly reachable.
@@ -109,7 +120,7 @@ If we look in the `todo.todo.views` we can see that `HomeView` view which is han
 Every menu item contains a callback path, as described in the json structure [here](/building/menus/#json-structure) and once the user selects one of the menu items, an HTTP request will be made towards that callback path, a new json structure is returned by our web server, so a different sms response is presented to the user.
 
 
-### Tweak the application
+## Tweak the application
 
 Let's tweak the application a little bit. Say we want to allow the user to set the priority for the todo item and at the same time not enforce this.
 
@@ -223,3 +234,6 @@ class TaskCreateView(View):
         )
         return HttpResponseRedirect(reverse('home'))
 ```
+
+!!! Info
+    All the above changes should be available immediately, there is no need for a server restart.
