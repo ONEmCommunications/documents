@@ -63,7 +63,7 @@ class SendMessageView(View):
         post = get_object_or_404(Post, id=id)
 
         headers = {'X-API-KEY': settings.APP_APIKEY, 'Content-Type': 'application/json'}
-        notify_url = settings.RESTD_API_URL.format(endpoint='users/{}/notify').format(post.user.id)
+        notify_url = settings.ONEM_API_URL.format(post.user.id)
         body = {
             'header': 'postv3 - {}'.format(post.title[:13]),
             'body': '\n'.join([message, 'Sent by: {}'.format(self.get_user().username)]),
@@ -79,11 +79,12 @@ class SendMessageView(View):
         return HttpResponseRedirect(reverse('post_detail', args=[id]))
 ```
 
-!!! TODO
-    Update above snipper and then delete this
-
 The post owner will receive the notification as follows:
 
 <pre>
-TODO fill up here the notification as received by the post owner
+#POSTV3 - apartment for rent
+Hello, I am interested in renting your apartment!
+Can you let me know what your telephone number is ?
+Sent by: John
+--Reply #postv3
 </pre>
