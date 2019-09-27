@@ -57,8 +57,6 @@ nav:
 
 theme:
     name: material
-    feature:
-        tabs: false
     highlightjs: true
     hljs_languages:
         - javascript
@@ -71,8 +69,6 @@ theme:
     palette:
         primary: white
         accent: blue
-    feature:
-         tabs: false
     logo: assets/onem-logo.svg
 plugins:
     - search
