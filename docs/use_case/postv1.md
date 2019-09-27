@@ -55,7 +55,6 @@ FormItemContent(
 )
 ```
  - *class MyPostListView(View)* - to view the list of your created posts. We can see here the SDK's **Menu** structure in action. Each post is a **MenuItem** and togheter they are displayed as a **Menu**:
-
 ```python
 posts = cache.get('posts')                                              
 if posts:                                                               
