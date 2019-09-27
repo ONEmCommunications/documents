@@ -14,4 +14,4 @@ markdown-include = "==0.5.1"
 pymdown-extensions = "==6.1"
 
 [requires]
-python_version = "3.5"
+python_version = "3.6"
