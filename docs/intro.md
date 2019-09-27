@@ -10,7 +10,7 @@ ONEm Framework is a layer on top of ONEm's cloud-based platform that provides SM
 
 ### Web Standards-based
 
-ONEm Framework is built on top of trusted, standardized web technologies: HTML, JSON, REST, using modern Web APIs such as our RestDAPI. Because of this, ONEm applications build with ONEm have a stable base, are familiar to any developer and are easy to maintain.
+ONEm Framework is built on top of trusted, standardized web technologies: HTML, JSON, REST, using modern Web APIs such as our ONEm API. Because of this, ONEm applications build with ONEm have a stable base, are familiar to any developer and are easy to maintain.
 
 ### Simple yet Powerful
 
