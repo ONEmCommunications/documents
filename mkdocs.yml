@@ -38,16 +38,22 @@ nav:
             - HTML tags: building/html.md
             - HTML to Response: building/html_to_response.md
             - How to use the SDKs: building/how_to_use_sdk.md
-
     - Use Case:
         - Introduction: use_case/post_demo_app_intro.md
         - post v1: use_case/postv1.md
         - post v2: use_case/postv2.md
         - post v3: use_case/postv3.md
 
-    - API:
-        - Purpose: api/purpose.md
-        - Documentation: !!python/object/apply:os.getenv ['RESTDAPI_REDOC']
+    - Guides:
+        - Building a post board micro-app:
+            - Basics: use_case/post_demo_app_intro.md
+            - Micro app landing: use_case/postv1.md
+            - Search through posts: use_case/postv2.md
+            - Using the ONEm API: use_case/postv3.md
+        - Building a skillhire micro-app using templates: todo.md
+    - Reference:
+        - ONEm API: !!python/object/apply:os.getenv ['RESTDAPI_REDOC']
+        - ONEm SDK: !!python/object/apply:os.getenv ['ONEMSDK_DOCS']
 
 theme:
     name: material
@@ -80,6 +86,8 @@ extra:
     python_sdk_repo: !!python/object/apply:os.getenv ['PYTHON_SDK_REPO']
   todo_app:
     github_py_url: !!python/object/apply:os.getenv ['TODO_APP_GITHUB_PY_URL']
+  post_app:
+    github_py_url: !!python/object/apply:os.getenv ['POST_APP_GITHUB_PY_URL']
 
 extra_css:
     - 'assets/stylesheets/styles.css'
