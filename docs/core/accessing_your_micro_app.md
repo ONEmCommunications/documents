@@ -6,7 +6,8 @@ As a ONEm developer, you can implement particular ways for your users to access 
 
 Also, `parameters` can be sent to the `verbs` so even more specific areas can be accessed.
 
-<span style="font-size:13px;"><i>There are some [reserved verbs](/core/reserved_verbs/) you cannot use</i></span>
+!!! attention
+    There are some [reserved verbs](/core/reserved_verbs/) you cannot use.
 
 ## Example
 
