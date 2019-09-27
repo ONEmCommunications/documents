@@ -4,12 +4,18 @@ This means that no **path** or **method** are needed in the **content** item of 
 
 ## JSON Example
 
-```
-{'body': [{'description': 'Your task has been created!',
-           'type': 'content'}],
- 'header': 'done',
- 'footer': None,
- 'type': 'menu'}
+```json
+{
+  "body": [
+    {
+      "description": "Your task has been created!",
+      "type": "content"
+    }
+  ],
+  "header": "done",
+  "footer": null,
+  "type": "menu"
+}
 ```
 
 The response back to the user will be an SMS which will look like:
