@@ -15,7 +15,7 @@ nav:
         - Accessing your micro-app: core/accessing_your_micro_app.md
         - Reserved verbs: core/reserved_verbs.md
         - Framework capabilities: 
-            - (callback vs RestDAPI): core/callback_api.md
+            - (callback vs ONEm API): core/callback_api.md
             - Validation: core/todo.md
 
     - Getting started:
@@ -70,7 +70,7 @@ plugins:
 extra:
   links:
     portal: !!python/object/apply:os.getenv ['DEV_PORTAL_SITE']
-    api: !!python/object/apply:os.getenv ['RESTDAPI_DOCS']
+    onem_api_docs: !!python/object/apply:os.getenv ['RESTDAPI_DOCS']
     schema_url: !!python/object/apply:os.getenv ['SWAGGER_SCHEMA_URL']
     nodejs_sdk_repo: !!python/object/apply:os.getenv ['NODEJS_SDK_REPO']
     python_sdk_repo: !!python/object/apply:os.getenv ['PYTHON_SDK_REPO']

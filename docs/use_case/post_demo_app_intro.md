@@ -4,7 +4,7 @@ In this tutorial we are going to present 3 versions of ONEm's #post application.
 
 - **[#postv1](/use_case/postv1/)** - a stripped down version of the service; we will be able to create, store and view posts
 - **[#postv2](/use_case/postv2/)** - on top of v1, we will now add a Search wizard so we can search by keyword/code in all saved posts (ours or others)
-- **[#postv3](/use_case/postv3/)** - on top of v2, we will enable interactions with ONEm's restdAPI
+- **[#postv3](/use_case/postv3/)** - on top of v2, we will enable interactions with [ONEm API]({{ links.onem_api_docs }})
 
 For prerequisites and running any of the 3 apps locally please refer to: [prerequisites](/getting_started/python_prereq) and [run locally](/getting_started/python_run_local/) tutorials.
 
