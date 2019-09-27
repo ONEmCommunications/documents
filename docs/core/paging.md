@@ -6,18 +6,30 @@ At the end of each sms body, right before the footer, there will be automaticall
 
 A relevant example for this mechanism can be extracted from our `#wiki` micro app. The article's introduction about SMS is paginated in 8 chunks and the first 2 are presented below. The hint from footer, _"more"_, is used to navigate to the next chunk.
 
-```
+<pre>
 #WIKI (ENGLISH) SMS SEARCH
-SMS (short message service) is a text messaging service component of most telephone, Internet, and mobile device systems. It uses standardized
+SMS (short message service)
+is a text messaging service
+component of most telephone,
+Internet, and mobile device
+systems. It uses
+standardized
 ..1/8
 --MORE/BACK
-```
+</pre>
 
 _more_
 
-```
-communication protocols to enable mobile devices to exchange short text messages. An intermediary service can facilitate a text-to-voice conversion to be sent to landlines.
+<pre>
+communication protocols to
+enable mobile devices to
+exchange short text
+messages.
+An intermediary service can
+facilitate a text-to-voice
+conversion to be sent to
+landlines.
 SMS was
 ..2/8
 --MORE/BACK
-```
+</pre>

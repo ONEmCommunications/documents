@@ -143,28 +143,28 @@ So when the user sends **a** to access the **New todo** option item, as mentione
 
 The user will be taken through a wizard and it will look like:
 
-```
+<pre>
 #TODO CREATE TASK
 Provide a description
-```
+</pre>
 
 This is the first step and whatever the user replies with will be set as the task description. This is a **string** and it will be **POST**ed to **path** as indicated in the json structure. Notice there is no **header** or **footer** mentioned at this step, so form header and footer will be used as fallbacks.
 
 
-```
+<pre>
 #TODO DUE DATE
 Provide a description
-```
+</pre>
 
 This is the second step and the user needs to reply with a date. There is no callback path so no HTTP request will be performed after this step. The **header** is present here, so it will be displayed instead of the form header.
 
 
-```
+<pre>
 #TODO PRIORITY
 A High priority
 B Low priority
 --Reply A-B
-```
+</pre>
 
 This is the last step and the user needs to choose one option.
 
