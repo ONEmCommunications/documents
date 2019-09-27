@@ -14,7 +14,7 @@ This means that no **path** or **method** are needed in the **content** item of 
 
 The response back to the user will be an SMS which will look like:
 
-```
+<pre>
 #TODO DONE
 Your task has been created!
-```
+</pre>

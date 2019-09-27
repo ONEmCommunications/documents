@@ -90,14 +90,14 @@ So when the user accesses your **todo** app, by sending **#todo**, ONEm will sen
 
 The response back to the user will be an SMS which will look like:
 
-```
+<pre>
 #TODO HOME
 A New todo
 B Done(0)
 Todo(1)
 C buy coffee 2019-07-01
 --Reply A-C
-```
+</pre>
 
 
 ### Type

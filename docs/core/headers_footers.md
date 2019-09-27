@@ -7,7 +7,8 @@ Every response message from ONEm Platform will have the following structure:
 **FOOTER** - the footer is where information like 'hints' is attached to the bottom of the message. In here, users will find guidelines regarding next available actions.
 
 All this might be more intuitive with an example from #onem application:
-```
+
+<pre>
 #ONEM MENU
 A My account
 B Invite friends to chat
@@ -15,4 +16,4 @@ C Create SMS group chats (xGroup)
 D Services
 E How to use
 --Reply A-E
-```
+</pre>
