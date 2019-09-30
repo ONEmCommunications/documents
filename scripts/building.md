@@ -59,7 +59,7 @@ the user
 |body|array|Composed of [`MenuItemFormItem`](#menuitemformitem) objects <br> _required only for `type=form-menu`_|
 |chunking_footer|string|Shown in the footer of the sms chunks|
 |confirmation_label|string|Shown in the confirmation menu|
-|*description|string|The description of this `FormItem`|
+|description|string|The description of this `FormItem`|
 |footer|string|If provided will overwrite the `Form.footer`|
 |header|string|If provided will overwrite the `Form.header`|
 |max_length|integer|Validates the user input <br> _applies only for `type=string`_|
@@ -73,10 +73,11 @@ the user
 |min_value|number|Validates the user input <br> _applies only for `type=int|float`_|
 |min_value_error|string|Message to be shown on `min_value` error|
 |*name|string|The name of this `FormItem`, used in form serialization|
+|pattern|string|ECMA Script regex pattern string <br> _applies only for `type=regex`_|
 |required|boolean|User can `SKIP` this `FormItem` if set to `false`|
 |status_exclude|boolean|If `true` this step will be excluded from the form completion status|
 |status_prepend|boolean|If `true` this step will be prepended to the body of the response. Appended otherwise|
-|*type|string|Indicates the type of the object<br> _available: `"string", "date", "datetime", "hidden", "int", "float", "form-menu", "email", "url", "location"`_|
+|*type|string|Indicates the type of the object<br> _available: `"string", "date", "datetime", "hidden", "int", "float", "form-menu", "email", "url", "location", "regex"`_|
 |url|string|Callback url triggered right after the choice has been set for this form item|
 |validate_type_error|string|An error message to be shown on basic type validation|
 |validate_type_error_footer|string|Shown in the error message footer|
@@ -90,7 +91,7 @@ the user
 |-----|------|-------|
 |completion_status_in_header|boolean|If `true` will indicate the status in the header. Defaults to `false`, which means it will be shown below header if the completion status is shown|
 |completion_status_show|boolean|If `true` will show a completion status. Defaults to `false`|
-|confirmation_needed|boolean|If `false` will not ask for confirmation. Defaults to `true`|
+|skip_confirmation|boolean|If `true` will not ask for confirmation. Defaults to `false`|
 
 ## Form
 A top level component used to acquire information from the user
