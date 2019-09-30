@@ -213,28 +213,33 @@ For asking the user to select from a predefined list of options, the
 - allowed children: no
 
 ### Attributes
-- `type` (string) - describes the data type expected by the app as response
-from the user. The platform will convert the text input to the specified type.
-Supported values:
-    - "text" - the user input is validated as text
-    - "date" - the user input is validated as date
-    - "datetime" - the user input is validated as datetime
-    - "number" - the user input is validated as any number (if integer is wanted,
-    use `type="number"` with `step="1"`)
-    - "hidden" - won't be displayed
-    - "email" - the user input is validated as email address
-    - "location" - the user input is validated as location
-    - "url" - the user input is validated as url
+
+#### Standard HTML5:
+- `type` (string) - describes the data type expected by the app as response from the user. The platform will convert the text input to the specified type. The supported values are:
+    - Standard HTML5:
+        - `"date"` - the user input is validated as date
+        - `"email"` - the user input is validated as email address
+        - `"hidden"` - won't be displayed
+        - `"number"` - the user input is validated as any number (if integer is wanted, use `type="number"` with `step="1"`)
+        - `"text"` - the user input is validated as text
+        - `"url"` - the user input is validated as url    
+    - Non-standard:
+        - `"datetime"` - the user input is validated as datetime
+        - `"location"` - the user input is validated as location
+
 - `min` (number) - validates the user input - for type=number
-- `min_error` (string) - message to be shown on min error
 - `minlength` (integer) - validates the user input - for type=text
-- `minlength_error` (string) - message to be shown on minlength error
 - `max` (number) - validates the user input - for type=number
-- `max_error` (string) - message to be shown on max error
 - `maxlength` (integer) - validates the user input - for type=text
-- `maxlength_error` (string) - message to be shown on maxlength error
 - `step` (integer) - specifies the legal number intervals for input field
 - `value` (string) - required for type=hidden
+- `pattern` (string) - defines a regex. `type` is ignored and considered `text`.
+
+#### Non-standard
+- `min_error` (string) - message to be shown on min error
+- `minlength_error` (string) - message to be shown on minlength error
+- `max_error` (string) - message to be shown on max error
+- `maxlength_error` (string) - message to be shown on maxlength error
 
 ### Example
 ```html
@@ -285,13 +290,12 @@ within the form
 - `completion-status-in-header` (boolean) - if `true`, show the user's
 progress in header, otherwise in body; ignored if `completion-status-show` is
 false.
-- `confirmation-needed` (boolean) - whether to add an additional form item for
-confirmation.
+- `skip-confirmation` (boolean) - If `true` will not ask for confirmation.
 
 ### Example
 
 ```html
-<form action="/callback/form1" method="POST" confirmation-needed>
+<form action="/callback/form1" method="POST" skip-confirmation>
   <section>...</section>
   <section>...</section>
 </form>
