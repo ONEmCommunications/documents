@@ -74,6 +74,8 @@ extra:
     schema_url: !!python/object/apply:os.getenv ['SWAGGER_SCHEMA_URL']
     nodejs_sdk_repo: !!python/object/apply:os.getenv ['NODEJS_SDK_REPO']
     python_sdk_repo: !!python/object/apply:os.getenv ['PYTHON_SDK_REPO']
+    todo_app:
+      github_nodejs_url: !!python/object/apply:os.getenv ['TODO_APP_GITHUB_NODEJS_URL']
   todo_app:
     github_py_url: !!python/object/apply:os.getenv ['TODO_APP_GITHUB_PY_URL']
   post_app:
