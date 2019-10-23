@@ -28,6 +28,8 @@ not inside a `<form>`.
 Ignored if not inside a `<form>`.
 - `required` (boolean) - can be skipped if set to false. Ignored if not inside a
 `<form>`.
+- `default` (string) - used for not required form items, providing a default 
+value when the item is skipped.
 - `status-exclude` (boolean) - if true this step will be excluded from the form
 completion status.Ignored if not inside a `<form>`.
 - `status-prepend` (boolean) - if true this step will be prepended to the body
