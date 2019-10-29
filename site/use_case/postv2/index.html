@@ -36,7 +36,7 @@
     
     
       
-        <title>post v2 - Documentation</title>
+        <title>Search through posts - Documentation</title>
       
     
     
@@ -106,7 +106,7 @@
               Documentation
             </span>
             <span class="md-header-nav__topic">
-              post v2
+              Search through posts
             </span>
           
         </div>
@@ -356,8 +356,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../core/callback_api/" title="(callback vs RestDAPI)" class="md-nav__link">
-      (callback vs RestDAPI)
+    <a href="../../core/callback_api/" title="(callback vs ONEm API)" class="md-nav__link">
+      (callback vs ONEm API)
     </a>
   </li>
 
@@ -708,11 +708,32 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
-      Use Case
+      Guides
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
-        Use Case
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1" checked>
+    
+    <label class="md-nav__link" for="nav-6-1">
+      Building a post board micro-app
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-1">
+        Building a post board micro-app
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -723,8 +744,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../post_demo_app_intro/" title="Introduction" class="md-nav__link">
-      Introduction
+    <a href="../post_demo_app_intro/" title="Basics" class="md-nav__link">
+      Basics
     </a>
   </li>
 
@@ -735,8 +756,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../postv1/" title="post v1" class="md-nav__link">
-      post v1
+    <a href="../postv1/" title="Micro app landing" class="md-nav__link">
+      Micro app landing
     </a>
   </li>
 
@@ -753,8 +774,8 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
-    <a href="./" title="post v2" class="md-nav__link md-nav__link--active">
-      post v2
+    <a href="./" title="Search through posts" class="md-nav__link md-nav__link--active">
+      Search through posts
     </a>
     
   </li>
@@ -766,8 +787,25 @@
 
 
   <li class="md-nav__item">
-    <a href="../postv3/" title="post v3" class="md-nav__link">
-      post v3
+    <a href="../postv3/" title="Using the ONEm API" class="md-nav__link">
+      Using the ONEm API
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../todo.md" title="Building a skillhire micro-app using templates" class="md-nav__link">
+      Building a skillhire micro-app using templates
     </a>
   </li>
 
@@ -787,11 +825,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
-      API
+      Reference
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
-        API
+        Reference
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -802,8 +840,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/purpose/" title="Purpose" class="md-nav__link">
-      Purpose
+    <a href="http://172.16.38.113:6212/redoc" title="ONEm API" class="md-nav__link">
+      ONEm API
     </a>
   </li>
 
@@ -814,8 +852,8 @@
 
 
   <li class="md-nav__item">
-    <a href="http://172.16.38.113:6212/redoc" title="Documentation" class="md-nav__link">
-      Documentation
+    <a href="http://172.16.38.113:6212/docs" title="ONEm SDK" class="md-nav__link">
+      ONEm SDK
     </a>
   </li>
 
@@ -838,10 +876,18 @@
               
                 
                 
-                  <h1>post v2</h1>
+                  <h1>Search through posts</h1>
                 
-                <p>If not already done so, please first follow the tutorial for the <strong>postv1</strong> app <a href="/use_case/postv1">here</a>, to get a grasp on what this micro-app does, the prerequisites and some specific details of the ONEm SDK.</p>
-<p>We are now going to save/store our posts in a local database, instead of the non-persistent cache. The <strong>models.py</strong> file describes our Post entity and its attributes:</p>
+                <p>If not already done so, please first follow the tutorial for the <strong><a href="/use_case/postv1/">postv1</a></strong> micro-app, to get a grasp on what it does, the prerequisites and some specific details of the ONEm SDK.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This version adds the following:</p>
+<ul>
+<li>persistent post storage in our local sqlite database</li>
+<li>search capabilities</li>
+</ul>
+</div>
+<p>The <code>models.py</code> file describes our Post entity and its attributes.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -850,27 +896,20 @@
 6
 7
 8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>class Post<span class="o">(</span>models.Model<span class="o">)</span>:
-    <span class="nv">user</span> <span class="o">=</span> models.ForeignKey<span class="o">(</span>User, models.CASCADE<span class="o">)</span>
-    <span class="nv">title</span> <span class="o">=</span> models.CharField<span class="o">(</span><span class="nv">max_length</span><span class="o">=</span><span class="m">64</span><span class="o">)</span>
-    <span class="nv">description</span> <span class="o">=</span> models.CharField<span class="o">(</span><span class="nv">max_length</span><span class="o">=</span><span class="m">1024</span><span class="o">)</span>
-    <span class="nv">code</span> <span class="o">=</span> models.CharField<span class="o">(</span><span class="nv">max_length</span><span class="o">=</span><span class="m">16</span><span class="o">)</span>
-    <span class="nv">created_at</span> <span class="o">=</span> models.DateTimeField<span class="o">()</span>
-    <span class="nv">is_private</span> <span class="o">=</span> models.BooleanField<span class="o">(</span><span class="nv">default</span><span class="o">=</span>False<span class="o">)</span>
-    <span class="nv">views</span> <span class="o">=</span> models.IntegerField<span class="o">()</span>
-    <span class="nv">expires_at</span> <span class="o">=</span> models.DateTimeField<span class="o">()</span>
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Post</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">)</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">64</span><span class="p">)</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">1024</span><span class="p">)</span>
+    <span class="n">code</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+    <span class="n">created_at</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">()</span>
+    <span class="n">is_private</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">views</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">()</span>
+    <span class="n">expires_at</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">()</span>
 </pre></div>
 </td></tr></table>
 
-<p>This model will be used to create a table in a local lightweight sqlite database - let's run the below 2 commands in the root folder of our <strong>postv2</strong> app:
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manange.py makemigrations
-</pre></div>
-</td></tr></table>
-and after:
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py migrate
-</pre></div>
-</td></tr></table></p>
-<p>Next, if we look at the changes in the <strong>views.py</strong> file we can notice the post is no longer saved/retrieved from cache(as we did in <strong>postv1</strong>), but in/from the database:
+<p>The <code>AddPostView.post</code> method from <code>views.py</code> file was modified in order to store the posts in the database.</p>
+<p>The relevant piece of code is the one below:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -880,54 +919,35 @@ and after:
  7
  8
  9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nv">new_post</span> <span class="o">=</span> Post.objects.create<span class="o">(</span>
-    <span class="nv">user</span><span class="o">=</span>self.get_user<span class="o">()</span>,
-    <span class="nv">title</span><span class="o">=</span>request.POST<span class="o">[</span><span class="s1">&#39;title&#39;</span><span class="o">]</span>,
-    <span class="nv">description</span><span class="o">=</span>request.POST<span class="o">[</span><span class="s1">&#39;description&#39;</span><span class="o">]</span>,
-    <span class="nv">is_private</span><span class="o">=</span>request.POST<span class="o">[</span><span class="s1">&#39;is_private&#39;</span><span class="o">]</span>,
-    <span class="nv">created_at</span><span class="o">=</span>now,
-    <span class="nv">expires_at</span><span class="o">=</span>expires_at,
-    <span class="nv">views</span><span class="o">=</span><span class="m">0</span>
-<span class="o">)</span>
-new_post.save<span class="o">()</span>
-</pre></div>
-</td></tr></table></p>
-<p>As mentioned, in this version we introduce a search capability. Let's look into the <strong>SearchWizard</strong> view class:
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>def get<span class="o">(</span>self, request<span class="o">)</span>:
-    <span class="nv">form_items</span> <span class="o">=</span> <span class="o">[</span>
-        FormItem<span class="o">(</span><span class="nv">type</span><span class="o">=</span>FormItemType.string,
-                 <span class="nv">name</span><span class="o">=</span><span class="s1">&#39;keyword&#39;</span>,
-                 <span class="nv">description</span><span class="o">=</span><span class="s1">&#39;Send code or keyword to search&#39;</span>,
-                 <span class="nv">header</span><span class="o">=</span><span class="s1">&#39;search&#39;</span>,
-                 <span class="nv">footer</span><span class="o">=</span><span class="s1">&#39;Send code or keyword&#39;</span><span class="o">)</span>
-    <span class="o">]</span>
-</pre></div>
-</td></tr></table>
-Our search 'wizard' has only 1 step in which we request the user's input, be it a specific post code or a keyword to search for.
-In the ONEm SDK we call such step a <strong>FormItem</strong>, much like in the web world we fill in a form which asked us for our name.(one step only) A <strong>FormItem</strong> has specific properties like <code>type</code>, <code>name</code>, <code>description</code> etc. Should we want further input from the user, we can simply add new <strong>FormItem</strong>s in the above list.</p>
-<p>To prepare this form for processing, we instatiate a <strong>Form</strong> class using the previously described <strong>FormItem</strong> item(s), along with other details like the http method to be used, the path to be used for the redirection(meaning where we will proccess the user's input) and some meta information:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nv">form</span> <span class="o">=</span> Form<span class="o">(</span><span class="nv">body</span><span class="o">=</span>form_items,
-            <span class="nv">method</span><span class="o">=</span><span class="s1">&#39;POST&#39;</span>,
-            <span class="nv">path</span><span class="o">=</span>reverse<span class="o">(</span><span class="s1">&#39;search_wizard&#39;</span><span class="o">)</span>,
-            <span class="nv">meta</span><span class="o">=</span>FormMeta<span class="o">(</span><span class="nv">confirmation_needed</span><span class="o">=</span>False,
-                          <span class="nv">completion_status_in_header</span><span class="o">=</span>False,
-                          <span class="nv">completion_status_show</span><span class="o">=</span>False<span class="o">))</span>
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">AddPostView</span><span class="p">(</span><span class="n">View</span><span class="p">):</span>
+    <span class="o">...</span>
+    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+        <span class="o">...</span>
+        <span class="n">new_post</span> <span class="o">=</span> <span class="n">Post</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+            <span class="n">user</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_user</span><span class="p">(),</span>
+            <span class="n">title</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">],</span>
+            <span class="n">description</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">],</span>
+            <span class="n">is_private</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;is_private&#39;</span><span class="p">],</span>
+            <span class="n">created_at</span><span class="o">=</span><span class="n">now</span><span class="p">,</span>
+            <span class="n">expires_at</span><span class="o">=</span><span class="n">expires_at</span><span class="p">,</span>
+            <span class="n">views</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="o">...</span>
 </pre></div>
 </td></tr></table>
 
-<p>Further, our code redirects us to the <code>post(self, request)</code> method in this <strong>SearchWizardView</strong> class where we check if the input is a post code or a keyword. We inspect the database and get back with an answer for the user's request. Worth mentioning here is that if we get multiple matches for the given keyword, we use the ONEm's SDK <strong>Menu</strong> structure and add the results as <strong>MenuItem</strong>s, then render this menu for the user to select the desired result:
+<p>Let's run the below 2 commands in the root folder of our <strong>postv2</strong> app to create the schema migrations and the database tables:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manange.py makemigrations
+python manage.py migrate
+</pre></div>
+</td></tr></table>
+
+<p>As mentioned, in this version we've added a search capability. Let's look into the <code>SearchWizardView</code> class:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -946,27 +966,36 @@ In the ONEm SDK we call such step a <strong>FormItem</strong>, much like in the 
 16
 17
 18
-19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">if</span> posts:
-    <span class="k">if</span> len<span class="o">(</span>posts<span class="o">)</span> <span class="o">==</span> <span class="m">1</span>:
-        <span class="k">return</span> HttpResponseRedirect<span class="o">(</span>reverse<span class="o">(</span><span class="s1">&#39;post_detail&#39;</span>, <span class="nv">args</span><span class="o">=[</span>posts<span class="o">[</span><span class="m">0</span><span class="o">]</span>.id<span class="o">]))</span>
+19
+20
+21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">SearchWizardView</span><span class="p">(</span><span class="n">View</span><span class="p">):</span>
+    <span class="o">...</span>
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+        <span class="n">form_items</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">FormItem</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="n">FormItemType</span><span class="o">.</span><span class="n">string</span><span class="p">,</span>
+                     <span class="n">name</span><span class="o">=</span><span class="s1">&#39;keyword&#39;</span><span class="p">,</span>
+                     <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Send code or keyword to search&#39;</span><span class="p">,</span>
+                     <span class="n">header</span><span class="o">=</span><span class="s1">&#39;search&#39;</span><span class="p">,</span>
+                     <span class="n">footer</span><span class="o">=</span><span class="s1">&#39;Send code or keyword&#39;</span><span class="p">)</span>
+        <span class="p">]</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">Form</span><span class="p">(</span><span class="n">body</span><span class="o">=</span><span class="n">form_items</span><span class="p">,</span>
+                    <span class="n">method</span><span class="o">=</span><span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+                    <span class="n">path</span><span class="o">=</span><span class="n">reverse</span><span class="p">(</span><span class="s1">&#39;search_wizard&#39;</span><span class="p">),</span>
+                    <span class="n">meta</span><span class="o">=</span><span class="n">FormMeta</span><span class="p">(</span><span class="n">confirmation_needed</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                                  <span class="n">completion_status_in_header</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                                  <span class="n">completion_status_show</span><span class="o">=</span><span class="bp">False</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_response</span><span class="p">(</span><span class="n">form</span><span class="p">)</span>
 
-    <span class="nv">footer</span> <span class="o">=</span> u<span class="s1">&#39;Select an option&#39;</span>
-    <span class="k">for</span> post in posts:
-        menu_items.append<span class="o">(</span>
-            MenuItem<span class="o">(</span><span class="nv">description</span><span class="o">=</span>u<span class="s1">&#39;{}..&#39;</span>.format<span class="o">(</span>post.title<span class="o">[</span>:15<span class="o">])</span>,
-                     <span class="nv">method</span><span class="o">=</span><span class="s1">&#39;GET&#39;</span>,
-                     <span class="nv">path</span><span class="o">=</span>reverse<span class="o">(</span><span class="s1">&#39;post_detail&#39;</span>, <span class="nv">args</span><span class="o">=[</span>post.id<span class="o">]))</span>
-        <span class="o">)</span>
-<span class="k">else</span>:
-    menu_items.append<span class="o">(</span>
-        MenuItem<span class="o">(</span><span class="nv">description</span><span class="o">=</span><span class="s1">&#39;There are no posts matching your keyword.&#39;</span><span class="o">)</span>
-    <span class="o">)</span>
-    <span class="nv">footer</span> <span class="o">=</span> u<span class="s1">&#39;Reply MENU&#39;</span>
-<span class="nv">content</span> <span class="o">=</span> Menu<span class="o">(</span><span class="nv">body</span><span class="o">=</span>menu_items, <span class="nv">header</span><span class="o">=</span><span class="s1">&#39;search&#39;</span>, <span class="nv">footer</span><span class="o">=</span>footer<span class="o">)</span>
-
-<span class="k">return</span> self.to_response<span class="o">(</span>content<span class="o">)</span>
+    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;keyword&#39;</span><span class="p">]</span>
+        <span class="o">...</span>
 </pre></div>
-</td></tr></table></p>
+</td></tr></table>
+
+<p>Our form has only one form item in which we prompt the user with some input, be it a specific post code or a keyword to search for.</p>
+<p>A <code>FormItem</code> has specific properties like <code>type</code>, <code>name</code>, <code>description</code> etc. Should we want further input from the user, we can simply add new <code>FormItem</code> items in the above list.</p>
+<p>A <code>Form</code> contains the form items in the <code>body</code> attribute and requires a <code>path</code> so ONEm platform can perform an HTTP POST callback (as indicated in the <code>method</code> attribute) with a payload containing the user search term.</p>
+<p>The <code>post</code> method grabs the <code>keyword</code> and handles the search logic. Worth mentioning here is that if we get multiple matches for the given keyword, we use a <a href="/building/menu/"><code>Menu</code></a> to present the results, otherwise we redirect to post detail.</p>
                 
                   
                 
@@ -987,7 +1016,7 @@ In the ONEm SDK we call such step a <strong>FormItem</strong>, much like in the 
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../postv1/" title="post v1" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../postv1/" title="Micro app landing" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -996,19 +1025,19 @@ In the ONEm SDK we call such step a <strong>FormItem</strong>, much like in the 
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                post v1
+                Micro app landing
               </span>
             </div>
           </a>
         
         
-          <a href="../postv3/" title="post v3" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../postv3/" title="Using the ONEm API" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                post v3
+                Using the ONEm API
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

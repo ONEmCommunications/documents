@@ -360,8 +360,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../core/callback_api/" title="(callback vs RestDAPI)" class="md-nav__link">
-      (callback vs RestDAPI)
+    <a href="../../core/callback_api/" title="(callback vs ONEm API)" class="md-nav__link">
+      (callback vs ONEm API)
     </a>
   </li>
 
@@ -710,11 +710,30 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
-      Use Case
+      Guides
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
-        Use Case
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1">
+    
+    <label class="md-nav__link" for="nav-6-1">
+      Building a post board micro-app
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-1">
+        Building a post board micro-app
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -725,8 +744,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../use_case/post_demo_app_intro/" title="Introduction" class="md-nav__link">
-      Introduction
+    <a href="../../use_case/post_demo_app_intro/" title="Basics" class="md-nav__link">
+      Basics
     </a>
   </li>
 
@@ -737,8 +756,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../use_case/postv1/" title="post v1" class="md-nav__link">
-      post v1
+    <a href="../../use_case/postv1/" title="Micro app landing" class="md-nav__link">
+      Micro app landing
     </a>
   </li>
 
@@ -749,8 +768,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../use_case/postv2/" title="post v2" class="md-nav__link">
-      post v2
+    <a href="../../use_case/postv2/" title="Search through posts" class="md-nav__link">
+      Search through posts
     </a>
   </li>
 
@@ -761,8 +780,25 @@
 
 
   <li class="md-nav__item">
-    <a href="../../use_case/postv3/" title="post v3" class="md-nav__link">
-      post v3
+    <a href="../../use_case/postv3/" title="Using the ONEm API" class="md-nav__link">
+      Using the ONEm API
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../todo.md" title="Building a skillhire micro-app using templates" class="md-nav__link">
+      Building a skillhire micro-app using templates
     </a>
   </li>
 
@@ -782,11 +818,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
-      API
+      Reference
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
-        API
+        Reference
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -797,8 +833,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/purpose/" title="Purpose" class="md-nav__link">
-      Purpose
+    <a href="http://172.16.38.113:6212/redoc" title="ONEm API" class="md-nav__link">
+      ONEm API
     </a>
   </li>
 
@@ -809,8 +845,8 @@
 
 
   <li class="md-nav__item">
-    <a href="http://172.16.38.113:6212/redoc" title="Documentation" class="md-nav__link">
-      Documentation
+    <a href="http://172.16.38.113:6212/docs" title="ONEm SDK" class="md-nav__link">
+      ONEm SDK
     </a>
   </li>
 
@@ -1095,6 +1131,26 @@
     Attributes
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-html5" title="Standard HTML5:" class="md-nav__link">
+    Standard HTML5:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-standard" title="Non-standard" class="md-nav__link">
+    Non-standard
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1217,6 +1273,8 @@ not inside a <code>&lt;form&gt;</code>.</li>
 Ignored if not inside a <code>&lt;form&gt;</code>.</li>
 <li><code>required</code> (boolean) - can be skipped if set to false. Ignored if not inside a
 <code>&lt;form&gt;</code>.</li>
+<li><code>default</code> (string) - used for not required form items, providing a default 
+value when the item is skipped.</li>
 <li><code>status-exclude</code> (boolean) - if true this step will be excluded from the form
 completion status.Ignored if not inside a <code>&lt;form&gt;</code>.</li>
 <li><code>status-prepend</code> (boolean) - if true this step will be prepended to the body
@@ -1424,31 +1482,43 @@ ignored.</p>
 <li>allowed children: no</li>
 </ul>
 <h3 id="attributes_3">Attributes<a class="headerlink" href="#attributes_3" title="Permanent link">&para;</a></h3>
+<h4 id="standard-html5">Standard HTML5:<a class="headerlink" href="#standard-html5" title="Permanent link">&para;</a></h4>
 <ul>
-<li><code>type</code> (string) - describes the data type expected by the app as response
-from the user. The platform will convert the text input to the specified type.
-Supported values:<ul>
-<li>"text" - the user input is validated as text</li>
-<li>"date" - the user input is validated as date</li>
-<li>"datetime" - the user input is validated as datetime</li>
-<li>"number" - the user input is validated as any number (if integer is wanted,
-use <code>type="number"</code> with <code>step="1"</code>)</li>
-<li>"hidden" - won't be displayed</li>
-<li>"email" - the user input is validated as email address</li>
-<li>"location" - the user input is validated as location</li>
-<li>"url" - the user input is validated as url</li>
+<li>
+<p><code>type</code> (string) - describes the data type expected by the app as response from the user. The platform will convert the text input to the specified type. The supported values are:</p>
+<ul>
+<li>Standard HTML5:<ul>
+<li><code>"date"</code> - the user input is validated as date</li>
+<li><code>"email"</code> - the user input is validated as email address</li>
+<li><code>"hidden"</code> - won't be displayed</li>
+<li><code>"number"</code> - the user input is validated as any number (if integer is wanted, use <code>type="number"</code> with <code>step="1"</code>)</li>
+<li><code>"text"</code> - the user input is validated as text</li>
+<li><code>"url"</code> - the user input is validated as url    </li>
 </ul>
 </li>
-<li><code>min</code> (number) - validates the user input - for type=number</li>
-<li><code>min_error</code> (string) - message to be shown on min error</li>
+<li>Non-standard:<ul>
+<li><code>"datetime"</code> - the user input is validated as datetime</li>
+<li><code>"location"</code> - the user input is validated as location</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>min</code> (number) - validates the user input - for type=number</p>
+</li>
 <li><code>minlength</code> (integer) - validates the user input - for type=text</li>
-<li><code>minlength_error</code> (string) - message to be shown on minlength error</li>
 <li><code>max</code> (number) - validates the user input - for type=number</li>
-<li><code>max_error</code> (string) - message to be shown on max error</li>
 <li><code>maxlength</code> (integer) - validates the user input - for type=text</li>
-<li><code>maxlength_error</code> (string) - message to be shown on maxlength error</li>
 <li><code>step</code> (integer) - specifies the legal number intervals for input field</li>
 <li><code>value</code> (string) - required for type=hidden</li>
+<li><code>pattern</code> (string) - defines a regex. <code>type</code> is ignored and considered <code>text</code>.</li>
+</ul>
+<h4 id="non-standard">Non-standard<a class="headerlink" href="#non-standard" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>min_error</code> (string) - message to be shown on min error</li>
+<li><code>minlength_error</code> (string) - message to be shown on minlength error</li>
+<li><code>max_error</code> (string) - message to be shown on max error</li>
+<li><code>maxlength_error</code> (string) - message to be shown on maxlength error</li>
 </ul>
 <h3 id="example_8">Example<a class="headerlink" href="#example_8" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -1504,14 +1574,13 @@ within the form</li>
 <li><code>completion-status-in-header</code> (boolean) - if <code>true</code>, show the user's
 progress in header, otherwise in body; ignored if <code>completion-status-show</code> is
 false.</li>
-<li><code>confirmation-needed</code> (boolean) - whether to add an additional form item for
-confirmation.</li>
+<li><code>skip-confirmation</code> (boolean) - If <code>true</code> will not ask for confirmation.</li>
 </ul>
 <h3 id="example_10">Example<a class="headerlink" href="#example_10" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;/callback/form1&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span> <span class="na">confirmation-needed</span><span class="p">&gt;</span>
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;/callback/form1&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span> <span class="na">skip-confirmation</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>

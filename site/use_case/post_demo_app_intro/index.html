@@ -36,7 +36,7 @@
     
     
       
-        <title>Introduction - Documentation</title>
+        <title>Basics - Documentation</title>
       
     
     
@@ -106,7 +106,7 @@
               Documentation
             </span>
             <span class="md-header-nav__topic">
-              Introduction
+              Basics
             </span>
           
         </div>
@@ -356,8 +356,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../core/callback_api/" title="(callback vs RestDAPI)" class="md-nav__link">
-      (callback vs RestDAPI)
+    <a href="../../core/callback_api/" title="(callback vs ONEm API)" class="md-nav__link">
+      (callback vs ONEm API)
     </a>
   </li>
 
@@ -708,11 +708,32 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
-      Use Case
+      Guides
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
-        Use Case
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1" checked>
+    
+    <label class="md-nav__link" for="nav-6-1">
+      Building a post board micro-app
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-1">
+        Building a post board micro-app
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -729,8 +750,8 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
-    <a href="./" title="Introduction" class="md-nav__link md-nav__link--active">
-      Introduction
+    <a href="./" title="Basics" class="md-nav__link md-nav__link--active">
+      Basics
     </a>
     
   </li>
@@ -742,8 +763,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../postv1/" title="post v1" class="md-nav__link">
-      post v1
+    <a href="../postv1/" title="Micro app landing" class="md-nav__link">
+      Micro app landing
     </a>
   </li>
 
@@ -754,8 +775,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../postv2/" title="post v2" class="md-nav__link">
-      post v2
+    <a href="../postv2/" title="Search through posts" class="md-nav__link">
+      Search through posts
     </a>
   </li>
 
@@ -766,8 +787,25 @@
 
 
   <li class="md-nav__item">
-    <a href="../postv3/" title="post v3" class="md-nav__link">
-      post v3
+    <a href="../postv3/" title="Using the ONEm API" class="md-nav__link">
+      Using the ONEm API
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../todo.md" title="Building a skillhire micro-app using templates" class="md-nav__link">
+      Building a skillhire micro-app using templates
     </a>
   </li>
 
@@ -787,11 +825,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
-      API
+      Reference
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
-        API
+        Reference
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -802,8 +840,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/purpose/" title="Purpose" class="md-nav__link">
-      Purpose
+    <a href="http://172.16.38.113:6212/redoc" title="ONEm API" class="md-nav__link">
+      ONEm API
     </a>
   </li>
 
@@ -814,8 +852,8 @@
 
 
   <li class="md-nav__item">
-    <a href="http://172.16.38.113:6212/redoc" title="Documentation" class="md-nav__link">
-      Documentation
+    <a href="http://172.16.38.113:6212/docs" title="ONEm SDK" class="md-nav__link">
+      ONEm SDK
     </a>
   </li>
 
@@ -838,14 +876,14 @@
               
                 
                 
-                  <h1>Introduction</h1>
+                  <h1>Basics</h1>
                 
                 <p><strong>#post</strong> micro-app is a collaborative application that serves as a virtual post board where users can post small adds sharing information or services. Users can post, edit and view adds, search by keyword, contact the add owner, comment and rate.</p>
 <p>In this tutorial we are going to present 3 versions of ONEm's #post application. The apps are written in the Django framework using ONEm's Python SDK.</p>
 <ul>
-<li><strong>#postv1</strong> - a stripped down version of the service; we will be able to create, store and view posts</li>
-<li><strong>#postv2</strong> - on top of v1, we will now add a Search wizard so we can search by keyword/code in all saved posts (ours or others)</li>
-<li><strong>#postv3</strong> - on top of v2, we will enable interactions with ONEm's restdAPI</li>
+<li><strong><a href="/use_case/postv1/">#postv1</a></strong> - a stripped down version of the service; we will be able to create, store and view posts</li>
+<li><strong><a href="/use_case/postv2/">#postv2</a></strong> - on top of v1, we will now add a Search wizard so we can search by keyword/code in all saved posts (ours or others)</li>
+<li><strong><a href="/use_case/postv3/">#postv3</a></strong> - on top of v2, we will enable interactions with <a href="http://172.16.38.113:6212/docs">ONEm API</a></li>
 </ul>
 <p>For prerequisites and running any of the 3 apps locally please refer to: <a href="/getting_started/python_prereq">prerequisites</a> and <a href="/getting_started/python_run_local/">run locally</a> tutorials.</p>
 <p>Notes: </p>
@@ -854,53 +892,44 @@
 </pre></div>
 </td></tr></table></p>
 <p>2) We will only need to create one virtualenv, containing the packages listed in the requirements.txt file in the project's root folder and this virtual env will be used by all 3 versions of the app.</p>
-<p>All 3 versions of the #post application contained in this repo(<strong>postv1</strong>, <strong>v2</strong> &amp; <strong>v3</strong>) are Django apps. Below you can find a few details on the structure of a Django project, its key files and their purpose.</p>
-<p>The root folder of a Django project:
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">[</span>projectname<span class="o">]</span>/
-├── <span class="o">[</span>projectname<span class="o">]</span>/
+<p>All 3 versions of the #post application contained in this <a href="https://github.com/onem-developer/post-demo-app/">repo</a> are Django apps. Below you can find a few details on the structure of a Django project, its key files and their purpose.</p>
+<p>The root folder of a Django project:</p>
+<pre>
+[projectname]/
+├── [projectname]/
 │   ├── __init__.py
 │   ├── settings.py
 │   ├── urls.py
 │   └── wsgi.py
 └── manage.py
-</pre></div>
-</td></tr></table></p>
+</pre>
+
 <ul>
 <li>the <strong>manage.py</strong> file is the command line utility of the project. This file contains the code for starting the server, migrating and controlling the project through command-line.</li>
 <li>the <strong>settings.py</strong> is the main file where we will be adding all our applications and middleware applications. As the name suggests this is the main settings file of the Django project. This file contains the installed applications and middleware information.</li>
 <li>the <strong>urls.py</strong> file contains the project level URL information. The main purpose of this file is to connect the web-apps with the project. Anything you will be typing in the URL bar will be processed by this urls.py file. Then, it will correspond your request to the designated app you connected to it.</li>
 </ul>
 <p>The inner [projectname] folder contains the following files:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="se">\[</span>projectname<span class="o">]</span>
-    <span class="se">\m</span>igrations
+<pre>
+\[projectname]
+    \migrations
     __init__.py
     admin.py
     apps.py
     models.py
     tests.py
     views.py
-</pre></div>
-</td></tr></table>
+</pre>
 
-<p>For our postv1, v2 and v3 apps it is worth mentioning about:</p>
+<p>For our v1, v2 and v3 apps it is worth mentioning about:</p>
 <ul>
-<li>the <strong>models.py</strong> file - the model for a <code>post</code> enitity is described here. Django models define the structure of stored data. We will be using this in <strong>postv2</strong> and <strong>postv3</strong> to store our posts in a local database.</li>
+<li>the <strong>models.py</strong> file - the model for a <code>post</code> enitity is described here. Django models define the structure of stored data. We will be using this in <strong><a href="/use_case/postv2/">postv2</a></strong> and <strong><a href="/use_case/postv3/">postv3</a></strong> to store our posts in a local database.</li>
 <li>the <strong>views.py</strong> file - it is here where most of the code interacting with the ONEm platform and the ONEm SDK will reside. At their simplest, the views are a Python function or class that takes a web request and return a web response. They are used to do things like fetch objects from the database, modify those objects if needed, render forms, return HTML, and much more.</li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>For more info about the internals of the Django framework, please visit the oficial documentation here <a href="https://docs.djangoproject.com">Django docs</a>.</p>
+</div>
                 
                   
                 
@@ -936,13 +965,13 @@
           </a>
         
         
-          <a href="../postv1/" title="post v1" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../postv1/" title="Micro app landing" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                post v1
+                Micro app landing
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

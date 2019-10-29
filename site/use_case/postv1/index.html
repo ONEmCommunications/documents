@@ -36,7 +36,7 @@
     
     
       
-        <title>post v1 - Documentation</title>
+        <title>Micro app landing - Documentation</title>
       
     
     
@@ -106,7 +106,7 @@
               Documentation
             </span>
             <span class="md-header-nav__topic">
-              post v1
+              Micro app landing
             </span>
           
         </div>
@@ -356,8 +356,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../core/callback_api/" title="(callback vs RestDAPI)" class="md-nav__link">
-      (callback vs RestDAPI)
+    <a href="../../core/callback_api/" title="(callback vs ONEm API)" class="md-nav__link">
+      (callback vs ONEm API)
     </a>
   </li>
 
@@ -708,11 +708,32 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
-      Use Case
+      Guides
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
-        Use Case
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1" checked>
+    
+    <label class="md-nav__link" for="nav-6-1">
+      Building a post board micro-app
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-1">
+        Building a post board micro-app
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -723,8 +744,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../post_demo_app_intro/" title="Introduction" class="md-nav__link">
-      Introduction
+    <a href="../post_demo_app_intro/" title="Basics" class="md-nav__link">
+      Basics
     </a>
   </li>
 
@@ -741,8 +762,8 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
-    <a href="./" title="post v1" class="md-nav__link md-nav__link--active">
-      post v1
+    <a href="./" title="Micro app landing" class="md-nav__link md-nav__link--active">
+      Micro app landing
     </a>
     
   </li>
@@ -754,8 +775,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../postv2/" title="post v2" class="md-nav__link">
-      post v2
+    <a href="../postv2/" title="Search through posts" class="md-nav__link">
+      Search through posts
     </a>
   </li>
 
@@ -766,8 +787,25 @@
 
 
   <li class="md-nav__item">
-    <a href="../postv3/" title="post v3" class="md-nav__link">
-      post v3
+    <a href="../postv3/" title="Using the ONEm API" class="md-nav__link">
+      Using the ONEm API
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../todo.md" title="Building a skillhire micro-app using templates" class="md-nav__link">
+      Building a skillhire micro-app using templates
     </a>
   </li>
 
@@ -787,11 +825,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
-      API
+      Reference
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
-        API
+        Reference
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -802,8 +840,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/purpose/" title="Purpose" class="md-nav__link">
-      Purpose
+    <a href="http://172.16.38.113:6212/redoc" title="ONEm API" class="md-nav__link">
+      ONEm API
     </a>
   </li>
 
@@ -814,8 +852,8 @@
 
 
   <li class="md-nav__item">
-    <a href="http://172.16.38.113:6212/redoc" title="Documentation" class="md-nav__link">
-      Documentation
+    <a href="http://172.16.38.113:6212/docs" title="ONEm SDK" class="md-nav__link">
+      ONEm SDK
     </a>
   </li>
 
@@ -838,7 +876,7 @@
               
                 
                 
-                  <h1>post v1</h1>
+                  <h1>Micro app landing</h1>
                 
                 <p>This initial version of the demo #post app will allow you to create and visualise your own post(s). It will also showcase examples of the ONEM's python SDK usage.</p>
 <p>So let's navigate to the <strong>postv1</strong> folder and create/activate our virtual environment:</p>
@@ -858,24 +896,20 @@ All of the above steps are explained in the <a href="/getting_started/python_run
 <p>Once that is done, you will have an option to create an app. Hit that button and place the url obtaine from ngrok as the callback url.</p>
 <p>In the developer portal there is a <code>Test Client</code> section. This is a phone simulator from where you can test the app.
 We can now access the application by placing a hashtag in front of the name. So let's send: <code>#name-of-your-app</code></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">#POSTV1 MENU</span>
+<pre>
+#POSTV1 MENU
 Please choose a username
 --Send username
-</pre></div>
-</td></tr></table>
+</pre>
 
-<p>Send the desired username and we should be greeted with the landing menu:
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">#POSTV1</span>
+<p>Send the desired username and we should be greeted with the landing menu:</p>
+<pre>
+#POSTV1
 A Add post
 B My posts
 --Reply A-B
-</pre></div>
-</td></tr></table></p>
+</pre>
+
 <p><em>*the name of your app will be different, as chosen in the developer portal</em></p>
 <p>You can go ahead and create a post or two which you can later visualise in the <strong>My post</strong> section of the app.</p>
 <p>Code-wise you can inspect the below classes from the <em>views.py</em> file:</p>
@@ -885,15 +919,19 @@ B My posts
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>FormItemContent(type=FormItemContentType.string,
-        name=&#39;title&#39;,
-        description=&#39;Give your new post a title (maximum 64 characters)&#39;,
-        header=&#39;add&#39;,
-        footer=&#39;Reply with post title or BACK&#39;)
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">FormItemContent</span><span class="p">(</span>
+    <span class="nb">type</span><span class="o">=</span><span class="n">FormItemContentType</span><span class="o">.</span><span class="n">string</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;title&#39;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Give your new post a title (maximum 64 characters)&#39;</span><span class="p">,</span>
+    <span class="n">header</span><span class="o">=</span><span class="s1">&#39;add&#39;</span><span class="p">,</span>
+    <span class="n">footer</span><span class="o">=</span><span class="s1">&#39;Reply with post title or BACK&#39;</span>
+<span class="p">)</span>
 </pre></div>
 </td></tr></table></li>
-<li><em>class MyPostListView(View)</em> - to view the list of your created posts. We can see here the SDK's <strong>Menu</strong> structure in action. Each post is a <strong>MenuItem</strong> and togheter they are displayed as a <strong>Menu</strong>:</li>
-</ul>
+<li>
+<p><em>class MyPostListView(View)</em> - to view the list of your created posts. We can see here the SDK's <strong>Menu</strong> structure in action. Each post is a <strong>MenuItem</strong> and togheter they are displayed as a <strong>Menu</strong>:
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -906,27 +944,28 @@ B My posts
 10
 11
 12
-13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>posts = cache.get(&#39;posts&#39;)                                              
-if posts:                                                               
-    for post in posts:                                                  
-        menu_items.append(                                              
-            MenuItem(description=u&#39;{}..&#39;.format(post[&#39;title&#39;][:15]),    
-                     method=&#39;GET&#39;,                                      
-                     path=reverse(&#39;post_detail&#39;, args=[post[&#39;code&#39;]]))  
-        )                                                               
-else:                                                                   
-    menu_items.append(                                                  
-        MenuItem(description=&#39;You currently have no posts.&#39;)            
-    )                                                                   
-content = Menu(body=menu_items, footer=&#39;Reply MENU&#39;) 
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">posts</span> <span class="o">=</span> <span class="n">cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;posts&#39;</span><span class="p">)</span>                                              
+<span class="k">if</span> <span class="n">posts</span><span class="p">:</span>                                                               
+    <span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">posts</span><span class="p">:</span>                                                  
+        <span class="n">menu_items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>                                              
+            <span class="n">MenuItem</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="sa">u</span><span class="s1">&#39;{}..&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">post</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">][:</span><span class="mi">15</span><span class="p">]),</span>    
+                     <span class="n">method</span><span class="o">=</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span>                                      
+                     <span class="n">path</span><span class="o">=</span><span class="n">reverse</span><span class="p">(</span><span class="s1">&#39;post_detail&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">[</span><span class="n">post</span><span class="p">[</span><span class="s1">&#39;code&#39;</span><span class="p">]]))</span>  
+        <span class="p">)</span>                                                               
+<span class="k">else</span><span class="p">:</span>                                                                   
+    <span class="n">menu_items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>                                                  
+        <span class="n">MenuItem</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;You currently have no posts.&#39;</span><span class="p">)</span>            
+    <span class="p">)</span>                                                                   
+<span class="n">content</span> <span class="o">=</span> <span class="n">Menu</span><span class="p">(</span><span class="n">body</span><span class="o">=</span><span class="n">menu_items</span><span class="p">,</span> <span class="n">footer</span><span class="o">=</span><span class="s1">&#39;Reply MENU&#39;</span><span class="p">)</span> 
 </pre></div>
-</td></tr></table>
-
-<ul>
-<li><em>class PostDetailView(View)</em> - to show details of the selected post. Again, a <strong>Menu</strong> structure is used for achieving this.</li>
+</td></tr></table></p>
+</li>
+<li>
+<p><em>class PostDetailView(View)</em> - to show details of the selected post. Again, a <strong>Menu</strong> structure is used for achieving this.</p>
+</li>
 </ul>
 <p>For each of these classes you can modify the code to add new items, remove them, show different labels etc and see the result by saving these changes and revisiting the app in the test client.</p>
-<p>For <strong>post v2</strong> we are going to add a search functionality which will further explain how a <strong>Form</strong> works and also store our posts in a lightweight local database.</p>
+<p>For <strong><a href="/use_case/postv2/">postv2</a></strong> we are going to add a search functionality which will further explain how a <strong>Form</strong> works and also store our posts in a lightweight local database.</p>
                 
                   
                 
@@ -947,7 +986,7 @@ content = Menu(body=menu_items, footer=&#39;Reply MENU&#39;)
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../post_demo_app_intro/" title="Introduction" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../post_demo_app_intro/" title="Basics" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -956,19 +995,19 @@ content = Menu(body=menu_items, footer=&#39;Reply MENU&#39;)
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Introduction
+                Basics
               </span>
             </div>
           </a>
         
         
-          <a href="../postv2/" title="post v2" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../postv2/" title="Search through posts" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                post v2
+                Search through posts
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

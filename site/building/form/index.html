@@ -360,8 +360,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../core/callback_api/" title="(callback vs RestDAPI)" class="md-nav__link">
-      (callback vs RestDAPI)
+    <a href="../../core/callback_api/" title="(callback vs ONEm API)" class="md-nav__link">
+      (callback vs ONEm API)
     </a>
   </li>
 
@@ -851,11 +851,30 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
-      Use Case
+      Guides
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
-        Use Case
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1">
+    
+    <label class="md-nav__link" for="nav-6-1">
+      Building a post board micro-app
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-1">
+        Building a post board micro-app
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -866,8 +885,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../use_case/post_demo_app_intro/" title="Introduction" class="md-nav__link">
-      Introduction
+    <a href="../../use_case/post_demo_app_intro/" title="Basics" class="md-nav__link">
+      Basics
     </a>
   </li>
 
@@ -878,8 +897,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../use_case/postv1/" title="post v1" class="md-nav__link">
-      post v1
+    <a href="../../use_case/postv1/" title="Micro app landing" class="md-nav__link">
+      Micro app landing
     </a>
   </li>
 
@@ -890,8 +909,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../use_case/postv2/" title="post v2" class="md-nav__link">
-      post v2
+    <a href="../../use_case/postv2/" title="Search through posts" class="md-nav__link">
+      Search through posts
     </a>
   </li>
 
@@ -902,8 +921,25 @@
 
 
   <li class="md-nav__item">
-    <a href="../../use_case/postv3/" title="post v3" class="md-nav__link">
-      post v3
+    <a href="../../use_case/postv3/" title="Using the ONEm API" class="md-nav__link">
+      Using the ONEm API
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../todo.md" title="Building a skillhire micro-app using templates" class="md-nav__link">
+      Building a skillhire micro-app using templates
     </a>
   </li>
 
@@ -923,11 +959,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
-      API
+      Reference
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
-        API
+        Reference
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -938,8 +974,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/purpose/" title="Purpose" class="md-nav__link">
-      Purpose
+    <a href="http://172.16.38.113:6212/redoc" title="ONEm API" class="md-nav__link">
+      ONEm API
     </a>
   </li>
 
@@ -950,8 +986,8 @@
 
 
   <li class="md-nav__item">
-    <a href="http://172.16.38.113:6212/redoc" title="Documentation" class="md-nav__link">
-      Documentation
+    <a href="http://172.16.38.113:6212/docs" title="ONEm SDK" class="md-nav__link">
+      ONEm SDK
     </a>
   </li>
 
@@ -1489,29 +1525,24 @@ a menu inside a form item</p>
 <p>Notice the <strong>'type': 'form'</strong> key value pair, which indicates the form response.</p>
 <p>So when the user sends <strong>a</strong> to access the <strong>New todo</strong> option item, as mentioned <a href="/building/menu/">here</a> ONEm will send a GET request to <strong>http://your-callback.url/task/create/</strong>. This url should return something like the above json structure.</p>
 <p>The user will be taken through a wizard and it will look like:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>#TODO CREATE TASK
+<pre>
+#TODO CREATE TASK
 Provide a description
-</pre></div>
-</td></tr></table>
+</pre>
 
 <p>This is the first step and whatever the user replies with will be set as the task description. This is a <strong>string</strong> and it will be <strong>POST</strong>ed to <strong>path</strong> as indicated in the json structure. Notice there is no <strong>header</strong> or <strong>footer</strong> mentioned at this step, so form header and footer will be used as fallbacks.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>#TODO DUE DATE
+<pre>
+#TODO DUE DATE
 Provide a description
-</pre></div>
-</td></tr></table>
+</pre>
 
 <p>This is the second step and the user needs to reply with a date. There is no callback path so no HTTP request will be performed after this step. The <strong>header</strong> is present here, so it will be displayed instead of the form header.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>#TODO PRIORITY
+<pre>
+#TODO PRIORITY
 A High priority
 B Low priority
 --Reply A-B
-</pre></div>
-</td></tr></table>
+</pre>
 
 <p>This is the last step and the user needs to choose one option.</p>
 <p>After all steps have been processed, as indicated through <strong>method</strong> and <strong>path</strong>, the form will be serialized and an HTTP POST will be sent to the path which is relative to the callback url: <strong>http://your-callback.url/task/create/</strong></p>
