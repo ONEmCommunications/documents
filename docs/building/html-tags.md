@@ -224,10 +224,12 @@ For asking the user to select from a predefined list of options, the
         - `"hidden"` - won't be displayed
         - `"number"` - the user input is validated as any number (if integer is wanted, use `type="number"` with `step="1"`)
         - `"text"` - the user input is validated as text
+        - `"tel"` - validated as text, for web browsers the standard keyboard is replaced with the dialpad
         - `"url"` - the user input is validated as url    
     - Non-standard:
         - `"datetime"` - the user input is validated as datetime
         - `"location"` - the user input is validated as location
+        - `"phone"` - the user input is validated as an international phone number. For web browsers the standard keyboard is replaced with the dialpad
 
 - `min` (number) - validates the user input - for type=number
 - `minlength` (integer) - validates the user input - for type=text
