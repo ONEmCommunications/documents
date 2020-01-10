@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd site && static-server"
+    "start": "cd site && static-server",
+    "start:docker": "cd site && static-server"
   },
   "repository": {
     "type": "git",
