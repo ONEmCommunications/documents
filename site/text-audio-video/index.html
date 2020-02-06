@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
     
     
       
@@ -40,9 +40,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.0284f74d.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.01803549.css">
       
       
         
@@ -51,12 +51,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -110,7 +110,9 @@
               Documentation
             </span>
             <span class="md-header-nav__topic">
-              Text audio video
+              
+                Text audio video
+              
             </span>
           
         </div>
@@ -194,11 +196,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      What is it?
+      Basics
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        What is it?
+        Basics
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -209,8 +211,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../micro_apps_basics/" title="Micro app basics" class="md-nav__link">
-      Micro app basics
+    <a href="../micro_app_platform.md" title="Platform" class="md-nav__link">
+      Platform
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../micro_apps_basics/" title="Micro-apps" class="md-nav__link">
+      Micro-apps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../micro_apps_basics/" title="Multi-channel" class="md-nav__link">
+      Multi-channel
     </a>
   </li>
 
@@ -833,7 +859,7 @@
 
 
   <li class="md-nav__item">
-    <a href="https://developer-api-poc.onem.zone/redoc" title="ONEm API" class="md-nav__link">
+    <a href="http://172.16.38.113:6212/redoc" title="ONEm API" class="md-nav__link">
       ONEm API
     </a>
   </li>
@@ -845,7 +871,7 @@
 
 
   <li class="md-nav__item">
-    <a href="https://developer-api-poc.onem.zone/docs" title="ONEm SDK" class="md-nav__link">
+    <a href="http://172.16.38.113:6212/docs" title="ONEm SDK" class="md-nav__link">
       ONEm SDK
     </a>
   </li>
@@ -1000,10 +1026,10 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>@generate_doc 
-def main():
-    parser = argparse.ArgumentParser(bla bla bla) 
-    # rest of code..
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nv">@generate_doc</span><span class="w"> </span>
+<span class="n">def</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">parser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">bla</span><span class="w"> </span><span class="n">bla</span><span class="w"> </span><span class="n">bla</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">rest</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">code</span><span class="p">..</span><span class="w"></span>
 </pre></div>
 </td></tr></table>
 
@@ -1011,10 +1037,10 @@ def main():
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>@generate_doc(format=&#39;pdf&#39;, noob=True)
-def main():
-    parser = argparse.ArgumentParser(bla bla bla) 
-    # rest of code..
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nv">@generate_doc</span><span class="p">(</span><span class="nf">format</span><span class="o">=</span><span class="s1">&#39;pdf&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">noob</span><span class="o">=</span><span class="k">True</span><span class="p">)</span><span class="w"></span>
+<span class="n">def</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">parser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">bla</span><span class="w"> </span><span class="n">bla</span><span class="w"> </span><span class="n">bla</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">rest</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">code</span><span class="p">..</span><span class="w"></span>
 </pre></div>
 </td></tr></table>
 
@@ -1040,7 +1066,7 @@ def main():
 
 <h4 id="generate_doc-commandline">generate_doc (commandline)<a class="headerlink" href="#generate_doc-commandline" title="Permanent link">&para;</a></h4>
 <p>Finally, if preferred, you can run argDoc as a commandline tool. </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$user python argdoc.py --f pdf name_of_script_to_document.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">$</span><span class="k">user</span> <span class="n">python</span> <span class="n">argdoc</span><span class="p">.</span><span class="n">py</span> <span class="c1">--f pdf name_of_script_to_document.py</span>
 </pre></div>
 </td></tr></table>
 
@@ -1064,18 +1090,18 @@ Drop me a line at audionautic@gmail.com</p>
 </ol>
 <p><strong>Program Name</strong><br />
 Simply the name of the program you want to run.    </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span> $ python test_input.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span> <span class="err">$</span> <span class="n">python</span> <span class="n">test_input</span><span class="p">.</span><span class="n">py</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>Flags</strong><br />
 Flags are completely optional. They can be used to modify the way the program is run. For instance, to change where an output file is saved. They are preceded by two dashes and the name of the flag. </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>--outfile  myfilename.txt
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">--outfile  myfilename.txt</span>
 </pre></div>
 </td></tr></table>
 
 <p>Flags can also be set via a shortened form which consists of a single dash, and (commonly) the first letter of the flag name.   </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>-o myfilename.txt
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">-</span><span class="n">o</span> <span class="n">myfilename</span><span class="p">.</span><span class="n">txt</span>
 </pre></div>
 </td></tr></table>
 
@@ -1209,7 +1235,7 @@ If required by the program, arguments are used to give information that the prog
       
     </div>
     
-      <script src="../assets/javascripts/application.2ba8dec4.js"></script>
+      <script src="../assets/javascripts/application.245445c6.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       

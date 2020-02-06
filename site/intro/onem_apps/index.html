@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
     
     
       
@@ -40,9 +40,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
       
       
         
@@ -51,12 +51,12 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -110,7 +110,9 @@
               Documentation
             </span>
             <span class="md-header-nav__topic">
-              What are ONEm apps?
+              
+                What are ONEm apps?
+              
             </span>
           
         </div>
@@ -194,11 +196,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      What is it?
+      Basics
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        What is it?
+        Basics
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -209,8 +211,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../micro_apps_basics/" title="Micro app basics" class="md-nav__link">
-      Micro app basics
+    <a href="../../micro_app_platform.md" title="Platform" class="md-nav__link">
+      Platform
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../micro_apps_basics/" title="Micro-apps" class="md-nav__link">
+      Micro-apps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../micro_apps_basics/" title="Multi-channel" class="md-nav__link">
+      Multi-channel
     </a>
   </li>
 
@@ -833,7 +859,7 @@
 
 
   <li class="md-nav__item">
-    <a href="https://developer-api-poc.onem.zone/redoc" title="ONEm API" class="md-nav__link">
+    <a href="http://172.16.38.113:6212/redoc" title="ONEm API" class="md-nav__link">
       ONEm API
     </a>
   </li>
@@ -845,7 +871,7 @@
 
 
   <li class="md-nav__item">
-    <a href="https://developer-api-poc.onem.zone/docs" title="ONEm SDK" class="md-nav__link">
+    <a href="http://172.16.38.113:6212/docs" title="ONEm SDK" class="md-nav__link">
       ONEm SDK
     </a>
   </li>
@@ -935,13 +961,13 @@ A website/web application provides pages, navigation system, hints and, most imp
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>#ONEM MENU
-A My account
-B Invite friends to chat
-C Create SMS group chats (xGroup)
-D Services
-E How to use
---Reply A-E
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">#</span><span class="n">ONEM</span> <span class="n">MENU</span>
+<span class="n">A</span> <span class="n">My</span> <span class="n">account</span>
+<span class="n">B</span> <span class="n">Invite</span> <span class="n">friends</span> <span class="k">to</span> <span class="n">chat</span>
+<span class="k">C</span> <span class="k">Create</span> <span class="n">SMS</span> <span class="k">group</span> <span class="n">chats</span> <span class="p">(</span><span class="n">xGroup</span><span class="p">)</span>
+<span class="n">D</span> <span class="n">Services</span>
+<span class="n">E</span> <span class="n">How</span> <span class="k">to</span> <span class="n">use</span>
+<span class="c1">--Reply A-E</span>
 </pre></div>
 </td></tr></table>
 The above message is the landing page of #onem application, also considered the main menu. The first message presents user with the main options that can be accessed and offers a navigation possibility.
@@ -954,14 +980,14 @@ As you probably figured out, the user can access account information, chat with 
 5
 6
 7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>#ONEM SERVICES
-A Search
-B Information
-C Tools
-D Business
-E Entertainment
-F Social
---Reply option/&quot;#&quot;
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">#</span><span class="n">ONEM</span> <span class="n">SERVICES</span>
+<span class="n">A</span> <span class="k">Search</span>
+<span class="n">B</span> <span class="n">Information</span>
+<span class="k">C</span> <span class="n">Tools</span>
+<span class="n">D</span> <span class="n">Business</span>
+<span class="n">E</span> <span class="n">Entertainment</span>
+<span class="n">F</span> <span class="n">Social</span>
+<span class="c1">--Reply option/&quot;#&quot;</span>
 </pre></div>
 </td></tr></table></p>
 <p>Let's get back to message body. The amount of information displayed to the user, along with header and footer, can exceed the sms size. In this case, the ONEm platform will split body information in several messages called chunks, adding a paging system that allows users to access more than can fit one single SMS. At the end of each sms body, right before the footer, there will be automatically added information about current chunk and total number of chunks in which the message was split. This mechanism applies both to simple text, like a news article, and options lists that are too long to be displayed in one message.</p>
@@ -976,17 +1002,17 @@ F Social
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>#WIKI (ENGLISH) SMS SEARCH
-SMS (short message service) is a text messaging service component of most telephone, Internet, and mobile device systems. It uses standardized
-..1/8
---MORE/BACK
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">#</span><span class="n">WIKI</span> <span class="p">(</span><span class="n">ENGLISH</span><span class="p">)</span> <span class="n">SMS</span> <span class="k">SEARCH</span>
+<span class="n">SMS</span> <span class="p">(</span><span class="n">short</span> <span class="n">message</span> <span class="n">service</span><span class="p">)</span> <span class="k">is</span> <span class="n">a</span> <span class="nb">text</span> <span class="n">messaging</span> <span class="n">service</span> <span class="n">component</span> <span class="k">of</span> <span class="n">most</span> <span class="n">telephone</span><span class="p">,</span> <span class="n">Internet</span><span class="p">,</span> <span class="k">and</span> <span class="n">mobile</span> <span class="n">device</span> <span class="n">systems</span><span class="p">.</span> <span class="n">It</span> <span class="n">uses</span> <span class="n">standardized</span>
+<span class="p">..</span><span class="mi">1</span><span class="o">/</span><span class="mi">8</span>
+<span class="c1">--MORE/BACK</span>
 
-&gt;&gt; more
+<span class="o">&gt;&gt;</span> <span class="k">more</span>
 
-communication protocols to enable mobile devices to exchange short text messages. An intermediary service can facilitate a text-to-voice conversion to be sent to landlines.
-SMS was
-..2/8
---MORE/BACK
+<span class="n">communication</span> <span class="n">protocols</span> <span class="k">to</span> <span class="n">enable</span> <span class="n">mobile</span> <span class="n">devices</span> <span class="k">to</span> <span class="n">exchange</span> <span class="n">short</span> <span class="nb">text</span> <span class="n">messages</span><span class="p">.</span> <span class="n">An</span> <span class="n">intermediary</span> <span class="n">service</span> <span class="n">can</span> <span class="n">facilitate</span> <span class="n">a</span> <span class="nb">text</span><span class="o">-</span><span class="k">to</span><span class="o">-</span><span class="n">voice</span> <span class="k">conversion</span> <span class="k">to</span> <span class="n">be</span> <span class="n">sent</span> <span class="k">to</span> <span class="n">landlines</span><span class="p">.</span>
+<span class="n">SMS</span> <span class="n">was</span>
+<span class="p">..</span><span class="mi">2</span><span class="o">/</span><span class="mi">8</span>
+<span class="c1">--MORE/BACK</span>
 </pre></div>
 </td></tr></table>
 Another important topic to talk about regards capturing user input. Any webpage or web application will present users with a form to complete and submit. This is rather difficult in the SMS version of ONEm applications, but getting help from wizards, forms are completed step by step, each form field translates in a new message asking user for a free response or choose from a list of options. When all information is gathered, the user can review and submit the form through a supplementary confirmation step. No worries, we dedicated an entire section to forms and how you can create one [here][
@@ -1028,7 +1054,7 @@ Another important topic to talk about regards capturing user input. Any webpage 
       
     </div>
     
-      <script src="../../assets/javascripts/application.2ba8dec4.js"></script>
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
     
     
       
@@ -40,9 +40,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
       
       
         
@@ -51,12 +51,12 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -110,7 +110,9 @@
               Documentation
             </span>
             <span class="md-header-nav__topic">
-              Run locally
+              
+                Run locally
+              
             </span>
           
         </div>
@@ -194,11 +196,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      What is it?
+      Basics
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        What is it?
+        Basics
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -209,8 +211,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../micro_apps_basics/" title="Micro app basics" class="md-nav__link">
-      Micro app basics
+    <a href="../../micro_app_platform.md" title="Platform" class="md-nav__link">
+      Platform
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../micro_apps_basics/" title="Micro-apps" class="md-nav__link">
+      Micro-apps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../micro_apps_basics/" title="Multi-channel" class="md-nav__link">
+      Multi-channel
     </a>
   </li>
 
@@ -926,7 +952,7 @@
 
 
   <li class="md-nav__item">
-    <a href="https://developer-api-poc.onem.zone/redoc" title="ONEm API" class="md-nav__link">
+    <a href="http://172.16.38.113:6212/redoc" title="ONEm API" class="md-nav__link">
       ONEm API
     </a>
   </li>
@@ -938,7 +964,7 @@
 
 
   <li class="md-nav__item">
-    <a href="https://developer-api-poc.onem.zone/docs" title="ONEm SDK" class="md-nav__link">
+    <a href="http://172.16.38.113:6212/docs" title="ONEm SDK" class="md-nav__link">
       ONEm SDK
     </a>
   </li>
@@ -1052,7 +1078,7 @@
 <h2 id="run-an-existing-application">Run an existing application<a class="headerlink" href="#run-an-existing-application" title="Permanent link">&para;</a></h2>
 <h3 id="download-source-code">Download source code<a class="headerlink" href="#download-source-code" title="Permanent link">&para;</a></h3>
 <p>Clone the project from github.com:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>onem@local:~$ git clone https://github.com/onem-developer/django-onem-todo
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>onem@local:~$ git clone https://github.com/onem-developer/django-onem-todo/
 </pre></div>
 </td></tr></table>
 
@@ -1077,7 +1103,7 @@
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>On MacOS you might get a pg_config related error that’s solved by installing postgresql package:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>brew install postgresql
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">postgresql</span>
 </pre></div>
 </td></tr></table>
 
@@ -1118,7 +1144,7 @@ Forwarding                    https://5d283db8.ngrok.io -> http://localhost:8000
 <p>The important bit here is the <code>http://5d283db8.ngrok.io</code> link. We will be using this as our callback url when we will register our app on ONEm developer portal.</p>
 </div>
 <h3 id="register-the-application">Register the application<a class="headerlink" href="#register-the-application" title="Permanent link">&para;</a></h3>
-<p>To register your application please open <a href="https://developer-portal-poc.onem.zone">ONEm Developer Portal</a> and register for a free account.</p>
+<p>To register your application please open <a href="http://testtool.dhq.onem:6060">ONEm Developer Portal</a> and register for a free account.</p>
 <p>Once that is done, you will have an option to create an app. Hit that button and place <code>http://5d283db8.ngrok.io</code> as the callback url.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
@@ -1390,7 +1416,7 @@ B Low priority
       
     </div>
     
-      <script src="../../assets/javascripts/application.2ba8dec4.js"></script>
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

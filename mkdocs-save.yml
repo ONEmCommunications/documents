@@ -2,10 +2,8 @@ site_name: Documentation
 nav:
     - Introduction: index.md
 
-    - Basics: 
-        - Platform: micro_app_platform.md
-        - Micro-apps: micro_apps_basics.md
-        - Multi-channel: micro_apps_basics.md       
+    - What is it?:
+        - Micro app basics: micro_apps_basics.md
         - How it works: how_it_works.md
 
     - Core concepts:

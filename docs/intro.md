@@ -1,8 +1,8 @@
 # What is ONEm Framework?
 
-The ONEm Framework provides a set of APIs and tools that allow you to rapidly build local or global SMS and web based applications that solve a myriad of business problems.
+The ONEm Framework provides a set of APIs and tools that allow you to rapidly build multi-channel micro-apps that solve a myriad of business problems.
 
-ONEm Framework is a layer on top of ONEm's cloud-based platform that provides SMS connectivity to mobile networks around the globe.
+ONEm Framework is a layer on top of ONEm's cloud-based platform that provides multi-channel solutions with a single code base.
 
 ## Goals
 
