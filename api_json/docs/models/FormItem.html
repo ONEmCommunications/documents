@@ -1,0 +1,158 @@
+
+<h2>FormItem</h2>
+<ul class="parameter">
+  <li class="param-required-true">type : String
+    <br/>The type of data expected from the user
+      <dl class="param-enum">
+        <dt>Enum:
+            <dd>string</dd>
+            <dd>date</dd>
+            <dd>datetime</dd>
+            <dd>hidden</dd>
+            <dd>int</dd>
+            <dd>float</dd>
+            <dd>form-menu</dd>
+            <dd>email</dd>
+            <dd>url</dd>
+            <dd>location</dd>
+        </dt>
+      </dl>
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">name : String
+    <br/>The name of this FormItem, used in form serialization
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">description : String
+    <br/>The description of this FormItem
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">header : String
+    <br/>If provided will overwrite the Form.header
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">footer : String
+    <br/>If provided will overwrite the Form.footer
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">body : List
+    <br/>Required only for type&#x3D;form-menu
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">value : String
+    <br/>Required for type&#x3D;hidden
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">chunking_footer : String
+    <br/>Shown in the footer of the sms chunks
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">confirmation_label : String
+    <br/>Shown in the confirmation menu
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">min_length : Integer
+    <br/>Validates the user input - for type&#x3D;string
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">min_length_error : String
+    <br/>Message to be shown on min_length error
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">max_length : Integer
+    <br/>Validates the user input - for type&#x3D;string
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">max_length_error : String
+    <br/>Message to be shown on max_length error
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">min_value : BigDecimal
+    <br/>Validates the user input - for type&#x3D;int|float
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">min_value_error : String
+    <br/>Message to be shown on min_value error
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">max_value : BigDecimal
+    <br/>Validates the user input - for type&#x3D;int|float
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">max_value_error : String
+    <br/>Message to be shown on max_value error
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">meta : 
+    <br/>Applies only for type&#x3D;form-menu
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">method : String
+    <br/>http method, how the callback url should be triggered
+      <dl class="param-enum">
+        <dt>Enum:
+            <dd>GET</dd>
+            <dd>POST</dd>
+            <dd>PUT</dd>
+            <dd>PATCH</dd>
+            <dd>DELETE</dd>
+            <dd>HEAD</dd>
+            <dd>OPTIONS</dd>
+            <dd>TRACE</dd>
+        </dt>
+      </dl>
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">required : Boolean
+    <br/>Can be skipped if set to false
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">status_exclude : Boolean
+    <br/>If true this step will be excluded from the form completion status
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">status_prepend : Boolean
+    <br/>If true this step will be prepended to the body pre of the response - appended otherwise
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">url : String
+    <br/>Callback url triggered right after the choice has been set for this form item
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">validate_type_error : String
+    <br/>An error message to be shown on basic type validation
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">validate_type_error_footer : String
+    <br/>Shown in the error message footer
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">validate_url : String
+    <br/>the callback url path (GET) triggered to validate user input with query string ?name&#x3D;user_input - url must return json content {\&quot;valid\&quot;: True/False, \&quot;error\&quot;: \&quot;Some validation error message\&quot;}
+  </li>
+</ul>

@@ -1,0 +1,45 @@
+
+<h2>MenuItem</h2>
+<ul class="parameter">
+  <li class="param-required-true">type : String
+    <br/>The type of the menu item.
+      <dl class="param-enum">
+        <dt>Enum:
+            <dd>option</dd>
+            <dd>content</dd>
+        </dt>
+      </dl>
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">description : String
+    <br/>The displayed text of a menu item.
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">text_search : String
+    <br/>Field to add more context for searching in options
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">method : String
+    <br/>The HTTP method called when the menu item is selected.
+      <dl class="param-enum">
+        <dt>Enum:
+            <dd>GET</dd>
+            <dd>POST</dd>
+            <dd>PUT</dd>
+            <dd>PATCH</dd>
+            <dd>DELETE</dd>
+            <dd>HEAD</dd>
+            <dd>OPTIONS</dd>
+            <dd>TRACE</dd>
+        </dt>
+      </dl>
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">path : String
+    <br/>The path called when the menu item is selected.
+  </li>
+</ul>

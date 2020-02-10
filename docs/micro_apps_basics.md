@@ -1,6 +1,6 @@
-ONEm's platform provides a single API that features
+A micro-app is a simplified data driven web application
 
-* Single API
+* Communiates with platform through single API
 * Built using standard web development technology
-* Single Code Base for multiple-channels
-* HTML Subset
+* Requires a small subset of HTML tags
+* A single code base serves any channel

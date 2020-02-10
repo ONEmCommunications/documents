@@ -1,0 +1,49 @@
+
+<h2>Form</h2>
+<ul class="parameter">
+  <li class="param-required-false">type : String
+    <br/>The type of a form is always form
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">body : List
+    <br/>Sequence of components used to acquire the pieces of data needed from user
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">method : String
+    <br/>The HTTP method used to send the form data
+      <dl class="param-enum">
+        <dt>Enum:
+            <dd>GET</dd>
+            <dd>POST</dd>
+            <dd>PUT</dd>
+            <dd>PATCH</dd>
+            <dd>DELETE</dd>
+            <dd>HEAD</dd>
+            <dd>OPTIONS</dd>
+            <dd>TRACE</dd>
+        </dt>
+      </dl>
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">path : String
+    <br/>The path used to send the form data
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">header : String
+    <br/>The header of the form. It can be overwritten by each body component
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">footer : String
+    <br/>The footer of the form. It can be overwritten by each body component
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">meta : 
+    <br/>Contains configuration flags
+  </li>
+</ul>
