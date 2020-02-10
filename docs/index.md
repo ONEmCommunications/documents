@@ -1,8 +1,10 @@
-<img src="/assets/onem-logo.svg" width=150 style="float:left;margin-right:15px;" /> 
-At ONEm, we are building a Mobile Ecosystem first of a kind with interactive services, that will transform the way people communicate and get access to information on any mobile, including the 3 billion people who have no access to internet, who have no way to share nor create their own content.
+<!-- <img src="/assets/onem-logo.svg" width=150 style="float:left;margin-right:15px;" /> -->
+ONEm's micro-app framework offers web developers the ability to build amazing multi-channel micro-apps capable of functioning over web, SMS, Facebook and more using a single code base.
 
-We aim to provide access to information and to make our services available to everyone.
+With ONEm's SDKs, developers can use their favourite web development framework such as NodeJS/Express or Django/Python.  Micro-apps can be hosted anywhere in the cloud. Communication with ONEm's Platform is via HTTPS/JSON.
 
-ONEm has created a global multi-service Platform that provides innovative services, using core connectivity as SMS and Voice but also the internet.
+Just few basic HTML tags are all that are needed to present perfectly formated content on any channel, e.g. website, mobile browser, social media and even SMS.
 
-We provide first of a kind interactive micro-applications that allow people to communicate in a completely new way through simple interaction with an intelligent platform that works on their behalf behind the scenes to connect, find, process and present communications, content and services across all types of networks and to any type of mobile device. 
+The ONEm platform handles user identities, authentication and authorization, validation of user input and formatting of the response to best fit the user's channel.
+
+ONEm's multi-channel micro-app framework saves developers countless hours whilst allowing businesses to offer amazing applications that delight and empower their customers.

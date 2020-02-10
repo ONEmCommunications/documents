@@ -9,7 +9,7 @@ Your micro-app is a web server which receives HTTP requests from ONEm Platform a
 No matter what language you are developing in, the SDK will enable you two ways of creating user interfaces by:
 
 - pure programming
-- HTML (see [supported HTML tags](/building/html)) or HTML based templates. Currently we support several templating engines which are coming with the SDK:
+- HTML (see [supported HTML tags](/building/html)) or HTML based templates. Currently we support several templating engines with the SDK:
     - NodeJS SDK:
         - [pug](https://pugjs.org/api/getting-started.html)
         - [ejs](https://ejs.co/#install)
@@ -25,6 +25,17 @@ No matter what language you are developing in, the SDK will enable you two ways 
         --Reply A-C
     </pre>
 
+    ```HTML tab="HTML"
+    <section>
+        <header>My App</header>
+        <ul>
+            <li><a href="/path1">Option 1</a></li>
+            <li><a href="/path2">Option 2</a></li>
+            <li><a href="/path3">Option 3</a></li>
+        </ul>
+    </section>
+    ```
+
     ```javascript tab="NodeJS"
     const onemsdk = require('onemsdk');
     
@@ -36,17 +47,6 @@ No matter what language you are developing in, the SDK will enable you two ways 
             new MenuItem({description: 'Option 3', path: '/path3'}),
         ]
     });
-    ```
-    
-    ```HTML tab="HTML"
-    <section>
-        <header>My App</header>
-        <ul>
-            <li><a href="/path1">Option 1</a></li>
-            <li><a href="/path2">Option 2</a></li>
-            <li><a href="/path3">Option 3</a></li>
-        </ul>
-    </section>
     ```
     
     ```python tab="Python"
