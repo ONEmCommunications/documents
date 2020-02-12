@@ -78,7 +78,7 @@ Once that is done, you will have an option to create an app. Hit that button and
 
 ### Run it
 
-In the developer portal there is a `Test Client` section. This is a phone simulator from where you can test the app.
+In the [ONEm Developer Portal]({{ links.portal }}) there is a `Test Client` section. This is a phone simulator from where you can test the app.
 
 Head on to the test client and send `#name-of-your-app`. At this point ONEm will request the callback URL we've set previously, so if you check the `ngrok` logs you will see the request there.
 
@@ -99,7 +99,7 @@ Todo(0)
 </pre>
 
 !!! important
-    The name of your app will be different, as chosen in the developer portal.
+    The name of your app will be different, as chosen in the [ONEm Developer Portal]({{ links.portal }}).
 
 The above SMS response is rendered based on the HTTP JSON response returned by our `/` URL.
 

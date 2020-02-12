@@ -20,7 +20,7 @@ To register your application please open [ONEm Developer Portal]({{ links.portal
 
 Once that is done, you will have an option to create an app. Hit that button and place the url obtaine from ngrok as the callback url.
 
-In the developer portal there is a `Test Client` section. This is a phone simulator from where you can test the app.
+In the [ONEm Developer Portal]({{ links.portal }}) there is a `Test Client` section. This is a phone simulator from where you can test the app.
 We can now access the application by placing a hashtag in front of the name. So let's send: `#name-of-your-app`
 
 <pre>

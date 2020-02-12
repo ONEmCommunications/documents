@@ -2,7 +2,7 @@ It is recommended to first follow the tutorial for [**#postv1**](/use_case/postv
 
 In this version we are going to enable users to send messages between them. To achieve this we can make use of the ONEm API.
 
-First, we will need an API key to be able to authenticate our requests towards the ONEm API. Head over to the [developer portal]({{ links.portal }}).
+First, we will need an API key to be able to authenticate our requests towards the ONEm API. Head over to the [ONEm Developer Portal]({{ links.portal }}).
 
 First create the app then click on **Details** --> **API key & permissions**, check the **Notification** box and click on **Generate API key**:
 

@@ -104,7 +104,7 @@ The header of the menu is indicated through **header** key. This value is not fi
 
 
 ### Body
-The body of the menu is indicated through **body** key and it is a sequence of objects. Each object can be an **option** or a **content** item and this is set through the **type** key. A **content** type item does not need a **path** nor a **method** since these are not selectable by the user. However an **option** item needs a callback **path** and this is relative to the **callback_url** set in the app schema in the developer portal. If the **method** is not present, it will default to GET.
+The body of the menu is indicated through **body** key and it is a sequence of objects. Each object can be an **option** or a **content** item and this is set through the **type** key. A **content** type item does not need a **path** nor a **method** since these are not selectable by the user. However an **option** item needs a callback **path** and this is relative to the **callback_url** set in the app schema in the [ONEm Developer Portal]({{ links.portal }}). If the **method** is not present, it will default to GET.
 
 
 **NOTE:**

@@ -2,7 +2,7 @@ Ok, so we've mentioned that your app is identified by the name you give it and i
 
 ## Verbs and parameters
 
-As a ONEm developer, you can implement particular ways for your users to access specific areas of your micro-app. We call these `verbs` and, in a nutshell, they are shortcuts to specific callback paths you define in the developer portal.
+As a ONEm developer, you can implement particular ways for your users to access specific areas of your micro-app. We call these `verbs` and, in a nutshell, they are shortcuts to specific callback paths you define in the [ONEm Developer Portal]({{ links.portal }}).
 
 Also, `parameters` can be sent to the `verbs` so even more specific areas can be accessed.
 
@@ -19,7 +19,7 @@ We have a micro-app named `barbershop`. Our users can:
 2. Access a list of appointments by sending `#barbershop appointments`.
 3. Access a list of narrowed down appointments by sending `#barbershop appointments today`.
 
-For points 2 and 3 above to work, we need to define in the developer portal a verb named `appointments` and map it to a callback path.
+For points 2 and 3 above to work, we need to define in the [ONEm Developer Portal]({{ links.portal }}) a verb named `appointments` and map it to a callback path.
 
 If our callback path looks like `/appointment/list` and the user sends parameters, as mentioned in the third point above, then ONEm platform will launch an `HTTP GET` request with a query string: `/appointment/list?params=today`
 
@@ -30,6 +30,6 @@ Accessing a micro app:
 `#app [verb] [parameters]`
 
 - `verb` is optional
-    - if not present an `HTTP GET` request will be made against `/app-callback-path` defined in the developer portal
-    - if present an `HTTP GET` request will be made against `/verb-callback-path` defined in the developer portal
+    - if not present an `HTTP GET` request will be made against `/app-callback-path` defined in the [ONEm Developer Portal]({{ links.portal }})
+    - if present an `HTTP GET` request will be made against `/verb-callback-path` defined in the [ONEm Developer Portal]({{ links.portal }})
 - `parameters` is optional and if present will be sent url encoded to the relative callback url path: `/app-or-verb-callback-path/?params=parameters`

@@ -17,7 +17,7 @@ We have a micro-app named `barbershop`. Our users can:
 1. Access it directly by sending `#barbershop` to the ONEm platform.
 2. Access a list of appointments by sending `#barbershop appointments`.
 
-For point 2 above to work, we need to define in the Developer Portal a verb named `appointments` and map it to a callback path.
+For point 2 above to work, we need to define in the [ONEm Developer Portal]({{ links.portal }}) a verb named `appointments` and map it to a callback path.
 
 If our callback path looks like `/appointment/list` and the user sends parameters, as mentioned in the third point above, then ONEm platform will launch an `HTTP GET` request with a query string: `/appointment/list`
 
@@ -28,6 +28,6 @@ Accessing a micro app:
 `#app [verb]`
 
 - `verb` is optional
-    - if not present an `HTTP GET` request will be made against the 'root' `/app-callback-path` defined in the Developer Portal
-    - if a verb is supplied, an `HTTP GET` request will be made against `/verb-callback-path` defined in the Developer Portal
+    - if not present an `HTTP GET` request will be made against the 'root' `/app-callback-path` defined in the [ONEm Developer Portal]({{ links.portal }})
+    - if a verb is supplied, an `HTTP GET` request will be made against `/verb-callback-path` defined in the [ONEm Developer Portal]({{ links.portal }})
 

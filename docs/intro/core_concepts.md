@@ -6,9 +6,9 @@ Follow along the steps to ramp up or watch as we create a working Todo applicati
 
 ## Developer Account
 
-Head over to the [developer portal](http://developer-portal-poc.onem.zone) and create your account. Once you have an account, go to **Applications** section and create your app.
+Head over to the [ONEm Developer Portal]({{ links.portal }}) and create your account. Once you have an account, go to **Applications** section and create your app.
 <!-- tutorial? -->
-As a ONEm developer, after you create and register your application on the developer portal you should follow the necessary steps to configure it to return standardised JSON responses upon ONEm requests. These requests are launched by the ONEm platform on behalf of your users.
+As a ONEm developer, after you create and register your application on the [ONEm Developer Portal]({{ links.portal }}) you should follow the necessary steps to configure it to return standardised JSON responses upon ONEm requests. These requests are launched by the ONEm platform on behalf of your users.
 <!-- Link to Building section, how to register an application  -->
 
 ## Your app

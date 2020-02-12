@@ -20,7 +20,7 @@ _* although the json response can be built however one sees fit, based on the ON
 ### Example
 
 1. The user sends `#todo` to the ONEm platform number.
-2. ONEm platform receives the sms and performs an HTTP GET request towards the callback path set in the developer portal.
+2. ONEm platform receives the sms and performs an HTTP GET request towards the callback path set in the [ONEm Developer Portal]({{ links.portal }}).
 3. The `todo` webserver handles the GET request and returns an HTTP json response.
 4. ONEm platform takes the JSON and builds an sms. Finally the sms is sent back to the user.
 

@@ -132,7 +132,7 @@ The *Hello World* example app expects to receive HTTP requests as users perform 
 
 If you have not already done so, sign-up for a <a href="{{links.portal}}" target="_blank">free ONEm developer account</a>.
 
-Register your app on the Developer Portal by selecting the *Create app* option.  You will need to provide:
+Register your app on the [ONEm Developer Portal]({{ links.portal }}) by selecting the *Create app* option.  You will need to provide:
 
 1. A short description of your app
 1. The app category, just select "Business"
@@ -145,7 +145,7 @@ Make sure the details are saved correctly in the portal.
 
 ## Test the app
 
-In the Developer Portal, select the *Test Client* tab and register your mobile number. Then in the input field, enter `#` followed by your app's name, for example `#HELLO.WORLD` if your app is called *hello.world*.
+In the [ONEm Developer Portal]({{ links.portal }}), select the *Test Client* tab and register your mobile number. Then in the input field, enter `#` followed by your app's name, for example `#HELLO.WORLD` if your app is called *hello.world*.
 
 If you have completed everything correctly, the ONEm system should respond with a menu, similar to the below:
 

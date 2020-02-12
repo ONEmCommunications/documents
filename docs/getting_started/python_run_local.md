@@ -77,7 +77,7 @@ Forwarding                    https://5d283db8.ngrok.io -> http://localhost:8000
 </pre>
 
 !!! important
-    The important bit here is the `http://5d283db8.ngrok.io` link. We will be using this as our callback url when we will register our app on ONEm developer portal.
+    The important bit here is the `http://5d283db8.ngrok.io` link. We will be using this as our callback url when we will register our app in the [ONEm Developer Portal]({{ links.portal }}).
 
 ### Register the application
 
@@ -90,9 +90,9 @@ Once that is done, you will have an option to create an app. Hit that button and
 
 ### Run it
 
-In the developer portal there is a `Test Client` section. This is a phone simulator from where you can test the app.
+In the [Developer Portal]({{ links.portal }}) there is a `Test Client` section. This is a phone simulator from where you can test the app.
 
-Head on to the test client and send `#name-of-your-app`. At this point ONEm will request the callback url we've set previously, so if you check the ngrok logs you will see the request there.
+Head on to the test client, register your mobile number and send `#name-of-your-app`. At this point ONEm will request the callback url we've set previously, so if you check the ngrok logs you will see the request there.
 
 <pre>
 HTTP Requests
@@ -111,13 +111,13 @@ Todo(0)
 </pre>
 
 !!! important
-    The name of your app will be different, as chosen in the developer portal
+    The name of your app will be different as shown in the Developer Portal
 
-The above sms response is rendered based on the HTTP json response returned by our `/` url.
+The above SMS response is rendered based on the HTTP/JSON response returned by our `/` url.
 
 If we look in the `todo.todo.views` we can see that `HomeView` view which is handling the `/` route is basically returning a [Menu](/building/menus/) json object.
 
-Every menu item contains a callback path, as described in the json structure [here](/building/menus/#json-structure) and once the user selects one of the menu items, an HTTP request will be made towards that callback path, a new json structure is returned by our web server, so a different sms response is presented to the user.
+Every menu item contains a callback path, as described in the JSON structure [here]({{ links.schema_url }}) and once the user selects one of the menu items, an HTTP request will be made towards that callback path, a new json structure is returned by our web server, so a different sms response is presented to the user.
 
 
 ## Tweak the application

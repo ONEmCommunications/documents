@@ -11,10 +11,13 @@ nav:
         Node.js: getting_started/nodejs.md
                 # - Pre-requisites: getting_started/nodejs.md
                 # - Run locally: getting_started/nodejs_run_local.md
-        Python: getting_started/python_prereq.md
+        Python: 
+            Pre-requisites: getting_started/python_prereq.md
+            Running on localhost: getting_started/python_run_local.md
                 # - Pre-requisites: getting_started/python_prereq.md
                 # - Run locally: getting_started/python_run_local.md
-        # - Running in production: getting_started/running-in-production.md
+
+        Running in production: getting_started/running-in-production.md
 
     - Core elements:
         # - Overview: concepts.md
@@ -29,6 +32,7 @@ nav:
         #     - (callback vs ONEm API): core/callback_api.md
         #     - Validation: core/todo.md
     - Channels:
+        Web widget verbs: core/web_verbs.md
         SMS:
             SMS paging: core/paging.md
             SMS user access: core/accessing-sms.md
