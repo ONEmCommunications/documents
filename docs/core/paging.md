@@ -1,10 +1,6 @@
-Let's get back to message body.
+The amount of information displayed to the user can exceed the number of characters allowed by the SMS specifications. If the number of characters exceeds the amount configured for the current user (see [size verb](/core/reserved_verbs)), the ONEm platform will split the message into several messages called chunks.  Chunks can be considered as "pages".  Users can navigate between pages using [reserved verbs](/core/reserved_verbs).
 
-The amount of information displayed to the user, along with header and footer, can exceed the sms size. In this case, the ONEm platform will split body information in several messages called chunks, adding a paging system that allows users to access more than can fit one single SMS.
-
-At the end of each sms body, right before the footer, there will be automatically added information about current chunk and total number of chunks in which the message was split. This mechanism applies both to simple text, like a news article, and options lists that are too long to be displayed in one message.
-
-A relevant example for this mechanism can be extracted from our `#wiki` micro app. The article's introduction about SMS is paginated in 8 chunks and the first 2 are presented below. The hint from footer, _"more"_, is used to navigate to the next chunk.
+At the end of each SMS message body, right before the footer, the ONEm Platform automaticaly adds information about current chunk and total number of chunks in which the message was split. This mechanism applies both to simple text, like a news article, and options lists that are too long to be displayed in one message:
 
 <pre>
 #WIKI (ENGLISH) SMS SEARCH
@@ -18,7 +14,7 @@ standardized
 --MORE/BACK
 </pre>
 
-_more_
+User sends ```MORE``` then:
 
 <pre>
 communication protocols to

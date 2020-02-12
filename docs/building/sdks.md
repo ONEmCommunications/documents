@@ -1,4 +1,20 @@
-# Menu
+ONEm is continuously developing and maintaining SDKs (Software Development Kits) in different languages in order to provide a smooth integration between your micro-app and ONEm Framework.
+
+!!! abstract "Official SDKs"
+    - [Python SDK]({{ links.python_sdk_repo }})
+    - [NodeJS SDK]({{ links.nodejs_sdk_repo }})
+
+The SDKs is to help you generate valid JSON responses to incoming requests sent from your users.
+
+No matter what language you are developing in, the SDK will always provide **two ways** of creating user interfaces by:
+
+1. Pure programming
+1. HTML (see [supported HTML tags](/building/html)) or HTML based templates. Currently we support several templating engines with the SDK:
+    - NodeJS SDK:
+        - [pug](https://pugjs.org/api/getting-started.html)
+        - [ejs](https://ejs.co/#install)
+    - Python SDK:
+        - [Jinja](https://palletsprojects.com/p/jinja/)
 
 !!! example "Example of how a simple menu can be defined"
     <pre>

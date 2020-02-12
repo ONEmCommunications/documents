@@ -79,16 +79,17 @@ $ npm install
 
 ## Configure the app
 
-The *Hello World* example application listens on the HTTP port defined by the environment variable `PORT` or 8080 by default.  You can change the port by creating a `.env` file in your app's root directory and specifying the desired port value:
-
 ### Port
+
+The *Hello World* example application listens on the HTTP port defined by the environment variable `PORT` or 8080 by default.  You can change the port by creating a `.env` file in your app's root directory and specifying the desired port value, like this:
+
 ```
 PORT=8080
 ```
 
 ### Token secret
 
-Webhooks triggered by the ONEm platform contain a [jwt token](https://tools.ietf.org/html/rfc7519) in the authorzation header.  The jwt token carries the unique identity of the ONEm user so that your app can differentiate requests from different users.  In order to verify jwt tokens that are sent by the ONEm platform, the token secret should be configured.  For test purposes you may use the secret is *87654321*.  Configure the secret in the `.env` file:
+Callbacks triggered by the ONEm platform contain a [jwt token](https://tools.ietf.org/html/rfc7519) in the authorzation header.  The jwt token carries the unique identity of the ONEm user so that your app can differentiate requests from different users.  In order to verify jwt tokens that are sent by the ONEm platform, the token secret should be configured.  For test purposes you may use the secret is *87654321*.  Configure the secret in the `.env` file:
 
 ```
 TOKEN_SECRET=87654321
@@ -111,18 +112,18 @@ Listening on port 8080
 Now run ngrok to create a secure tunnel to your local computer so that your app is visible to the ONEm servers.
 
 ```
-$ ./ngrok http 8080
+$ ngrok http 8080
 ```
 
-ngrok will launch a continuous display to the console.  Make a note of the http or https forwarding address.  In the example below the address is `http://6e3f3fce.ngrok.io`:
+ngrok will launch a continuous display to the console.  Make a note of the HTTP or HTTPS forwarding address.  In the example below the address is `http://6e3f3fce.ngrok.io`:
 
 ```
 Forwarding        http://6e3f3fce.ngrok.io -> http://localhost:8080
 ```
 
-Navigate to the forwarding link on your browser and you should see a *Hello World* greeting.
+Navigate to the forwarding link in your browser and you should see a *Hello World* greeting.
 
-The *Hello World* example app expects to receive HTTP requests as users perform certain actions.  We call these callback notifications. The *Hello World* example app expects to receive callback notifications on the base path: `/api`.  The ONEm platform will need to be configured with the fully qualified URL of this endpoint, including the base path.  In our example above, the *callback url* would be `http://6e3f3fce.ngrok.io/api`
+The *Hello World* example app expects to receive HTTP requests as users perform certain actions.  We call these callback notifications. The *Hello World* example app expects to receive callback notifications on the base path: `/api`.  The ONEm platform will need to be configured with the fully qualified URL of this endpoint, including the base path.  In our example above, the *callback url* would be `http://6e3f3fce.ngrok.io/api`.  We shall configure this callback url in the next step.
 
 !!! tip
     Make a note of your *callback url*, you will need it in the next step.
@@ -131,9 +132,7 @@ The *Hello World* example app expects to receive HTTP requests as users perform 
 
 If you have not already done so, sign-up for a <a href="{{links.portal}}" target="_blank">free ONEm developer account</a>.
 
-Register your app on the Developer Portal.  You will need to provide:
-
-### Signing-up
+Register your app on the Developer Portal by selecting the *Create app* option.  You will need to provide:
 
 1. A short description of your app
 1. The app category, just select "Business"
@@ -146,7 +145,7 @@ Make sure the details are saved correctly in the portal.
 
 ## Test the app
 
-In the developer portal, select the *Test Client* tab and register your mobile number. Then in the input field, enter `#` followed by your app's name, for example `#HELLO` if your app is called *hello*.
+In the Developer Portal, select the *Test Client* tab and register your mobile number. Then in the input field, enter `#` followed by your app's name, for example `#HELLO.WORLD` if your app is called *hello.world*.
 
 If you have completed everything correctly, the ONEm system should respond with a menu, similar to the below:
 
