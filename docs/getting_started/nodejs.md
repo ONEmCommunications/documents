@@ -18,7 +18,16 @@
 
 <!-- Inline <img src="/assets/nodejs-new-pantone-black.png" width=50> With Reference Link -->
 ## Introduction
-This tutorial will have you deploying a Node.js app in minutes.
+This tutorial will have you deploying a Node.js app for use on SMS and Web channels in minutes.
+
+<div style="width:100%">
+    <div style="width:50%;float:left;padding:15px;text-align:center">
+        <img height="400px" src="/assets/hello-world-sms.png" />
+    </div>
+    <div style="width:50%;float:left;padding:15px;text-align:center">
+        <img height="400px" src="/assets/hello-world-web.png" />
+    </div>
+</div>
 
 The tutorial assumes that you have a free or paid [ONEm account]({{links.portal}}), and that you have the following prerequisites installed locally:
 
@@ -150,7 +159,7 @@ In the [ONEm Developer Portal]({{ links.portal }}), select the *Test Client* tab
 If you have completed everything correctly, the ONEm system should respond with a menu, similar to the below:
 
 ```
-#<APP_NAME> HELLO WORLD
+#<APP_NAME>
 A First option
 B Second option
 C Third option
