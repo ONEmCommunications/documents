@@ -18,7 +18,7 @@ This section provides some worked examples of different menu layouts.  Refer to 
     ```
 
     ```javascript tab="NodeJS"
-    const { Menu, MenuItem } = require('onemsdk');
+    const { Response, Menu, MenuItem } = require('onemsdk');
     
     const menu = new Menu({
         header: 'Myapp',
@@ -28,6 +28,7 @@ This section provides some worked examples of different menu layouts.  Refer to 
             new MenuItem({description: 'Option 3', path: '/path3'}),
         ]
     });
+    const response = new Response(menu).toJSON()
     ```
     
     ```python tab="Python"
@@ -79,7 +80,7 @@ Note that in the HTML example, ```<li>``` tags without an ```<a>``` child are sy
     ```
 
     ```javascript tab="NodeJS"
-    const { Menu, MenuItem } = require('onemsdk');
+    const { Response, Menu, MenuItem } = require('onemsdk');
     
     const menu = new Menu({
         header: 'Myapp',
@@ -89,6 +90,7 @@ Note that in the HTML example, ```<li>``` tags without an ```<a>``` child are sy
             new MenuItem({description: 'Another paragraph'})
         ]
     });
+    const response = new Response(menu).toJSON()
     ```
     
     ```python tab="Python"
@@ -140,7 +142,7 @@ Note that in the HTML example, ```<li>``` tags without an ```<a>``` child are sy
     ```
 
     ```javascript tab="NodeJS"
-    const { Menu, MenuItem } = require('onemsdk');
+    const { Response, Menu, MenuItem } = require('onemsdk');
     
     const menu = new Menu({
         header: 'Myapp',
@@ -148,6 +150,7 @@ Note that in the HTML example, ```<li>``` tags without an ```<a>``` child are sy
             new MenuItem({description: 'This is an option', src: 'https://placekitten.com/300/300', alt:'alt text'})
         ]
     });
+    const response = new Response(menu).toJSON()
     ```
     
     ```python tab="Python"
@@ -191,7 +194,7 @@ Note that in the HTML example, ```<li>``` tags without an ```<a>``` child are sy
     ```
 
     ```javascript tab="NodeJS"
-    const { Menu, MenuItem } = require('onemsdk');
+    const { Response, Menu, MenuItem } = require('onemsdk');
     
     const menu = new Menu({
         header: 'Myapp',
@@ -200,6 +203,7 @@ Note that in the HTML example, ```<li>``` tags without an ```<a>``` child are sy
             new MenuItem({src: 'https://placekitten.com/300/300', alt:'alt text'}),
         ]
     });
+    const response = new Response(menu).toJSON()
     ```
     
     ```python tab="Python"
@@ -251,7 +255,7 @@ Videos work almost identically as images, when using HTMLl, you may use the ```<
     ```
 
     ```javascript tab="NodeJS"
-    const { Menu, MenuItem } = require('onemsdk');
+    const { Response, Menu, MenuItem } = require('onemsdk');
     
     const menu = new Menu({
         header: 'Myapp',
@@ -259,6 +263,7 @@ Videos work almost identically as images, when using HTMLl, you may use the ```<
             new MenuItem({description: 'This is an option', src: 'http://techslides.com/demos/sample-videos/small.mp4', alt:'alt text'})
         ]
     });
+    const response = new Response(menu).toJSON()
     ```
     
     ```python tab="Python"
@@ -302,7 +307,7 @@ Videos work almost identically as images, when using HTMLl, you may use the ```<
     ```
 
     ```javascript tab="NodeJS"
-    const { Menu, MenuItem } = require('onemsdk');
+    const { Response, Menu, MenuItem } = require('onemsdk');
     
     const menu = new Menu({
         header: 'Myapp',
@@ -310,6 +315,7 @@ Videos work almost identically as images, when using HTMLl, you may use the ```<
             new MenuItem({src: 'http://techslides.com/demos/sample-videos/small.mp4', alt:'alt text'})
         ]
     });
+    const response = new Response(menu).toJSON()
     ```
     
     ```python tab="Python"

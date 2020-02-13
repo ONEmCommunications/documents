@@ -802,7 +802,8 @@
  7
  8
  9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">Menu</span><span class="p">,</span> <span class="nx">MenuItem</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;onemsdk&#39;</span><span class="p">);</span>
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">Response</span><span class="p">,</span> <span class="nx">Menu</span><span class="p">,</span> <span class="nx">MenuItem</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;onemsdk&#39;</span><span class="p">);</span>
 
 <span class="kr">const</span> <span class="nx">menu</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Menu</span><span class="p">({</span>
     <span class="nx">header</span><span class="o">:</span> <span class="s1">&#39;Myapp&#39;</span><span class="p">,</span>
@@ -812,6 +813,7 @@
         <span class="k">new</span> <span class="nx">MenuItem</span><span class="p">({</span><span class="nx">description</span><span class="o">:</span> <span class="s1">&#39;Option 3&#39;</span><span class="p">,</span> <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;/path3&#39;</span><span class="p">}),</span>
     <span class="p">]</span>
 <span class="p">});</span>
+<span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="nx">menu</span><span class="p">).</span><span class="nx">toJSON</span><span class="p">()</span>
 </pre></div>
 </td></tr></table></div>
 <input name="__tabs_1" type="radio" id="__tab_1_2" />
@@ -890,7 +892,8 @@
  7
  8
  9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">Menu</span><span class="p">,</span> <span class="nx">MenuItem</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;onemsdk&#39;</span><span class="p">);</span>
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">Response</span><span class="p">,</span> <span class="nx">Menu</span><span class="p">,</span> <span class="nx">MenuItem</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;onemsdk&#39;</span><span class="p">);</span>
 
 <span class="kr">const</span> <span class="nx">menu</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Menu</span><span class="p">({</span>
     <span class="nx">header</span><span class="o">:</span> <span class="s1">&#39;Myapp&#39;</span><span class="p">,</span>
@@ -900,6 +903,7 @@
         <span class="k">new</span> <span class="nx">MenuItem</span><span class="p">({</span><span class="nx">description</span><span class="o">:</span> <span class="s1">&#39;Another paragraph&#39;</span><span class="p">})</span>
     <span class="p">]</span>
 <span class="p">});</span>
+<span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="nx">menu</span><span class="p">).</span><span class="nx">toJSON</span><span class="p">()</span>
 </pre></div>
 </td></tr></table></div>
 <input name="__tabs_3" type="radio" id="__tab_3_2" />
@@ -979,7 +983,8 @@
 5
 6
 7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">Menu</span><span class="p">,</span> <span class="nx">MenuItem</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;onemsdk&#39;</span><span class="p">);</span>
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">Response</span><span class="p">,</span> <span class="nx">Menu</span><span class="p">,</span> <span class="nx">MenuItem</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;onemsdk&#39;</span><span class="p">);</span>
 
 <span class="kr">const</span> <span class="nx">menu</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Menu</span><span class="p">({</span>
     <span class="nx">header</span><span class="o">:</span> <span class="s1">&#39;Myapp&#39;</span><span class="p">,</span>
@@ -987,6 +992,7 @@
         <span class="k">new</span> <span class="nx">MenuItem</span><span class="p">({</span><span class="nx">description</span><span class="o">:</span> <span class="s1">&#39;This is an option&#39;</span><span class="p">,</span> <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;https://placekitten.com/300/300&#39;</span><span class="p">,</span> <span class="nx">alt</span><span class="o">:</span><span class="s1">&#39;alt text&#39;</span><span class="p">})</span>
     <span class="p">]</span>
 <span class="p">});</span>
+<span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="nx">menu</span><span class="p">).</span><span class="nx">toJSON</span><span class="p">()</span>
 </pre></div>
 </td></tr></table></div>
 <input name="__tabs_5" type="radio" id="__tab_5_2" />
@@ -1044,15 +1050,16 @@
 </td></tr></table></div>
 <input name="__tabs_7" type="radio" id="__tab_7_1" />
 <label for="__tab_7_1">NodeJS</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">Menu</span><span class="p">,</span> <span class="nx">MenuItem</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;onemsdk&#39;</span><span class="p">);</span>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">Response</span><span class="p">,</span> <span class="nx">Menu</span><span class="p">,</span> <span class="nx">MenuItem</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;onemsdk&#39;</span><span class="p">);</span>
 
 <span class="kr">const</span> <span class="nx">menu</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Menu</span><span class="p">({</span>
     <span class="nx">header</span><span class="o">:</span> <span class="s1">&#39;Myapp&#39;</span><span class="p">,</span>
@@ -1061,6 +1068,7 @@
         <span class="k">new</span> <span class="nx">MenuItem</span><span class="p">({</span><span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;https://placekitten.com/300/300&#39;</span><span class="p">,</span> <span class="nx">alt</span><span class="o">:</span><span class="s1">&#39;alt text&#39;</span><span class="p">}),</span>
     <span class="p">]</span>
 <span class="p">});</span>
+<span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="nx">menu</span><span class="p">).</span><span class="nx">toJSON</span><span class="p">()</span>
 </pre></div>
 </td></tr></table></div>
 <input name="__tabs_7" type="radio" id="__tab_7_2" />
@@ -1138,7 +1146,8 @@
 5
 6
 7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">Menu</span><span class="p">,</span> <span class="nx">MenuItem</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;onemsdk&#39;</span><span class="p">);</span>
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">Response</span><span class="p">,</span> <span class="nx">Menu</span><span class="p">,</span> <span class="nx">MenuItem</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;onemsdk&#39;</span><span class="p">);</span>
 
 <span class="kr">const</span> <span class="nx">menu</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Menu</span><span class="p">({</span>
     <span class="nx">header</span><span class="o">:</span> <span class="s1">&#39;Myapp&#39;</span><span class="p">,</span>
@@ -1146,6 +1155,7 @@
         <span class="k">new</span> <span class="nx">MenuItem</span><span class="p">({</span><span class="nx">description</span><span class="o">:</span> <span class="s1">&#39;This is an option&#39;</span><span class="p">,</span> <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;http://techslides.com/demos/sample-videos/small.mp4&#39;</span><span class="p">,</span> <span class="nx">alt</span><span class="o">:</span><span class="s1">&#39;alt text&#39;</span><span class="p">})</span>
     <span class="p">]</span>
 <span class="p">});</span>
+<span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="nx">menu</span><span class="p">).</span><span class="nx">toJSON</span><span class="p">()</span>
 </pre></div>
 </td></tr></table></div>
 <input name="__tabs_9" type="radio" id="__tab_9_2" />
@@ -1208,7 +1218,8 @@
 5
 6
 7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">Menu</span><span class="p">,</span> <span class="nx">MenuItem</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;onemsdk&#39;</span><span class="p">);</span>
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">Response</span><span class="p">,</span> <span class="nx">Menu</span><span class="p">,</span> <span class="nx">MenuItem</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;onemsdk&#39;</span><span class="p">);</span>
 
 <span class="kr">const</span> <span class="nx">menu</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Menu</span><span class="p">({</span>
     <span class="nx">header</span><span class="o">:</span> <span class="s1">&#39;Myapp&#39;</span><span class="p">,</span>
@@ -1216,6 +1227,7 @@
         <span class="k">new</span> <span class="nx">MenuItem</span><span class="p">({</span><span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;http://techslides.com/demos/sample-videos/small.mp4&#39;</span><span class="p">,</span> <span class="nx">alt</span><span class="o">:</span><span class="s1">&#39;alt text&#39;</span><span class="p">})</span>
     <span class="p">]</span>
 <span class="p">});</span>
+<span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="nx">menu</span><span class="p">).</span><span class="nx">toJSON</span><span class="p">()</span>
 </pre></div>
 </td></tr></table></div>
 <input name="__tabs_11" type="radio" id="__tab_11_2" />

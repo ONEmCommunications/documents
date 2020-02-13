@@ -24,7 +24,7 @@ This section provides some worked examples of different form layouts.  Refer to 
     ```
 
     ```javascript tab="NodeJS"
-    const { Form, FormItem } = require('onemsdk');
+    const { Response, Form, FormItem } = require('onemsdk');
     
     const form = new Form({
         header: 'Todo form',
@@ -50,6 +50,7 @@ This section provides some worked examples of different form layouts.  Refer to 
             }),
         ]
     });
+    const response = new Response(form).toJSON()
     ```
     
     ```python tab="Python"

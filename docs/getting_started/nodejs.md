@@ -66,7 +66,7 @@ ngrok version 2.3.29
 In this step, you will prepare a simple *Hello World* application.  To clone a local version of the sample application, execute the following command in your local command shell or terminal:
 
 ```bash
-$ git clone https://github.com/chrishornmem/hello-world.git && cd hello-world
+$ git clone https://github.com/onem-developer/hello-world-node-js.git && cd hello-world-node-js
 ```
 
 You now have a functioning git repository that contains the *Hello World* application as well as a `package.json` file, which is used by npm (Node’s dependency manager).
@@ -150,7 +150,7 @@ In the [ONEm Developer Portal]({{ links.portal }}), select the *Test Client* tab
 If you have completed everything correctly, the ONEm system should respond with a menu, similar to the below:
 
 ```
-#HELLO WORLD
+#<APP_NAME> HELLO WORLD
 A First option
 B Second option
 C Third option

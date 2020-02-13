@@ -142,7 +142,7 @@ C Third option
 
 If you see the above, congratulations, you have successfully installed your first app.  Give yourself a pat on the back and then head over to the advanced tutorials to get to know ONEm better.
 
-If you don't see the above done worry, go back and check that each step has been followed properly and your program will soon be up and running.
+If you don't see the above don't worry, go back and check that each step has been followed properly and your micro-app will soon be up and running.
 
 ## Running your app in production
 
