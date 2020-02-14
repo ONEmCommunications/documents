@@ -162,6 +162,7 @@ For asking the user to select from a predefined list of options, the
         - `"email"` - the user input is validated as email address
         - `"hidden"` - won't be displayed
         - `"number"` - the user input is validated as any number (if integer is wanted, use `type="number"` with `step="1"`)
+        - `"range"` - user input is validated as range in combination with min, max and step
         - `"text"` - the user input is validated as text with only a single line allowed
         - `"textarea"` - the user input is validated as text with multiple lines allowed (depending on the input device being used)
         - `"tel"` - validated as text, for web browsers the standard keyboard is replaced with the dialpad
