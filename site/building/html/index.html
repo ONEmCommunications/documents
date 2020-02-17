@@ -1289,7 +1289,7 @@ ignored.</p>
 <li><code>"email"</code> - the user input is validated as email address</li>
 <li><code>"hidden"</code> - won't be displayed</li>
 <li><code>"number"</code> - the user input is validated as any number (if integer is wanted, use <code>type="number"</code> with <code>step="1"</code>)</li>
-<li><code>"range"</code> - user input is validated as range in combination with min, max and step</li>
+<li><code>"range"</code> - user input is validated as range in combination with min, max and step.  When default value has type array of multiple items, then multiple values are required in the user's input (eg <code>default="[1000, 100000]"</code>)</li>
 <li><code>"text"</code> - the user input is validated as text with only a single line allowed</li>
 <li><code>"textarea"</code> - the user input is validated as text with multiple lines allowed (depending on the input device being used)</li>
 <li><code>"tel"</code> - validated as text, for web browsers the standard keyboard is replaced with the dialpad</li>
