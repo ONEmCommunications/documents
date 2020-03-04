@@ -31,7 +31,7 @@ raw
 |method|string|HTTP method indicating how to trigger the callback path. Defaults to `"GET"`<br> _available: `"GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS", "TRACE"`_|
 |path|string|Next route callback path, accessed upon user selection <br> _required only for `type=option`_|
 |src|string|Fully qualified public path to a media file.  Be sure to include the file extension as this will be used to determine the type of media (image, audio or video).  If `src` is not provided, then `description` must be provided.
-|*type|string|Indicates the type of the object<br> _available: `"option", "content"`_|
+|*type|string|Indicates the type of the object<br> _available: `"content", "login", "logout", "option"`_|
 
 <!-- |text_search|string|If the user does not send a proper option marker and sends some input, this field will be used to search and narrow down the options against the user input. <br> max 1000 chars| -->
 

@@ -940,8 +940,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ltpgt" title="&lt;p&gt;" class="md-nav__link">
-    &lt;p&gt;
+  <a href="#ltlogingt" title="&lt;login&gt;" class="md-nav__link">
+    &lt;login&gt;
   </a>
   
     <nav class="md-nav">
@@ -950,6 +950,13 @@
           <li class="md-nav__item">
   <a href="#constraints_9" title="Constraints" class="md-nav__link">
     Constraints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_5" title="Attributes" class="md-nav__link">
+    Attributes
   </a>
   
 </li>
@@ -967,8 +974,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ltsectiongt" title="&lt;section&gt;" class="md-nav__link">
-    &lt;section&gt;
+  <a href="#ltlogoutgt" title="&lt;logout&gt;" class="md-nav__link">
+    &lt;logout&gt;
   </a>
   
     <nav class="md-nav">
@@ -982,7 +989,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#attributes_5" title="Attributes" class="md-nav__link">
+  <a href="#attributes_6" title="Attributes" class="md-nav__link">
     Attributes
   </a>
   
@@ -1001,8 +1008,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lttextareagt" title="&lt;textarea&gt;" class="md-nav__link">
-    &lt;textarea&gt;
+  <a href="#ltpgt" title="&lt;p&gt;" class="md-nav__link">
+    &lt;p&gt;
   </a>
   
     <nav class="md-nav">
@@ -1028,8 +1035,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ltulgt" title="&lt;ul&gt;" class="md-nav__link">
-    &lt;ul&gt;
+  <a href="#ltsectiongt" title="&lt;section&gt;" class="md-nav__link">
+    &lt;section&gt;
   </a>
   
     <nav class="md-nav">
@@ -1043,7 +1050,68 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#attributes_7" title="Attributes" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#example_12" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lttextareagt" title="&lt;textarea&gt;" class="md-nav__link">
+    &lt;textarea&gt;
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constraints_13" title="Constraints" class="md-nav__link">
+    Constraints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_13" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ltulgt" title="&lt;ul&gt;" class="md-nav__link">
+    &lt;ul&gt;
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constraints_14" title="Constraints" class="md-nav__link">
+    Constraints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_14" title="Example" class="md-nav__link">
     Example
   </a>
   
@@ -1063,21 +1131,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#constraints_13" title="Constraints" class="md-nav__link">
+  <a href="#constraints_15" title="Constraints" class="md-nav__link">
     Constraints
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#attributes_6" title="Attributes" class="md-nav__link">
+  <a href="#attributes_8" title="Attributes" class="md-nav__link">
     Attributes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example_13" title="Example" class="md-nav__link">
+  <a href="#example_15" title="Example" class="md-nav__link">
     Example
   </a>
   
@@ -1390,14 +1458,86 @@ a form context
 </pre></div>
 </td></tr></table>
 
+<h2 id="ltlogingt"><strong><code>&lt;login&gt;</code></strong><a class="headerlink" href="#ltlogingt" title="Permanent link">&para;</a></h2>
+<p>Renders a login button.  Currently this is only supported in Menus (not Forms).</p>
+<h3 id="constraints_9">Constraints<a class="headerlink" href="#constraints_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>supported as menu list items or standalone element within a section menu</li>
+<li>allowed children: none</li>
+</ul>
+<h3 id="attributes_5">Attributes<a class="headerlink" href="#attributes_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>on-success</code> - the path to redirect to when the user has logged in successfully</li>
+<li><code>on-failure</code> - the path to redirect to when the user has failed to login
+<!-- - <code>text-search</code> - field to add more context for searching in options --></li>
+</ul>
+<h3 id="example_9">Example<a class="headerlink" href="#example_9" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+  ...
+  <span class="p">&lt;</span><span class="nt">login</span> <span class="na">on-success</span><span class="o">=</span><span class="s">&quot;/successPath&quot;</span> <span class="na">on-failure</span><span class="o">=</span><span class="s">&quot;/failurePath&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Item 1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Item 2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Item 3<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+  ...
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="ltlogoutgt"><strong><code>&lt;logout&gt;</code></strong><a class="headerlink" href="#ltlogoutgt" title="Permanent link">&para;</a></h2>
+<p>Renders a logout button.  Currently this is only supported in Menus (not Forms).</p>
+<h3 id="constraints_10">Constraints<a class="headerlink" href="#constraints_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>supported as menu list items or standalone element within a section menu</li>
+<li>allowed children: none</li>
+</ul>
+<h3 id="attributes_6">Attributes<a class="headerlink" href="#attributes_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>on-success</code> - the path to redirect to when the user has logged out successfully</li>
+<li><code>on-failure</code> - the path to redirect to when the user has failed to logout
+<!-- - <code>text-search</code> - field to add more context for searching in options --></li>
+</ul>
+<h3 id="example_10">Example<a class="headerlink" href="#example_10" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+  ...
+  <span class="p">&lt;</span><span class="nt">logout</span> <span class="na">on-success</span><span class="o">=</span><span class="s">&quot;/successPath&quot;</span> <span class="na">on-failure</span><span class="o">=</span><span class="s">&quot;/failurePath&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Item 1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Item 2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Item 3<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+  ...
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</pre></div>
+</td></tr></table>
+
 <h2 id="ltpgt"><strong><code>&lt;p&gt;</code></strong><a class="headerlink" href="#ltpgt" title="Permanent link">&para;</a></h2>
 <p>A paragraph.</p>
-<h3 id="constraints_9">Constraints<a class="headerlink" href="#constraints_9" title="Permanent link">&para;</a></h3>
+<h3 id="constraints_11">Constraints<a class="headerlink" href="#constraints_11" title="Permanent link">&para;</a></h3>
 <ul>
 <li>cannot be empty</li>
 <li>allowed children: text</li>
 </ul>
-<h3 id="example_9">Example<a class="headerlink" href="#example_9" title="Permanent link">&para;</a></h3>
+<h3 id="example_11">Example<a class="headerlink" href="#example_11" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1412,13 +1552,13 @@ a form context
 
 <h2 id="ltsectiongt"><strong><code>&lt;section&gt;</code></strong><a class="headerlink" href="#ltsectiongt" title="Permanent link">&para;</a></h2>
 <p>A <code>&lt;section&gt;</code> body represents the SMS sent to the user by a micro-app.</p>
-<h3 id="constraints_10">Constraints<a class="headerlink" href="#constraints_10" title="Permanent link">&para;</a></h3>
+<h3 id="constraints_12">Constraints<a class="headerlink" href="#constraints_12" title="Permanent link">&para;</a></h3>
 <ul>
 <li>cannot be empty</li>
 <li>allowed children: text, <code>&lt;p&gt;</code>, <code>&lt;br/&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;ul&gt;</code>,
 <code>&lt;input&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;video&gt;</code></li>
 </ul>
-<h3 id="attributes_5">Attributes<a class="headerlink" href="#attributes_5" title="Permanent link">&para;</a></h3>
+<h3 id="attributes_7">Attributes<a class="headerlink" href="#attributes_7" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>header</code> (string) - alternative to <code>&lt;header&gt;</code> child</li>
 <li><code>footer</code> (string) - alternative to <code>&lt;footer&gt;</code> child</li>
@@ -1457,7 +1597,7 @@ completion status.Ignored if not inside a `<form>`.
 - `status-prepend` (boolean) - if true this step will be prepended to the body
 pre of the response - appended otherwise. Ignored if not inside a `<form>`. -->
 
-<h3 id="example_10">Example<a class="headerlink" href="#example_10" title="Permanent link">&para;</a></h3>
+<h3 id="example_12">Example<a class="headerlink" href="#example_12" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
@@ -1468,12 +1608,12 @@ pre of the response - appended otherwise. Ignored if not inside a `<form>`. -->
 
 <h2 id="lttextareagt"><strong><code>&lt;textarea&gt;</code></strong><a class="headerlink" href="#lttextareagt" title="Permanent link">&para;</a></h2>
 <p>The <code>&lt;textarea&gt;</code> tag is used as an alterntive to <code>&lt;input type="textarea" /&gt;</code>.  It is used to faciltate input of text spanning multiple lines (if supported by the device and user's access channel).  If the <code>&lt;textarea&gt;</code> tag has a text child, then this becomes the default value for the field.</p>
-<h3 id="constraints_11">Constraints<a class="headerlink" href="#constraints_11" title="Permanent link">&para;</a></h3>
+<h3 id="constraints_13">Constraints<a class="headerlink" href="#constraints_13" title="Permanent link">&para;</a></h3>
 <ul>
 <li>allowed children: text</li>
 <li>it is ignored outside of a form context</li>
 </ul>
-<h3 id="example_11">Example<a class="headerlink" href="#example_11" title="Permanent link">&para;</a></h3>
+<h3 id="example_13">Example<a class="headerlink" href="#example_13" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1492,12 +1632,12 @@ pre of the response - appended otherwise. Ignored if not inside a `<form>`. -->
 
 <h2 id="ltulgt"><strong><code>&lt;ul&gt;</code></strong><a class="headerlink" href="#ltulgt" title="Permanent link">&para;</a></h2>
 <p>Declares a list. When rendered, it will be a selectable list, list elements are represented by <li> tags.</p>
-<h3 id="constraints_12">Constraints<a class="headerlink" href="#constraints_12" title="Permanent link">&para;</a></h3>
+<h3 id="constraints_14">Constraints<a class="headerlink" href="#constraints_14" title="Permanent link">&para;</a></h3>
 <ul>
 <li>cannot be empty</li>
 <li>allowed children: <code>&lt;li&gt;</code></li>
 </ul>
-<h3 id="example_12">Example<a class="headerlink" href="#example_12" title="Permanent link">&para;</a></h3>
+<h3 id="example_14">Example<a class="headerlink" href="#example_14" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1516,16 +1656,16 @@ pre of the response - appended otherwise. Ignored if not inside a `<form>`. -->
 
 <h2 id="ltvideogt"><strong><code>&lt;video&gt;</code></strong><a class="headerlink" href="#ltvideogt" title="Permanent link">&para;</a></h2>
 <p>The <code>&lt;video&gt;</code> tag is used to render an image.  If the <code>&lt;video&gt;</code> tag is enclosed within an <code>&lt;li&gt;</code> and <code>&lt;a&gt;</code> tags, then it becomes a selectable menu option.</p>
-<h3 id="constraints_13">Constraints<a class="headerlink" href="#constraints_13" title="Permanent link">&para;</a></h3>
+<h3 id="constraints_15">Constraints<a class="headerlink" href="#constraints_15" title="Permanent link">&para;</a></h3>
 <ul>
 <li>allowed children: children are ignored</li>
 </ul>
-<h3 id="attributes_6">Attributes<a class="headerlink" href="#attributes_6" title="Permanent link">&para;</a></h3>
+<h3 id="attributes_8">Attributes<a class="headerlink" href="#attributes_8" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>src</code> (string) - fully qualified public path to the video file to be rendered</li>
 <li><code>alt</code> (string) - alt text to be displayed when the src cannot be downloaded.  This is ignored for some access channels</li>
 </ul>
-<h3 id="example_13">Example<a class="headerlink" href="#example_13" title="Permanent link">&para;</a></h3>
+<h3 id="example_15">Example<a class="headerlink" href="#example_15" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3

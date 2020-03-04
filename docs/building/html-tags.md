@@ -242,6 +242,62 @@ a form context
 </section>
 ```
 
+## **`<login>`**
+
+Renders a login button.  Currently this is only supported in Menus (not Forms).
+
+### Constraints
+- supported as menu list items or standalone element within a section menu
+- allowed children: none
+
+### Attributes
+- `on-success` - the path to redirect to when the user has logged in successfully
+- `on-failure` - the path to redirect to when the user has failed to login
+<!-- - `text-search` - field to add more context for searching in options -->
+
+### Example
+
+```html
+<section>
+  ...
+  <login on-success="/successPath" on-failure="/failurePath" />
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+  ...
+</section>
+```
+
+## **`<logout>`**
+
+Renders a logout button.  Currently this is only supported in Menus (not Forms).
+
+### Constraints
+- supported as menu list items or standalone element within a section menu
+- allowed children: none
+
+### Attributes
+- `on-success` - the path to redirect to when the user has logged out successfully
+- `on-failure` - the path to redirect to when the user has failed to logout
+<!-- - `text-search` - field to add more context for searching in options -->
+
+### Example
+
+```html
+<section>
+  ...
+  <logout on-success="/successPath" on-failure="/failurePath" />
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+  ...
+</section>
+```
+
 ## **`<p>`**
 
 A paragraph.
