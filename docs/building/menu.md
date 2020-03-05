@@ -1,6 +1,6 @@
 A menu represents a type of response ONEm sends back to the user and it allows the user to select certain options you put in the menu.
 
-It is composed by a **header**, a **body** and a **footer**. The body can contain **option** or **content** items.
+It is composed by a **header**, a **body** and a **footer**. The body can contain **option**, **content**, **login** or **logout** items.
 
 When an option is being accessed, ONEm platform will perform an HTTP request to the callback path you set.
 

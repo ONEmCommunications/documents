@@ -18,7 +18,7 @@ nav:
                 # - Run locally: getting_started/python_run_local.md
 
         Running in production: getting_started/running-in-production.md
-
+    - IDs & Profile: ids-profile/index.md
     - Core elements:
         # - Overview: concepts.md
         - Menus: core/menus.md

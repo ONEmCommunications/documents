@@ -54,7 +54,7 @@ the user
 |min_value_error|string|Message to be shown on `min_value` error|
 |*name|string|The name of this `FormItem`, used in form serialization|
 |required|boolean|User can `SKIP` this `FormItem` if set to `false`|
-|*type|string|Indicates the type of the object<br> _available: `"string", "date", "datetime", "hidden", "int", "float", "form-menu", "email", "url", "location"`_|
+|*type|string|Indicates the type of the object<br> _available: `"string", "date", "datetime", "hidden", "int", "float", "form-menu", "email", "url", "location", "range", "textarea"`_|
 |url|string|Callback url triggered right after the choice has been set for this form item|
 |value|string|Value to pass in the form serialization data <br> _applies only for `type=hidden`_|
 
