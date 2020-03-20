@@ -39,6 +39,9 @@ nav:
             SMS reserved verbs: core/reserved_verbs.md
 
     - Guides:
+        - Build a omni-channel micro-app with Node.js and Express in 2 hours:
+            - Part 1 - Setting up: guides/moviedb/part1.md
+            - Part 2 - Adding a form: guides/moviedb/part2.md
         - Building a post board micro-app:
             - Basics: use_case/post_demo_app_intro.md
             - Micro app landing: use_case/postv1.md
