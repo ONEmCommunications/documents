@@ -56,6 +56,7 @@ nav:
         - Form: building/form.md
         - HTML tags: building/html-tags.md
 google_analytics: ['UA-128421206-6', 'developer-docs.onem.zone']
+site_url: https://developer-portal.onem.zone/
 theme:
     name: material
     highlightjs: true
