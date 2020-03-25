@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://developer-portal.onem.zone/building/html/">
+        <link rel="canonical" href="https://developer-docs.onem.zone/building/html/">
       
       
       
@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.1.0">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -112,7 +112,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#supported-html-tags" tabindex="1" class="md-skip">
+      <a href="#supported-html-tags" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -121,9 +121,10 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://developer-portal.onem.zone/" title="Documentation" class="md-header-nav__button md-logo">
+        <a href="https://developer-docs.onem.zone" title="Documentation"
+          class="md-header-nav__button md-logo">
           
-            <img src="../../assets/onem-logo.svg" width="24" height="24">
+          <img src="../../assets/onem-logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -133,24 +134,33 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            <span class="md-header-nav__topic">
-              Documentation
-            </span>
-            <span class="md-header-nav__topic">
-              Html
-            </span>
+          <span class="md-header-nav__topic">
+            Documentation
+          </span>
+          <span class="md-header-nav__topic">
+            Html
+          </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
+        <div style="min-width:100px" class="md-flex__ellipsis md-header-nav__title">
+          <span class="md-header-nav__topic btn-shake">
+            <a class="btn" target="_blank" rel="noopener noreferrer" href="https://developer-portal.onem.zone/">
+              Sign up
+            </a>
+          </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -180,7 +190,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -189,9 +199,9 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://developer-portal.onem.zone/" title="Documentation" class="md-nav__button md-logo">
+    <a href="https://developer-docs.onem.zone" title="Documentation" class="md-nav__button md-logo">
       
-        <img src="../../assets/onem-logo.svg" width="48" height="48">
+        <img alt="logo" src="../../assets/onem-logo.svg" width="48" height="48">
       
     </a>
     Documentation
@@ -722,14 +732,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#supported-html-tags" title="Supported HTML Tags" class="md-nav__link">
+  <a href="#supported-html-tags" class="md-nav__link">
     Supported HTML Tags
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ltagt" title="&amp;lt;a&amp;gt;" class="md-nav__link">
+  <a href="#ltagt" class="md-nav__link">
     &amp;lt;a&amp;gt;
   </a>
   
@@ -737,21 +747,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#constraints" title="Constraints" class="md-nav__link">
+  <a href="#constraints" class="md-nav__link">
     Constraints
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#attributes" title="Attributes" class="md-nav__link">
+  <a href="#attributes" class="md-nav__link">
     Attributes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
+  <a href="#example" class="md-nav__link">
     Example
   </a>
   
@@ -763,7 +773,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ltbrgt" title="&amp;lt;br&amp;gt;" class="md-nav__link">
+  <a href="#ltbrgt" class="md-nav__link">
     &amp;lt;br&amp;gt;
   </a>
   
@@ -771,14 +781,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#constraints_1" title="Constraints" class="md-nav__link">
+  <a href="#constraints_1" class="md-nav__link">
     Constraints
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example_1" title="Example" class="md-nav__link">
+  <a href="#example_1" class="md-nav__link">
     Example
   </a>
   
@@ -790,7 +800,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ltfootergt" title="&amp;lt;footer&amp;gt;" class="md-nav__link">
+  <a href="#ltfootergt" class="md-nav__link">
     &amp;lt;footer&amp;gt;
   </a>
   
@@ -798,14 +808,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#constraints_2" title="Constraints" class="md-nav__link">
+  <a href="#constraints_2" class="md-nav__link">
     Constraints
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example_2" title="Example" class="md-nav__link">
+  <a href="#example_2" class="md-nav__link">
     Example
   </a>
   
@@ -817,7 +827,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ltformgt" title="&amp;lt;form&amp;gt;" class="md-nav__link">
+  <a href="#ltformgt" class="md-nav__link">
     &amp;lt;form&amp;gt;
   </a>
   
@@ -825,21 +835,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#constraints_3" title="Constraints" class="md-nav__link">
+  <a href="#constraints_3" class="md-nav__link">
     Constraints
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#attributes_1" title="Attributes" class="md-nav__link">
+  <a href="#attributes_1" class="md-nav__link">
     Attributes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example_3" title="Example" class="md-nav__link">
+  <a href="#example_3" class="md-nav__link">
     Example
   </a>
   
@@ -851,7 +861,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ltheadergt" title="&amp;lt;header&amp;gt;" class="md-nav__link">
+  <a href="#ltheadergt" class="md-nav__link">
     &amp;lt;header&amp;gt;
   </a>
   
@@ -859,14 +869,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#constraints_4" title="Constraints" class="md-nav__link">
+  <a href="#constraints_4" class="md-nav__link">
     Constraints
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example_4" title="Example" class="md-nav__link">
+  <a href="#example_4" class="md-nav__link">
     Example
   </a>
   
@@ -878,7 +888,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ltimggt" title="&amp;lt;img&amp;gt;" class="md-nav__link">
+  <a href="#ltimggt" class="md-nav__link">
     &amp;lt;img&amp;gt;
   </a>
   
@@ -886,21 +896,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#constraints_5" title="Constraints" class="md-nav__link">
+  <a href="#constraints_5" class="md-nav__link">
     Constraints
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#attributes_2" title="Attributes" class="md-nav__link">
+  <a href="#attributes_2" class="md-nav__link">
     Attributes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example_5" title="Example" class="md-nav__link">
+  <a href="#example_5" class="md-nav__link">
     Example
   </a>
   
@@ -912,7 +922,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ltinputgt" title="&amp;lt;input&amp;gt;" class="md-nav__link">
+  <a href="#ltinputgt" class="md-nav__link">
     &amp;lt;input&amp;gt;
   </a>
   
@@ -920,14 +930,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#constraints_6" title="Constraints" class="md-nav__link">
+  <a href="#constraints_6" class="md-nav__link">
     Constraints
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#attributes_3" title="Attributes" class="md-nav__link">
+  <a href="#attributes_3" class="md-nav__link">
     Attributes
   </a>
   
@@ -935,14 +945,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#standard-html5" title="Standard HTML5:" class="md-nav__link">
+  <a href="#standard-html5" class="md-nav__link">
     Standard HTML5:
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#non-standard" title="Non-standard" class="md-nav__link">
+  <a href="#non-standard" class="md-nav__link">
     Non-standard
   </a>
   
@@ -954,7 +964,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#example_6" title="Example" class="md-nav__link">
+  <a href="#example_6" class="md-nav__link">
     Example
   </a>
   
@@ -966,7 +976,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ltlabelgt" title="&amp;lt;label&amp;gt;" class="md-nav__link">
+  <a href="#ltlabelgt" class="md-nav__link">
     &amp;lt;label&amp;gt;
   </a>
   
@@ -974,14 +984,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#constraints_7" title="Constraints" class="md-nav__link">
+  <a href="#constraints_7" class="md-nav__link">
     Constraints
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example_7" title="Example" class="md-nav__link">
+  <a href="#example_7" class="md-nav__link">
     Example
   </a>
   
@@ -993,7 +1003,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ltligt" title="&amp;lt;li&amp;gt;" class="md-nav__link">
+  <a href="#ltligt" class="md-nav__link">
     &amp;lt;li&amp;gt;
   </a>
   
@@ -1001,21 +1011,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#constraints_8" title="Constraints" class="md-nav__link">
+  <a href="#constraints_8" class="md-nav__link">
     Constraints
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#attributes_4" title="Attributes" class="md-nav__link">
+  <a href="#attributes_4" class="md-nav__link">
     Attributes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example_8" title="Example" class="md-nav__link">
+  <a href="#example_8" class="md-nav__link">
     Example
   </a>
   
@@ -1027,7 +1037,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ltlogingt" title="&amp;lt;login&amp;gt;" class="md-nav__link">
+  <a href="#ltlogingt" class="md-nav__link">
     &amp;lt;login&amp;gt;
   </a>
   
@@ -1035,21 +1045,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#constraints_9" title="Constraints" class="md-nav__link">
+  <a href="#constraints_9" class="md-nav__link">
     Constraints
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#attributes_5" title="Attributes" class="md-nav__link">
+  <a href="#attributes_5" class="md-nav__link">
     Attributes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example_9" title="Example" class="md-nav__link">
+  <a href="#example_9" class="md-nav__link">
     Example
   </a>
   
@@ -1061,7 +1071,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ltlogoutgt" title="&amp;lt;logout&amp;gt;" class="md-nav__link">
+  <a href="#ltlogoutgt" class="md-nav__link">
     &amp;lt;logout&amp;gt;
   </a>
   
@@ -1069,21 +1079,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#constraints_10" title="Constraints" class="md-nav__link">
+  <a href="#constraints_10" class="md-nav__link">
     Constraints
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#attributes_6" title="Attributes" class="md-nav__link">
+  <a href="#attributes_6" class="md-nav__link">
     Attributes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example_10" title="Example" class="md-nav__link">
+  <a href="#example_10" class="md-nav__link">
     Example
   </a>
   
@@ -1095,7 +1105,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ltpgt" title="&amp;lt;p&amp;gt;" class="md-nav__link">
+  <a href="#ltpgt" class="md-nav__link">
     &amp;lt;p&amp;gt;
   </a>
   
@@ -1103,14 +1113,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#constraints_11" title="Constraints" class="md-nav__link">
+  <a href="#constraints_11" class="md-nav__link">
     Constraints
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example_11" title="Example" class="md-nav__link">
+  <a href="#example_11" class="md-nav__link">
     Example
   </a>
   
@@ -1122,7 +1132,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ltsectiongt" title="&amp;lt;section&amp;gt;" class="md-nav__link">
+  <a href="#ltsectiongt" class="md-nav__link">
     &amp;lt;section&amp;gt;
   </a>
   
@@ -1130,21 +1140,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#constraints_12" title="Constraints" class="md-nav__link">
+  <a href="#constraints_12" class="md-nav__link">
     Constraints
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#attributes_7" title="Attributes" class="md-nav__link">
+  <a href="#attributes_7" class="md-nav__link">
     Attributes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example_12" title="Example" class="md-nav__link">
+  <a href="#example_12" class="md-nav__link">
     Example
   </a>
   
@@ -1156,7 +1166,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lttextareagt" title="&amp;lt;textarea&amp;gt;" class="md-nav__link">
+  <a href="#lttextareagt" class="md-nav__link">
     &amp;lt;textarea&amp;gt;
   </a>
   
@@ -1164,14 +1174,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#constraints_13" title="Constraints" class="md-nav__link">
+  <a href="#constraints_13" class="md-nav__link">
     Constraints
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example_13" title="Example" class="md-nav__link">
+  <a href="#example_13" class="md-nav__link">
     Example
   </a>
   
@@ -1183,7 +1193,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ltulgt" title="&amp;lt;ul&amp;gt;" class="md-nav__link">
+  <a href="#ltulgt" class="md-nav__link">
     &amp;lt;ul&amp;gt;
   </a>
   
@@ -1191,14 +1201,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#constraints_14" title="Constraints" class="md-nav__link">
+  <a href="#constraints_14" class="md-nav__link">
     Constraints
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example_14" title="Example" class="md-nav__link">
+  <a href="#example_14" class="md-nav__link">
     Example
   </a>
   
@@ -1210,7 +1220,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ltvideogt" title="&amp;lt;video&amp;gt;" class="md-nav__link">
+  <a href="#ltvideogt" class="md-nav__link">
     &amp;lt;video&amp;gt;
   </a>
   
@@ -1218,21 +1228,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#constraints_15" title="Constraints" class="md-nav__link">
+  <a href="#constraints_15" class="md-nav__link">
     Constraints
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#attributes_8" title="Attributes" class="md-nav__link">
+  <a href="#attributes_8" class="md-nav__link">
     Attributes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example_15" title="Example" class="md-nav__link">
+  <a href="#example_15" class="md-nav__link">
     Example
   </a>
   
@@ -1284,14 +1294,14 @@
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/menu&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;GET&quot;</span><span class="p">&gt;</span>Main menu<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <h2 id="ltbrgt"><strong><code>&lt;br&gt;</code></strong><a class="headerlink" href="#ltbrgt" title="Permanent link">&para;</a></h2>
@@ -1305,12 +1315,12 @@
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
   ...
   <span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
   ...
 <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <h2 id="ltfootergt"><strong><code>&lt;footer&gt;</code></strong><a class="headerlink" href="#ltfootergt" title="Permanent link">&para;</a></h2>
@@ -1327,11 +1337,11 @@ preceded by <code>--</code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
   ...
   <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>Reply A-D<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <h2 id="ltformgt"><strong><code>&lt;form&gt;</code></strong><a class="headerlink" href="#ltformgt" title="Permanent link">&para;</a></h2>
@@ -1361,11 +1371,11 @@ false. --&gt;</li>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;/callback/form1&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span> <span class="na">skip-confirmation</span><span class="p">&gt;</span>
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;/callback/form1&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span> <span class="na">skip-confirmation</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <h2 id="ltheadergt"><strong><code>&lt;header&gt;</code></strong><a class="headerlink" href="#ltheadergt" title="Permanent link">&para;</a></h2>
@@ -1381,11 +1391,11 @@ false. --&gt;</li>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>MY APP<span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
   ...
 <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <h2 id="ltimggt"><strong><code>&lt;img&gt;</code></strong><a class="headerlink" href="#ltimggt" title="Permanent link">&para;</a></h2>
@@ -1409,7 +1419,7 @@ false. --&gt;</li>
  7
  8
  9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://example.com/assets/image.png&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;alt text&quot;</span> <span class="p">/&gt;</span>
   <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -1419,7 +1429,7 @@ false. --&gt;</li>
     <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <h2 id="ltinputgt"><strong><code>&lt;input&gt;</code></strong><a class="headerlink" href="#ltinputgt" title="Permanent link">&para;</a></h2>
@@ -1481,12 +1491,12 @@ ignored.</p>
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
   ...
   <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span><span class="p">/&gt;</span>
   ...
 <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <h2 id="ltlabelgt"><strong><code>&lt;label&gt;</code></strong><a class="headerlink" href="#ltlabelgt" title="Permanent link">&para;</a></h2>
@@ -1501,12 +1511,12 @@ ignored.</p>
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
   ...
   <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Please send your name<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
   ...
 <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <h2 id="ltligt"><strong><code>&lt;li&gt;</code></strong><a class="headerlink" href="#ltligt" title="Permanent link">&para;</a></h2>
@@ -1533,7 +1543,7 @@ a form context
 6
 7
 8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
   ...
   <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Item 1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -1542,7 +1552,7 @@ a form context
   <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
   ...
 <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <h2 id="ltlogingt"><strong><code>&lt;login&gt;</code></strong><a class="headerlink" href="#ltlogingt" title="Permanent link">&para;</a></h2>
@@ -1568,7 +1578,7 @@ a form context
  7
  8
  9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
   ...
   <span class="p">&lt;</span><span class="nt">login</span> <span class="na">on-success</span><span class="o">=</span><span class="s">&quot;/successPath&quot;</span> <span class="na">on-failure</span><span class="o">=</span><span class="s">&quot;/failurePath&quot;</span> <span class="p">/&gt;</span>
   <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
@@ -1578,7 +1588,7 @@ a form context
   <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
   ...
 <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <h2 id="ltlogoutgt"><strong><code>&lt;logout&gt;</code></strong><a class="headerlink" href="#ltlogoutgt" title="Permanent link">&para;</a></h2>
@@ -1604,7 +1614,7 @@ a form context
  7
  8
  9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
   ...
   <span class="p">&lt;</span><span class="nt">logout</span> <span class="na">on-success</span><span class="o">=</span><span class="s">&quot;/successPath&quot;</span> <span class="na">on-failure</span><span class="o">=</span><span class="s">&quot;/failurePath&quot;</span> <span class="p">/&gt;</span>
   <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
@@ -1614,7 +1624,7 @@ a form context
   <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
   ...
 <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <h2 id="ltpgt"><strong><code>&lt;p&gt;</code></strong><a class="headerlink" href="#ltpgt" title="Permanent link">&para;</a></h2>
@@ -1629,12 +1639,12 @@ a form context
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
   ...
   <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Hi there!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
   ...
 <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <h2 id="ltsectiongt"><strong><code>&lt;section&gt;</code></strong><a class="headerlink" href="#ltsectiongt" title="Permanent link">&para;</a></h2>
@@ -1687,10 +1697,10 @@ pre of the response - appended otherwise. Ignored if not inside a `<form>`. -->
 <h3 id="example_12">Example<a class="headerlink" href="#example_12" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
   ...
 <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <h2 id="lttextareagt"><strong><code>&lt;textarea&gt;</code></strong><a class="headerlink" href="#lttextareagt" title="Permanent link">&para;</a></h2>
@@ -1707,14 +1717,14 @@ pre of the response - appended otherwise. Ignored if not inside a `<form>`. -->
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
   ...
   <span class="p">&lt;</span><span class="nt">section</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;address&quot;</span><span class="p">&gt;</span>
     ...
     <span class="p">&lt;</span><span class="nt">textarea</span><span class="p">&gt;</span>default value<span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <h2 id="ltulgt"><strong><code>&lt;ul&gt;</code></strong><a class="headerlink" href="#ltulgt" title="Permanent link">&para;</a></h2>
@@ -1731,14 +1741,14 @@ pre of the response - appended otherwise. Ignored if not inside a `<form>`. -->
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
   ...
   <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     ...
   <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
   ...
 <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <h2 id="ltvideogt"><strong><code>&lt;video&gt;</code></strong><a class="headerlink" href="#ltvideogt" title="Permanent link">&para;</a></h2>
@@ -1762,7 +1772,7 @@ pre of the response - appended otherwise. Ignored if not inside a `<form>`. -->
  7
  8
  9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">video</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://example.com/assets/image.png&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;alt text&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -1772,10 +1782,11 @@ pre of the response - appended otherwise. Ignored if not inside a `<form>`. -->
     <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
                 
                   
+                
                 
               
               
@@ -1795,20 +1806,32 @@ pre of the response - appended otherwise. Ignored if not inside a `<form>`. -->
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+          <div class="md-footer-copyright__highlight">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.onem.com">&copy;&nbsp;ONEm Communications Ltd 2020</a>
+          </div>
+        
       </div>
       
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/ONEmCommunications" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/onem_com" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/onem-communication/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://www.facebook.com/ONEmCommunicationsLtd/" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../../assets/javascripts/application.2ba8dec4.js"></script>
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
       <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
       

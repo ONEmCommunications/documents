@@ -1,6 +1,10 @@
 <!-- <img src="/assets/onem-logo.svg" width=150 style="float:left;margin-right:15px;" /> -->
 ONEm's micro-app framework offers web developers the ability to build amazing multi-channel micro-apps capable of functioning over web, SMS, Facebook and more using a single code base.
 
+<div style="text-align:center">
+    <a target="_blank" rel="noopener noreferrer" href="https://developer-portal.onem.zone/" class="btn">Sign up for free</a>
+</div>
+
 With ONEm's SDKs, developers can use their favourite web development framework such as NodeJS/Express or Django/Python.  Micro-apps can be hosted anywhere in the cloud. Communication with ONEm's Platform is via HTTPS/JSON.
 
 Just few basic HTML tags are all that are needed to present perfectly formated content on any channel, e.g. website, mobile browser, social media and even SMS.

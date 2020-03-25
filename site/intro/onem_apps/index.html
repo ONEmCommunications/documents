@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://developer-portal.onem.zone/intro/onem_apps/">
+        <link rel="canonical" href="https://developer-docs.onem.zone/intro/onem_apps/">
       
       
       
@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.1.0">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -112,7 +112,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#what-are-onem-apps" tabindex="1" class="md-skip">
+      <a href="#what-are-onem-apps" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -121,9 +121,10 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://developer-portal.onem.zone/" title="Documentation" class="md-header-nav__button md-logo">
+        <a href="https://developer-docs.onem.zone" title="Documentation"
+          class="md-header-nav__button md-logo">
           
-            <img src="../../assets/onem-logo.svg" width="24" height="24">
+          <img src="../../assets/onem-logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -133,24 +134,33 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            <span class="md-header-nav__topic">
-              Documentation
-            </span>
-            <span class="md-header-nav__topic">
-              What are ONEm apps?
-            </span>
+          <span class="md-header-nav__topic">
+            Documentation
+          </span>
+          <span class="md-header-nav__topic">
+            What are ONEm apps?
+          </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
+        <div style="min-width:100px" class="md-flex__ellipsis md-header-nav__title">
+          <span class="md-header-nav__topic btn-shake">
+            <a class="btn" target="_blank" rel="noopener noreferrer" href="https://developer-portal.onem.zone/">
+              Sign up
+            </a>
+          </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -180,7 +190,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -189,9 +199,9 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://developer-portal.onem.zone/" title="Documentation" class="md-nav__button md-logo">
+    <a href="https://developer-docs.onem.zone" title="Documentation" class="md-nav__button md-logo">
       
-        <img src="../../assets/onem-logo.svg" width="48" height="48">
+        <img alt="logo" src="../../assets/onem-logo.svg" width="48" height="48">
       
     </a>
     Documentation
@@ -724,14 +734,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-services-work" title="How services work" class="md-nav__link">
+  <a href="#how-services-work" class="md-nav__link">
     How services work
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lets-dig-further-into-the-anatomy-of-a-onem-application" title="Let's dig further into the anatomy of a ONEm application" class="md-nav__link">
+  <a href="#lets-dig-further-into-the-anatomy-of-a-onem-application" class="md-nav__link">
     Let's dig further into the anatomy of a ONEm application
   </a>
   
@@ -782,14 +792,14 @@ A website/web application provides pages, navigation system, hints and, most imp
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>#ONEM MENU
-A My account
-B Invite friends to chat
-C Create SMS group chats (xGroup)
-D Services
-E How to use
---Reply A-E
-</pre></div>
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">#ONEM MENU</span>
+<span class="err">A My account</span>
+<span class="err">B Invite friends to chat</span>
+<span class="err">C Create SMS group chats (xGroup)</span>
+<span class="err">D Services</span>
+<span class="err">E How to use</span>
+<span class="err">--Reply A-E</span>
+</code></pre></div>
 </td></tr></table>
 The above message is the landing page of #onem application, also considered the main menu. The first message presents user with the main options that can be accessed and offers a navigation possibility.
 As you probably figured out, the user can access account information, chat with friends, see available services or follow a tutorial on how to use ONEm features. Each available option has a letter attached to it to facilitate user response. As hinted in the footer, the user can send one of the letters to access the corresponding menu item. This is the <strong>MENU</strong> concept. Each option is displayed on a new line and has associated an action to it that will result in another message displayed to the user.</p>
@@ -801,15 +811,15 @@ As you probably figured out, the user can access account information, chat with 
 5
 6
 7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>#ONEM SERVICES
-A Search
-B Information
-C Tools
-D Business
-E Entertainment
-F Social
---Reply option/&quot;#&quot;
-</pre></div>
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">#ONEM SERVICES</span>
+<span class="err">A Search</span>
+<span class="err">B Information</span>
+<span class="err">C Tools</span>
+<span class="err">D Business</span>
+<span class="err">E Entertainment</span>
+<span class="err">F Social</span>
+<span class="err">--Reply option/&quot;#&quot;</span>
+</code></pre></div>
 </td></tr></table></p>
 <p>Let's get back to message body. The amount of information displayed to the user, along with header and footer, can exceed the sms size. In this case, the ONEm platform will split body information in several messages called chunks, adding a paging system that allows users to access more than can fit one single SMS. At the end of each sms body, right before the footer, there will be automatically added information about current chunk and total number of chunks in which the message was split. This mechanism applies both to simple text, like a news article, and options lists that are too long to be displayed in one message.</p>
 <p>A great example for this mechanism can be extracted from our #wiki application. The article's introduction about SMS is paginated in 8 chunks and the first 2 are presented below. The hint from footer - "more" - is used to navigate to the next chunk.
@@ -823,18 +833,18 @@ F Social
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>#WIKI (ENGLISH) SMS SEARCH
-SMS (short message service) is a text messaging service component of most telephone, Internet, and mobile device systems. It uses standardized
-..1/8
---MORE/BACK
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="o">#</span><span class="n">WIKI</span> <span class="p">(</span><span class="n">ENGLISH</span><span class="p">)</span> <span class="n">SMS</span> <span class="k">SEARCH</span>
+<span class="n">SMS</span> <span class="p">(</span><span class="n">short</span> <span class="n">message</span> <span class="n">service</span><span class="p">)</span> <span class="k">is</span> <span class="n">a</span> <span class="nb">text</span> <span class="n">messaging</span> <span class="n">service</span> <span class="n">component</span> <span class="k">of</span> <span class="n">most</span> <span class="n">telephone</span><span class="p">,</span> <span class="n">Internet</span><span class="p">,</span> <span class="k">and</span> <span class="n">mobile</span> <span class="n">device</span> <span class="n">systems</span><span class="p">.</span> <span class="n">It</span> <span class="n">uses</span> <span class="n">standardized</span>
+<span class="p">..</span><span class="mi">1</span><span class="o">/</span><span class="mi">8</span>
+<span class="c1">--MORE/BACK</span>
 
-&gt;&gt; more
+<span class="o">&gt;&gt;</span> <span class="k">more</span>
 
-communication protocols to enable mobile devices to exchange short text messages. An intermediary service can facilitate a text-to-voice conversion to be sent to landlines.
-SMS was
-..2/8
---MORE/BACK
-</pre></div>
+<span class="n">communication</span> <span class="n">protocols</span> <span class="k">to</span> <span class="n">enable</span> <span class="n">mobile</span> <span class="n">devices</span> <span class="k">to</span> <span class="n">exchange</span> <span class="n">short</span> <span class="nb">text</span> <span class="n">messages</span><span class="p">.</span> <span class="n">An</span> <span class="n">intermediary</span> <span class="n">service</span> <span class="n">can</span> <span class="n">facilitate</span> <span class="n">a</span> <span class="nb">text</span><span class="o">-</span><span class="k">to</span><span class="o">-</span><span class="n">voice</span> <span class="k">conversion</span> <span class="k">to</span> <span class="n">be</span> <span class="n">sent</span> <span class="k">to</span> <span class="n">landlines</span><span class="p">.</span>
+<span class="n">SMS</span> <span class="n">was</span>
+<span class="p">..</span><span class="mi">2</span><span class="o">/</span><span class="mi">8</span>
+<span class="c1">--MORE/BACK</span>
+</code></pre></div>
 </td></tr></table>
 Another important topic to talk about regards capturing user input. Any webpage or web application will present users with a form to complete and submit. This is rather difficult in the SMS version of ONEm applications, but getting help from wizards, forms are completed step by step, each form field translates in a new message asking user for a free response or choose from a list of options. When all information is gathered, the user can review and submit the form through a supplementary confirmation step. No worries, we dedicated an entire section to forms and how you can create one [here][
 <!-- Link to Building section, Forms  -->
@@ -843,6 +853,7 @@ Another important topic to talk about regards capturing user input. Any webpage 
 <!-- video here about services and how they work --></p>
                 
                   
+                
                 
               
               
@@ -862,20 +873,32 @@ Another important topic to talk about regards capturing user input. Any webpage 
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+          <div class="md-footer-copyright__highlight">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.onem.com">&copy;&nbsp;ONEm Communications Ltd 2020</a>
+          </div>
+        
       </div>
       
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/ONEmCommunications" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/onem_com" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/onem-communication/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://www.facebook.com/ONEmCommunicationsLtd/" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../../assets/javascripts/application.2ba8dec4.js"></script>
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
       <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
       

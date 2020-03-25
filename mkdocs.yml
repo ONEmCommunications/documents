@@ -56,7 +56,8 @@ nav:
         - Form: building/form.md
         - HTML tags: building/html-tags.md
 google_analytics: ['UA-128421206-6', 'developer-docs.onem.zone']
-site_url: https://developer-portal.onem.zone/
+site_url: https://developer-docs.onem.zone
+copyright: ONEm Communications Ltd 2020
 theme:
     name: material
     highlightjs: true
@@ -65,7 +66,7 @@ theme:
         - python
         - html
         - bash
-    # custom_dir: theme/material/
+    custom_dir: 'theme'
     favicon: assets/favicon.ico
     language: en
     palette:
@@ -88,7 +89,15 @@ extra:
     github_py_url: !!python/object/apply:os.getenv ['TODO_APP_GITHUB_PY_URL']
   post_app:
     github_py_url: !!python/object/apply:os.getenv ['POST_APP_GITHUB_PY_URL']
-
+  social:
+    - type: 'github'
+      link: 'https://github.com/ONEmCommunications'
+    - type: 'twitter'
+      link: 'https://twitter.com/onem_com'
+    - type: 'linkedin'
+      link: 'https://www.linkedin.com/company/onem-communication/'
+    - type: 'facebook'
+      link: 'https://www.facebook.com/ONEmCommunicationsLtd/'
 extra_css:
     - 'assets/stylesheets/styles.css'
 extra_javascript:
