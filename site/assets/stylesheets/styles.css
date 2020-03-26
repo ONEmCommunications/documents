@@ -54,3 +54,7 @@ pre {padding:5px 10px;}
 .fb_iframe_widget span {
   vertical-align: middle !important;
 }
+
+.md-footer-social {
+  min-width: 230px;
+}
