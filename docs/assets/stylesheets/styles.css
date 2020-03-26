@@ -50,3 +50,7 @@ pre {padding:5px 10px;}
     animation-name: shake-hv;
     animation-timing-function: ease-in-out;
 }
+
+.fb_iframe_widget span {
+  vertical-align: middle !important;
+}
