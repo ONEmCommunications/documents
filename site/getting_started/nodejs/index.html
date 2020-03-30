@@ -38,7 +38,7 @@
     
     
       
-        <title>Node.js - Documentation</title>
+        <title>Node.js - Framework</title>
       
     
     
@@ -121,7 +121,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://developer-docs.onem.zone" title="Documentation"
+        <a href="https://developer-docs.onem.zone" title="Framework"
           class="md-header-nav__button md-logo">
           
           <img src="../../assets/onem-logo.svg" width="24" height="24">
@@ -135,7 +135,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
           <span class="md-header-nav__topic">
-            Documentation
+            Framework
           </span>
           <span class="md-header-nav__topic">
             Node.js
@@ -145,6 +145,20 @@
       </div>
 
       <div class="md-flex__cell md-flex__cell--shrink">
+        <div style="min-width:50px" class="md-flex__ellipsis md-header-nav__title">
+          <span class="md-header-nav__topic nav-link">
+            <a target="_blank" rel="noopener noreferrer" href="https://blog.onem.zone/">
+              Blog
+            </a>
+          </span>
+        </div>
+        <div style="min-width:60px" class="md-flex__ellipsis md-header-nav__title">
+          <span class="md-header-nav__topic nav-link">
+            <a target="_blank" rel="noopener noreferrer" href="https://forum.onem.zone/">
+              Forum
+            </a>
+          </span>
+        </div>
         <div style="min-width:100px" class="md-flex__ellipsis md-header-nav__title">
           <span class="md-header-nav__topic btn-shake">
             <a class="btn" target="_blank" rel="noopener noreferrer" href="https://developer-portal.onem.zone/">
@@ -201,12 +215,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://developer-docs.onem.zone" title="Documentation" class="md-nav__button md-logo">
+    <a href="https://developer-docs.onem.zone" title="Framework" class="md-nav__button md-logo">
       
         <img alt="logo" src="../../assets/onem-logo.svg" width="48" height="48">
       
     </a>
-    Documentation
+    Framework
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -356,8 +370,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#register-the-app-with-developer-portal" class="md-nav__link">
-    Register the app with Developer Portal
+  <a href="#register-the-app-in-the-developer-portal" class="md-nav__link">
+    Register the app in the Developer Portal
   </a>
   
 </li>
@@ -893,8 +907,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#register-the-app-with-developer-portal" class="md-nav__link">
-    Register the app with Developer Portal
+  <a href="#register-the-app-in-the-developer-portal" class="md-nav__link">
+    Register the app in the Developer Portal
   </a>
   
 </li>
@@ -1011,7 +1025,12 @@ ngrok version <span class="m">2</span>.3.29
 </td></tr></table>
 
 <h3 id="token-secret">Token secret<a class="headerlink" href="#token-secret" title="Permanent link">&para;</a></h3>
-<p>Callbacks triggered by the ONEm platform contain a <a href="https://tools.ietf.org/html/rfc7519">jwt token</a> in the authorzation header.  The jwt token carries the unique identity of the ONEm user so that your app can differentiate requests from different users.  In order to verify jwt tokens that are sent by the ONEm platform, the token secret should be configured.  For test purposes you may use the secret is <em>87654321</em>.  Configure the secret in the <code>.env</code> file:</p>
+<p>Callbacks triggered by the ONEm platform contain a <a href="https://tools.ietf.org/html/rfc7519">jwt token</a> in the authorzation header.  The jwt token carries the unique identity of the ONEm user so that your app can differentiate requests from different users.  In order to verify jwt tokens that are sent by the ONEm platform, the token secret should be configured in two places:</p>
+<ol>
+<li>Your local environment</li>
+<li>In the <a href="https://developer-portal.onem.zone" target="_blank">developer portal</a> (see "Register the App in the Developer Portal" below).</li>
+</ol>
+<p>Configure the secret in the <code>.env</code> file, for example:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">TOKEN_SECRET=87654321</span>
 </code></pre></div>
 </td></tr></table>
@@ -1041,20 +1060,21 @@ ngrok version <span class="m">2</span>.3.29
 <p>The <em>Hello World</em> example app expects to receive HTTP requests as users perform certain actions.  We call these callback notifications. The <em>Hello World</em> example app expects to receive callback notifications on the base path: <code>/api</code>.  The ONEm platform will need to be configured with the fully qualified URL of this endpoint, including the base path.  In our example above, the <em>callback url</em> would be <code>http://6e3f3fce.ngrok.io/api</code>.  We shall configure this callback url in the next step.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Make a note of your <em>callback url</em>, you will need it in the next step.</p>
+<p>Make a note of your <em>callback url</em> and <em>token secret</em>, you will need them in the next step.</p>
 </div>
-<h2 id="register-the-app-with-developer-portal">Register the app with Developer Portal<a class="headerlink" href="#register-the-app-with-developer-portal" title="Permanent link">&para;</a></h2>
+<h2 id="register-the-app-in-the-developer-portal">Register the app in the Developer Portal<a class="headerlink" href="#register-the-app-in-the-developer-portal" title="Permanent link">&para;</a></h2>
 <p>If you have not already done so, sign-up for a <a href="https://developer-portal.onem.zone" target="_blank">free ONEm developer account</a>.</p>
 <p>Register your app on the <a href="https://developer-portal.onem.zone">ONEm Developer Portal</a> by selecting the <em>Create app</em> option.  You will need to provide:</p>
 <ol>
 <li>A short description of your app</li>
 <li>The app category, just select "Business"</li>
 <li>The <em>callback url</em> you obtained from the previous step</li>
+<li>The value of <em>token secret</em> that you provided in your environment settings</li>
 </ol>
 <p>Make sure the details are saved correctly in the portal.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Don't worry about the other app details at this stage (verbs, permissions), we will use them later in the advanced tutorials.</p>
+<p>Don't worry about the other app details at this stage, we will use them later in the advanced tutorials.</p>
 </div>
 <h2 id="test-the-app">Test the app<a class="headerlink" href="#test-the-app" title="Permanent link">&para;</a></h2>
 <p>In the <a href="https://developer-portal.onem.zone">ONEm Developer Portal</a>, select the <em>Test Client</em> tab and register your mobile number. Then in the input field, enter <code>#</code> followed by your app's name, for example <code>#HELLO.WORLD</code> if your app is called <em>hello.world</em>.</p>

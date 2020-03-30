@@ -58,3 +58,11 @@ pre {padding:5px 10px;}
 .md-footer-social {
   min-width: 230px;
 }
+
+.nav-link a {
+  font-size: 13px;
+  color: #493657;
+}
+.nav-link a:hover {
+  color: #2196F3;
+}

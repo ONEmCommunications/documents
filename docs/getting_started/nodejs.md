@@ -98,7 +98,12 @@ PORT=8080
 
 ### Token secret
 
-Callbacks triggered by the ONEm platform contain a [jwt token](https://tools.ietf.org/html/rfc7519) in the authorzation header.  The jwt token carries the unique identity of the ONEm user so that your app can differentiate requests from different users.  In order to verify jwt tokens that are sent by the ONEm platform, the token secret should be configured.  For test purposes you may use the secret is *87654321*.  Configure the secret in the `.env` file:
+Callbacks triggered by the ONEm platform contain a [jwt token](https://tools.ietf.org/html/rfc7519) in the authorzation header.  The jwt token carries the unique identity of the ONEm user so that your app can differentiate requests from different users.  In order to verify jwt tokens that are sent by the ONEm platform, the token secret should be configured in two places:
+
+1. Your local environment
+2. In the <a href="{{links.portal}}" target="_blank">developer portal</a> (see "Register the App in the Developer Portal" below).
+
+Configure the secret in the `.env` file, for example:
 
 ```
 TOKEN_SECRET=87654321
@@ -135,9 +140,9 @@ Navigate to the forwarding link in your browser and you should see a *Hello Worl
 The *Hello World* example app expects to receive HTTP requests as users perform certain actions.  We call these callback notifications. The *Hello World* example app expects to receive callback notifications on the base path: `/api`.  The ONEm platform will need to be configured with the fully qualified URL of this endpoint, including the base path.  In our example above, the *callback url* would be `http://6e3f3fce.ngrok.io/api`.  We shall configure this callback url in the next step.
 
 !!! tip
-    Make a note of your *callback url*, you will need it in the next step.
+    Make a note of your *callback url* and *token secret*, you will need them in the next step.
 
-## Register the app with Developer Portal
+## Register the app in the Developer Portal
 
 If you have not already done so, sign-up for a <a href="{{links.portal}}" target="_blank">free ONEm developer account</a>.
 
@@ -146,11 +151,12 @@ Register your app on the [ONEm Developer Portal]({{ links.portal }}) by selectin
 1. A short description of your app
 1. The app category, just select "Business"
 1. The *callback url* you obtained from the previous step
+1. The value of *token secret* that you provided in your environment settings
 
 Make sure the details are saved correctly in the portal.
 
 !!! info
-    Don't worry about the other app details at this stage (verbs, permissions), we will use them later in the advanced tutorials.
+    Don't worry about the other app details at this stage, we will use them later in the advanced tutorials.
 
 ## Test the app
 

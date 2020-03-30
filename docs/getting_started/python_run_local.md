@@ -83,7 +83,7 @@ Forwarding                    https://5d283db8.ngrok.io -> http://localhost:8000
 
 To register your application please open [ONEm Developer Portal]({{ links.portal }}) and register for a free account.
 
-Once that is done, you will have an option to create an app. Hit that button and place `http://5d283db8.ngrok.io` as the callback url.
+Once that is done, you will have an option to create an app. Hit that button and place `http://5d283db8.ngrok.io` as the callback url.  Use the value of `87654321` for the *token secret*.
 
 !!! success
     That is it. We can now access the application by placing a hashtag in front of the name.
