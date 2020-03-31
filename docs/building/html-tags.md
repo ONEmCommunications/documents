@@ -1,4 +1,4 @@
-## **`<a>`**
+## **&lt;a&gt;**
 
 It is used for redirection to other locations.
 
@@ -23,7 +23,7 @@ It is used for redirection to other locations.
 </section>
 ```
 
-## **`<br>`**
+## **&lt;br&gt;**
 
 Renders a new line.
 
@@ -40,7 +40,7 @@ Renders a new line.
 </section>
 ```
 
-## **`<footer>`**
+## **&lt;footer&gt;**
 
 Declares the footer of a message. It overwrites the footer attribute from `<section>`. It
 should be relative short line of text and it is shown in the last chunk of a message,
@@ -60,7 +60,7 @@ preceded by `--`.
 </section>
 ```
 
-## **`<form>`**
+## **&lt;form&gt;**
 
 The `<form>` tag is used to capture user input.
 
@@ -93,7 +93,7 @@ false. -->
 </form>
 ```
 
-## **`<header>`**
+## **&lt;header&gt;**
 
 Declares the header of a message. It overwrites the `header` attribute from
 `<section>`. It is formatted automatically before is sent to the user.
@@ -112,7 +112,7 @@ Declares the header of a message. It overwrites the `header` attribute from
 </section>
 ```
 
-## **`<img>`**
+## **&lt;img&gt;**
 
 The `<img>` tag is used to render an image.  If the `<img>` tag is enclosed within an `<li>` and `<a>` tags, then it becomes a selectable menu option.
 
@@ -140,7 +140,7 @@ The `<img>` tag is used to render an image.  If the `<img>` tag is enclosed with
 </section>
 ```
 
-## **`<input>`**
+## **&lt;input&gt;**
 
 Used inside forms to request specific input types from user. Only one
 `<input/>` tag is permitted per section. If many are present, only the
@@ -195,7 +195,7 @@ For asking the user to select from a predefined list of options, the
 </section>
 ```
 
-## **`<label>`**
+## **&lt;label&gt;**
 
 Text to describe an input. It has the same behavior as `<p>` tag.
 
@@ -213,7 +213,7 @@ Text to describe an input. It has the same behavior as `<p>` tag.
 </section>
 ```
 
-## **`<li>`**
+## **&lt;li&gt;**
 
 Declares a list item. If it contains an `<a>` tag, it will be selectable,
 prefixed with a letter or a number. Otherwise it’s just an unselectable
@@ -242,7 +242,7 @@ a form context
 </section>
 ```
 
-## **`<login>`**
+## **&lt;login&gt;**
 
 Renders a login button.  Currently this is only supported in Menus (not Forms).
 
@@ -270,7 +270,7 @@ Renders a login button.  Currently this is only supported in Menus (not Forms).
 </section>
 ```
 
-## **`<logout>`**
+## **&lt;logout&gt;**
 
 Renders a logout button.  Currently this is only supported in Menus (not Forms).
 
@@ -298,7 +298,7 @@ Renders a logout button.  Currently this is only supported in Menus (not Forms).
 </section>
 ```
 
-## **`<p>`**
+## **&lt;p&gt;**
 
 A paragraph.
 
@@ -316,7 +316,7 @@ A paragraph.
 </section>
 ```
 
-## **`<section>`**
+## **&lt;section&gt;**
 
 A `<section>` body represents the SMS sent to the user by a micro-app.
 
@@ -372,7 +372,7 @@ pre of the response - appended otherwise. Ignored if not inside a `<form>`. -->
 </section>
 ```
 
-## **`<textarea>`**
+## **&lt;textarea&gt;**
 
 The `<textarea>` tag is used as an alterntive to `<input type="textarea" />`.  It is used to faciltate input of text spanning multiple lines (if supported by the device and user's access channel).  If the `<textarea>` tag has a text child, then this becomes the default value for the field.
 
@@ -393,7 +393,7 @@ The `<textarea>` tag is used as an alterntive to `<input type="textarea" />`.  I
 </form>
 ```
 
-## **`<ul>`**
+## **&lt;ul&gt;**
 
 Declares a list. When rendered, it will be a selectable list, list elements are represented by <li> tags.
 
@@ -412,7 +412,7 @@ Declares a list. When rendered, it will be a selectable list, list elements are 
 </section>
 ```
 
-## **`<video>`**
+## **&lt;video&gt;**
 
 The `<video>` tag is used to render an image.  If the `<video>` tag is enclosed within an `<li>` and `<a>` tags, then it becomes a selectable menu option.
 
