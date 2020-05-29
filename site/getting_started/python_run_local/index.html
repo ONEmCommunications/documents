@@ -781,12 +781,19 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../building/response/" title="Response" class="md-nav__link">
-      Response
-    </a>
-  </li>
-
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-1" type="checkbox" id="nav-8-1">
+    
+    <label class="md-nav__link" for="nav-8-1">
+      JSON
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-1">
+        JSON
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
         
           
           
@@ -794,8 +801,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../building/menu/" title="Menu" class="md-nav__link">
-      Menu
+    <a href="../../building/card/" title="Card" class="md-nav__link">
+      Card
     </a>
   </li>
 
@@ -818,8 +825,49 @@
 
 
   <li class="md-nav__item">
-    <a href="../../building/html-tags/" title="HTML tags" class="md-nav__link">
-      HTML tags
+    <a href="../../building/menu/" title="Menu" class="md-nav__link">
+      Menu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../building/response/" title="Response" class="md-nav__link">
+      Response
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../building/snackbar/" title="Snackbar" class="md-nav__link">
+      Snackbar
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../building/html-tags/" title="HTML" class="md-nav__link">
+      HTML
     </a>
   </li>
 
@@ -1028,7 +1076,7 @@ Todo(0)
 </div>
 <p>The above SMS response is rendered based on the HTTP/JSON response returned by our <code>/</code> url.</p>
 <p>If we look in the <code>todo.todo.views</code> we can see that <code>HomeView</code> view which is handling the <code>/</code> route is basically returning a <a href="/building/menus/">Menu</a> json object.</p>
-<p>Every menu item contains a callback path, as described in the JSON structure <a href="https://app.swaggerhub.com/apis/chris73/onem-json-response/1.0#free">here</a> and once the user selects one of the menu items, an HTTP request will be made towards that callback path, a new json structure is returned by our web server, so a different sms response is presented to the user.</p>
+<p>Every menu item contains a callback path, as described in the JSON structure <a href="https://app.swaggerhub.com/apis/chris73/onem-json-response/v1.1">here</a> and once the user selects one of the menu items, an HTTP request will be made towards that callback path, a new json structure is returned by our web server, so a different sms response is presented to the user.</p>
 <h2 id="tweak-the-application">Tweak the application<a class="headerlink" href="#tweak-the-application" title="Permanent link">&para;</a></h2>
 <p>Let's tweak the application a little bit. Say we want to allow the user to set the priority for the todo item and at the same time not enforce this.</p>
 <p>We first need to ask the user for the priority, when creating the todo item. We do that by adding an extra step in the body form returned by our <code>TaskCreateView.get</code> method.</p>

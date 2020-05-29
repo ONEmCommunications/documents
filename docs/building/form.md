@@ -13,13 +13,15 @@ A top level component used to acquire information from the user
 
 | KEY | TYPE | NOTES |
 |-----|------|-------|
+|*type|string|Indicates the type of the object, defaults to `"form"`|
 |*body|array|Sequence of [`FormItem`](#formitem) objects used to acquire information from user|
-|footer|string|The footer of the form. It can be overwritten by each body component|
-|header|string|The header of the form. It can be overwritten by each body component|
-|meta|object|[`FormMeta`](#formmeta) object. Contains configuration flags|
 |method|string|HTTP method indicating how to trigger the callback path. Defaults to `"POST"`<br> _available: `"GET", "POST", "PUT", "PATCH", "DELETE"|
 |*path|string|The callback path used to send the serialized form data|
-|*type|string|Indicates the type of the object, defaults to `"form"`|
+|header|string|The header of the form. It can be overwritten by each body component|
+|footer|string|The footer of the form. It can be overwritten by each body component|
+|meta|object|[`FormMeta`](#formmeta) object. Contains configuration flags|
+|snackbar|object|[`Snackbar`](/building/snackbar) object. Contains an informational 'pop-up' message|
+
 
 ### FormMeta
 [`Form`](#form) related component holding configuration fields for the form

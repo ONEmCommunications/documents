@@ -50,11 +50,13 @@ nav:
         # - Building a skillhire micro-app using templates: todo.md
 
     - Reference:
-        # - Structure:
-        - Response: building/response.md
-        - Menu: building/menu.md
-        - Form: building/form.md
-        - HTML tags: building/html-tags.md
+        - JSON:
+            - Card: building/card.md
+            - Form: building/form.md
+            - Menu: building/menu.md
+            - Response: building/response.md
+            - Snackbar: building/snackbar.md
+        - HTML: building/html-tags.md
 google_analytics: ['UA-128421206-6', 'developer-docs.onem.zone']
 site_url: https://developer-docs.onem.zone
 copyright: ONEm Communications Ltd 2020

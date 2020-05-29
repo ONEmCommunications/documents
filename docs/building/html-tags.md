@@ -1,18 +1,16 @@
 ## **&lt;a&gt;**
-
 It is used for redirection to other locations.
 
-### Constraints
+<h4>Constraints</h4>
 - cannot be empty
 - allowed children: text, `<img>`, `<video>`
 
-### Attributes
+<h4>Attributes</h4>
 - `href` (string) - a path in your app to redirect the user to
 - `method` (string) - the HTTP method used for redirection. Possible values:
 "POST", "GET", "PATCH", "PUT", "DELETE"
 
-### Example
-
+<h4>Example</h4>
 ```html
 <section>
   <ul>
@@ -27,11 +25,10 @@ It is used for redirection to other locations.
 
 Renders a new line.
 
-### Constraints
+<h4>Constraints</h4>
 - allowed children: no
 
-### Example
-
+<h4>Example</h4>
 ```html
 <section>
   ...
@@ -40,18 +37,143 @@ Renders a new line.
 </section>
 ```
 
+## **&lt;Card&gt;**
+
+Top level tag used to describe a card within a section.
+
+<h4>Constraints</h4>
+- not supported as children of `<form>` tags
+- allowed children: `<CardActions>`, `<CardContent>`, `<CardHeader>`, `<CardMedia>` 
+
+<h4>Attributes</h4>
+- `action` (string) - a path in your app to redirect the user when if the top level card element is selected
+- `action-label` (string) - Menu label used in SMS channels to indicate to the user that this card can be selected, default is "Select"
+- `method` (string) - the HTTP method used for redirection. Possible values:
+"POST", "GET", "PATCH", "PUT", "DELETE"
+
+<h4>Example</h4>
+
+```html
+<section>
+  <Card>
+    <CardHeader title="Our new product line" subtitle="2 hours ago">
+      <CardAvatar src="https://example.com/image.png" name="John Smith"></CardAvatar>
+    </CardHeader>
+    <CardMedia src="https://i.ibb.co/GMX8Q6v/motorbike.png"></CardMedia>
+    <CardContent title="Our new product line" content="A motorcycle, often called a motorbike, bike, or cycle, is a two- or three-wheel..."></CardContent>
+    <CardActions>
+      <CardAction name="Read more" method="post" path="/readmore"></CardAction>
+      <CardAction name="Like (1)" method="put" path="/like"></CardAction>
+    </CardActions>
+  </Card>
+</section>
+```
+
+## **&lt;CardAction&gt;**
+
+Describes a card action option within a `<Card>`.
+
+<h4>Constraints</h4>
+- must be a child of `<CardActions>`
+- allowed children: none
+
+<h4>Attributes</h4>
+
+- `method` (string) - the HTTP method used for redirection. Possible values:
+- `name` (string) - Name/label of the action button
+- `path` (string) - Callback path to use when the action is selected by the user
+"POST", "GET", "PATCH", "PUT", "DELETE"
+
+
+<h4>Example</h4>
+
+See [`<Card>`](#card)
+
+
+## **&lt;CardActions&gt;**
+
+Container tag used to hold one or more [`<CardAction>`](#cardaction) tags.
+
+<h4>Constraints</h4>
+- must be a child of `<Card>`
+- can only be one `<CardActions>` in each `<Card>`
+- allowed children: `<CardAction>` 
+
+<h4>Attributes</h4>
+
+None
+
+<h4>Example</h4>
+
+See [`<Card>`](#card)
+
+
+## **&lt;CardAvatar&gt;**
+
+Describes a user avatar within a `<CardHeader>`.
+
+<h4>Constraints</h4>
+- must be a child of `<CardHeader>`
+- allowed children: none
+
+<h4>Attributes</h4>
+
+- `name` (string) - Name of the user
+- `src` (string) - Url to public accessible image for the avatar
+
+<h4>Example</h4>
+
+See [`<Card>`](#card)
+
+
+## **&lt;CardContent&gt;**
+
+Used to describe a card content within a card.
+
+<h4>Constraints</h4>
+- must be a child of `<Card>`
+- can only be one `<CardContent>` in each `<Card>`
+- allowed children: none
+
+<h4>Attributes</h4>
+- `content` (string) - Content text to be displayed usually appearing underneath the card subtitle
+- `subtitle` (string) - Subtitle text usually appearing underneath the card title
+- `title` (string) required - Title usually appearing underneath the card media or card header
+
+<h4>Example</h4>
+See [`<Card>`](#card)
+
+## **&lt;CardHeader&gt;**
+
+Used to describe a card header within a card.
+
+<h4>Constraints</h4>
+- must be a child of `<Card>`
+- can only be one `<CardHeader>` in each `<Card>`
+- allowed children: `<CardAvatar>` 
+
+<h4>Attributes</h4>
+- `subtitle` (string) - Subtitle text usually appearing underneath the card title within the header
+- `title` (string) required - Content of the card title within the header
+
+<h4>Example</h4>
+
+See [`<Card>`](#card)
+
+
+
 ## **&lt;footer&gt;**
 
 Declares the footer of a message. It overwrites the footer attribute from `<section>`. It
 should be relative short line of text and it is shown in the last chunk of a message,
 preceded by `--`.
 
-### Constraints
+<h4>Constraints</h4>
 - cannot be empty
 - allowed children: text
 - if used, it must be the last child of a `<section>` tag
 
-### Example
+<h4>Example</h4>
 
 ```html
 <section>
@@ -64,11 +186,11 @@ preceded by `--`.
 
 The `<form>` tag is used to capture user input.
 
-### Constraints
+<h4>Constraints</h4>
 - cannot be empty
 - allowed children: `<section>`
 
-### Attributes
+<h4>Attributes</h4>
 
 - `action` (string) - a path in the app where the result of the form is sent
 - `method` (string) - the HTTP method used for sending the result of the form.
@@ -84,7 +206,7 @@ progress in header, otherwise in body; ignored if `completion-status-show` is
 false. -->
 - `skip-confirmation` (boolean) - If `true` will not ask for confirmation, depending on the user's access channel.
 
-### Example
+<h4>Example</h4>
 
 ```html
 <form action="/callback/form1" method="POST" skip-confirmation>
@@ -98,12 +220,12 @@ false. -->
 Declares the header of a message. It overwrites the `header` attribute from
 `<section>`. It is formatted automatically before is sent to the user.
 
-### Constraints
+<h4>Constraints</h4>
 - cannot be empty
 - allowed children: text
 - if used, it must be the first child of a `<section>` tag
 
-### Example
+<h4>Example</h4>
 
 ```html
 <section>
@@ -116,16 +238,16 @@ Declares the header of a message. It overwrites the `header` attribute from
 
 The `<img>` tag is used to render an image.  If the `<img>` tag is enclosed within an `<li>` and `<a>` tags, then it becomes a selectable menu option.
 
-### Constraints
+<h4>Constraints</h4>
 
 - allowed children: no
 
-### Attributes
+<h4>Attributes</h4>
 
 - `src` (string) - fully qualified public path to the image file to be rendered
 - `alt` (string) - alt text to be displayed when the src cannot be downloaded.  This is ignored for some access channels
 
-### Example
+<h4>Example</h4>
 
 ```html
 <section>
@@ -150,12 +272,12 @@ ignored.
 For asking the user to select from a predefined list of options, the
 `<ul>...</ul>` tag must be used instead of `<input/>`.
 
-### Constraints
+<h4>Constraints</h4>
 - allowed children: no
 
-### Attributes
+<h4>Attributes</h4>
 
-#### Standard HTML5:
+<h4>Standard HTML5:</h4>
 - `type` (string) - describes the data type expected by the app as response from the user. The platform will convert the text input to the specified type. The supported values are:
     - Standard HTML5:
         - `"date"` - the user input is validated as date
@@ -180,13 +302,13 @@ For asking the user to select from a predefined list of options, the
 <!-- - `pattern` (string) - defines a regex. `type` is ignored and considered `text`. -->
 <!-- - `"location"` - the user input is validated as location -->
 
-#### Non-standard
+<h4>Non-standard</h4>
 - `min_error` (string) - message to be shown on min error
 - `minlength_error` (string) - message to be shown on minlength error
 - `max_error` (string) - message to be shown on max error
 - `maxlength_error` (string) - message to be shown on maxlength error
 
-### Example
+<h4>Example</h4>
 ```html
 <section>
   ...
@@ -199,12 +321,12 @@ For asking the user to select from a predefined list of options, the
 
 Text to describe an input. It has the same behavior as `<p>` tag.
 
-### Constraints
+<h4>Constraints</h4>
 
 - cannot be empty
 - allowed children: text
 
-### Example
+<h4>Example</h4>
 ```html
 <section>
   ...
@@ -219,16 +341,16 @@ Declares a list item. If it contains an `<a>` tag, it will be selectable,
 prefixed with a letter or a number. Otherwise it’s just an unselectable
 separator item.
 
-### Constraints
+<h4>Constraints</h4>
 - cannot be empty
 - allowed children: text, `<a>`
 
-### Attributes
+<h4>Attributes</h4>
 - `value` - the value used for a form item response. It is ignored outside of
 a form context
 <!-- - `text-search` - field to add more context for searching in options -->
 
-### Example
+<h4>Example</h4>
 
 ```html
 <section>
@@ -246,16 +368,16 @@ a form context
 
 Renders a login button.  Currently this is only supported in Menus (not Forms).
 
-### Constraints
+<h4>Constraints</h4>
 - supported as menu list items or standalone element within a section menu
 - allowed children: none
 
-### Attributes
+<h4>Attributes</h4>
 - `on-success` - the path to redirect to when the user has logged in successfully
 - `on-failure` - the path to redirect to when the user has failed to login
 <!-- - `text-search` - field to add more context for searching in options -->
 
-### Example
+<h4>Example</h4>
 
 ```html
 <section>
@@ -274,16 +396,16 @@ Renders a login button.  Currently this is only supported in Menus (not Forms).
 
 Renders a logout button.  Currently this is only supported in Menus (not Forms).
 
-### Constraints
+<h4>Constraints</h4>
 - supported as menu list items or standalone element within a section menu
 - allowed children: none
 
-### Attributes
+<h4>Attributes</h4>
 - `on-success` - the path to redirect to when the user has logged out successfully
 - `on-failure` - the path to redirect to when the user has failed to logout
 <!-- - `text-search` - field to add more context for searching in options -->
 
-### Example
+<h4>Example</h4>
 
 ```html
 <section>
@@ -302,11 +424,11 @@ Renders a logout button.  Currently this is only supported in Menus (not Forms).
 
 A paragraph.
 
-### Constraints
+<h4>Constraints</h4>
 - cannot be empty
 - allowed children: text
 
-### Example
+<h4>Example</h4>
 
 ```html
 <section>
@@ -320,13 +442,13 @@ A paragraph.
 
 A `<section>` body represents the SMS sent to the user by a micro-app.
 
-### Constraints
+<h4>Constraints</h4>
 
 - cannot be empty
 - allowed children: text, `<p>`, `<br/>`, `<header>`, `<footer>`, `<ul>`,
 `<input>`, `<label>`, `<img>`, `<video>`
 
-### Attributes
+<h4>Attributes</h4>
 
 - `header` (string) - alternative to `<header>` child
 - `footer` (string) - alternative to `<footer>` child
@@ -364,7 +486,7 @@ completion status.Ignored if not inside a `<form>`.
 - `status-prepend` (boolean) - if true this step will be prepended to the body
 pre of the response - appended otherwise. Ignored if not inside a `<form>`. -->
 
-### Example
+<h4>Example</h4>
 
 ```html
 <section>
@@ -372,16 +494,46 @@ pre of the response - appended otherwise. Ignored if not inside a `<form>`. -->
 </section>
 ```
 
+## **&lt;Snackbar&gt;**
+
+Top level tag used to describe a snackbar within a `<section>` or `<form>`.
+
+<h4>Constraints</h4>
+- Must be a child of a `<section>` or `<form>`
+- Only one snackbar tag allowed per section/form
+- allowed children: none
+
+<h4>Attributes</h4>
+- `message` (string) - Required.  The main text content of the snackbar
+- `severity` (string) - Default `info`.  Possible values `info`, `warn`, `error` or `success`
+- `name` (string) - Name of the action button
+- `path` (string) - Path for the callback action
+- `method` (string) - the HTTP method used for redirection. Possible values:
+"POST", "GET", "PATCH", "PUT", "DELETE"
+- `auto-hide-duration` (number) - Time to wait (in ms) until the Snackbar should be automatically closed.  If not supplied, zero or null, the default system value applies (usually 7s)
+
+<h4>Example</h4>
+
+```html
+<section>
+  <snackbar message="Marked as done" name="undo" path="/todo/1234/undodone" method="post"></snackbar>
+  <ul>
+    <li><a href="/todo/1234/done" method="put">Mark as done</a></li>
+    <li><a href="/todo/1234" method="delete">Delete</a></li>
+  </ul>
+</section>
+```
+
 ## **&lt;textarea&gt;**
 
 The `<textarea>` tag is used as an alterntive to `<input type="textarea" />`.  It is used to faciltate input of text spanning multiple lines (if supported by the device and user's access channel).  If the `<textarea>` tag has a text child, then this becomes the default value for the field.
 
-### Constraints
+<h4>Constraints</h4>
 
 - allowed children: text
 - it is ignored outside of a form context
 
-### Example
+<h4>Example</h4>
 
 ```html
 <form>
@@ -397,11 +549,11 @@ The `<textarea>` tag is used as an alterntive to `<input type="textarea" />`.  I
 
 Declares a list. When rendered, it will be a selectable list, list elements are represented by <li> tags.
 
-### Constraints
+<h4>Constraints</h4>
 - cannot be empty
 - allowed children: `<li>`
 
-### Example
+<h4>Example</h4>
 ```html
 <section>
   ...
@@ -416,16 +568,16 @@ Declares a list. When rendered, it will be a selectable list, list elements are 
 
 The `<video>` tag is used to render an image.  If the `<video>` tag is enclosed within an `<li>` and `<a>` tags, then it becomes a selectable menu option.
 
-### Constraints
+<h4>Constraints</h4>
 
 - allowed children: children are ignored
 
-### Attributes
+<h4>Attributes</h4>
 
 - `src` (string) - fully qualified public path to the video file to be rendered
 - `alt` (string) - alt text to be displayed when the src cannot be downloaded.  This is ignored for some access channels
 
-### Example
+<h4>Example</h4>
 
 ```html
 <section>

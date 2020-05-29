@@ -689,10 +689,43 @@
           
           
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-1" type="checkbox" id="nav-8-1" checked>
+    
+    <label class="md-nav__link" for="nav-8-1">
+      JSON
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-1">
+        JSON
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
 
   <li class="md-nav__item">
-    <a href="../response/" title="Response" class="md-nav__link">
-      Response
+    <a href="../card/" title="Card" class="md-nav__link">
+      Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../form/" title="Form" class="md-nav__link">
+      Form
     </a>
   </li>
 
@@ -754,26 +787,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#swagger" class="md-nav__link">
-    Swagger
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#json-example" class="md-nav__link">
-    JSON Example
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#type" class="md-nav__link">
     Type
@@ -802,6 +815,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#swagger" class="md-nav__link">
+    Swagger
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-example" class="md-nav__link">
+    JSON Example
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -824,8 +851,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../form/" title="Form" class="md-nav__link">
-      Form
+    <a href="../response/" title="Response" class="md-nav__link">
+      Response
     </a>
   </li>
 
@@ -836,8 +863,25 @@
 
 
   <li class="md-nav__item">
-    <a href="../html-tags/" title="HTML tags" class="md-nav__link">
-      HTML tags
+    <a href="../snackbar/" title="Snackbar" class="md-nav__link">
+      Snackbar
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../html-tags/" title="HTML" class="md-nav__link">
+      HTML
     </a>
   </li>
 
@@ -894,26 +938,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#swagger" class="md-nav__link">
-    Swagger
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#json-example" class="md-nav__link">
-    JSON Example
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#type" class="md-nav__link">
     Type
@@ -938,6 +962,20 @@
           <li class="md-nav__item">
   <a href="#footer" class="md-nav__link">
     Footer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagger" class="md-nav__link">
+    Swagger
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-example" class="md-nav__link">
+    JSON Example
   </a>
   
 </li>
@@ -983,17 +1021,22 @@
 </thead>
 <tbody>
 <tr>
+<td>*type</td>
+<td>string</td>
+<td>Indicates the type of the object, defaults to <code>"menu"</code></td>
+</tr>
+<tr>
 <td>*body</td>
 <td>array</td>
 <td>Composed of <a href="#menuitem"><code>MenuItem</code></a> objects</td>
 </tr>
 <tr>
-<td>footer</td>
+<td>header</td>
 <td>string</td>
 <td>The header of the menu</td>
 </tr>
 <tr>
-<td>header</td>
+<td>footer</td>
 <td>string</td>
 <td>The header of the menu</td>
 </tr>
@@ -1003,9 +1046,9 @@
 <td><a href="#menumeta"><code>MenuMeta</code></a> object. Contains configuration flags</td>
 </tr>
 <tr>
-<td>*type</td>
-<td>string</td>
-<td>Indicates the type of the object, defaults to <code>"menu"</code></td>
+<td>snackbar</td>
+<td>object</td>
+<td><a href="/building/snackbar"><code>Snackbar</code></a> object. Contains an informational 'pop-up' message</td>
 </tr>
 </tbody>
 </table>
@@ -1022,9 +1065,9 @@ raw</p>
 </thead>
 <tbody>
 <tr>
-<td>alt</td>
+<td>*type</td>
 <td>string</td>
-<td>Alt text to use for media files when <code>src</code> is provided</td>
+<td>Indicates the type of the object<br> <em>available: <code>"content", "login", "logout", "option"</code></em></td>
 </tr>
 <tr>
 <td>description</td>
@@ -1047,12 +1090,21 @@ raw</p>
 <td>Fully qualified public path to a media file.  Be sure to include the file extension as this will be used to determine the type of media (image, audio or video).  If <code>src</code> is not provided, then <code>description</code> must be provided.</td>
 </tr>
 <tr>
-<td>*type</td>
+<td>alt</td>
 <td>string</td>
-<td>Indicates the type of the object<br> <em>available: <code>"content", "login", "logout", "option"</code></em></td>
+<td>Alt text to use for media files when <code>src</code> is provided</td>
+</tr>
+<tr>
+<td>card</td>
+<td>object</td>
+<td><a href="/building/card"><code>Card</code></a> object.  Object containing card related data.  <code>description</code>, <code>src</code> and <code>alt</code> fields are ignored when card has a value.</td>
 </tr>
 </tbody>
 </table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><a href="/building/card">'Cards'</a> can be turned into selectable options by setting <code>path</code>, <code>method</code> and <code>type</code> appropriately</p>
+</div>
 <!-- |text_search|string|If the user does not send a proper option marker and sends some input, this field will be used to search and narrow down the options against the user input. <br> max 1000 chars| -->
 
 <h3 id="menumeta">MenuMeta<a class="headerlink" href="#menumeta" title="Permanent link">&para;</a></h3>
@@ -1073,9 +1125,21 @@ raw</p>
 </tr>
 </tbody>
 </table>
-<h2 id="swagger">Swagger<a class="headerlink" href="#swagger" title="Permanent link">&para;</a></h2>
-<p>The schema can also be found on Swagger Hub <a href="https://app.swaggerhub.com/apis/chris73/onem-json-response/1.0#free">here</a></p>
-<h2 id="json-example">JSON Example<a class="headerlink" href="#json-example" title="Permanent link">&para;</a></h2>
+<h3 id="type">Type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h3>
+<p>The response <strong>type</strong> should be equal to <strong>menu</strong> to indicate a menu response.</p>
+<h3 id="header">Header<a class="headerlink" href="#header" title="Permanent link">&para;</a></h3>
+<p>The header of the menu is indicated through <strong>header</strong> key. This value is not final and may be re-formatted by the ONEm platform depending on the user's access channel.</p>
+<h3 id="body">Body<a class="headerlink" href="#body" title="Permanent link">&para;</a></h3>
+<p>The body of the menu is indicated through <strong>body</strong> key and it is a sequence of objects. Each object can be an <strong>option</strong> or a <strong>content</strong> item and this is set through the <strong>type</strong> key. A <strong>content</strong> type item does not need a <strong>path</strong> nor a <strong>method</strong> since these are not selectable by the user. However an <strong>option</strong> item needs a callback <strong>path</strong> and this is relative to the <strong>callback_url</strong> set in the app schema in the <a href="https://developer-portal.onem.zone">ONEm Developer Portal</a>. If the <strong>method</strong> is not present, it will default to GET.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>A body composed of only <strong>content</strong> items could be used for display purposes only. </p>
+</div>
+<h3 id="footer">Footer<a class="headerlink" href="#footer" title="Permanent link">&para;</a></h3>
+<p>The footer of the menu is indicated through <strong>footer</strong> key and like the header of the menu, it is not final and may be altered (or even not displayed) by the ONEm platform depending on the user's access channel. If no footer is specified, the ONEm platform adds a default depending on the user's access channel.</p>
+<h3 id="swagger">Swagger<a class="headerlink" href="#swagger" title="Permanent link">&para;</a></h3>
+<p>The schema can also be found on Swagger Hub <a href="https://app.swaggerhub.com/apis/chris73/onem-json-response/v1.1">here</a></p>
+<h3 id="json-example">JSON Example<a class="headerlink" href="#json-example" title="Permanent link">&para;</a></h3>
 <div style="max-height:300px;overflow:auto;">
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
@@ -1157,17 +1221,6 @@ raw</p>
 </code></pre></div>
 </td></tr></table>
 </div>
-
-<h3 id="type">Type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h3>
-<p>The response <strong>type</strong> should be equal to <strong>menu</strong> to indicate a menu response.</p>
-<h3 id="header">Header<a class="headerlink" href="#header" title="Permanent link">&para;</a></h3>
-<p>The header of the menu is indicated through <strong>header</strong> key. This value is not final and may be re-formatted by the ONEm platform depending on the user's access channel.</p>
-<h3 id="body">Body<a class="headerlink" href="#body" title="Permanent link">&para;</a></h3>
-<p>The body of the menu is indicated through <strong>body</strong> key and it is a sequence of objects. Each object can be an <strong>option</strong> or a <strong>content</strong> item and this is set through the <strong>type</strong> key. A <strong>content</strong> type item does not need a <strong>path</strong> nor a <strong>method</strong> since these are not selectable by the user. However an <strong>option</strong> item needs a callback <strong>path</strong> and this is relative to the <strong>callback_url</strong> set in the app schema in the <a href="https://developer-portal.onem.zone">ONEm Developer Portal</a>. If the <strong>method</strong> is not present, it will default to GET.</p>
-<p><strong>NOTE:</strong></p>
-<p>A body composed of only <strong>content</strong> items could be used for display purposes only. </p>
-<h3 id="footer">Footer<a class="headerlink" href="#footer" title="Permanent link">&para;</a></h3>
-<p>The footer of the menu is indicated through <strong>footer</strong> key and like the header of the menu, it is not final and may be altered (or even not displayed) by the ONEm platform depending on the user's access channel. If no footer is specified, the ONEm platform adds a default depending on the user's access channel.</p>
                 
                   
                 
@@ -1189,7 +1242,7 @@ raw</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../response/" title="Response" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../form/" title="Form" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1198,19 +1251,19 @@ raw</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Response
+                Form
               </span>
             </div>
           </a>
         
         
-          <a href="../form/" title="Form" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../response/" title="Response" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Form
+                Response
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
