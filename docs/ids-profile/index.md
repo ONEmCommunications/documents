@@ -29,7 +29,7 @@ The table below details the fields that maybe included in the decoded token.
 |given_name|string|User's first name|
 |family_name|string|User's family name|
 |picture|string|Fully qualified path to the the user's avatar image|
-|locale|string|User's language and country in the format `ll-CC` where `ll` is according to ISO-632-2 and `CC` confirming to ISO-3166|
+|locale|string|User's language according to ISO-632-2|
 |is_authenticated|boolean|Indicates if the user's session has been authenticated|
 |is_authentication_supported|boolean|Indicates if user's channel supports authentication|
 |is_admin|boolean|Indicates if the user making the request can be identified as the app owner|
