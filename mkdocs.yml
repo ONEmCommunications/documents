@@ -1,4 +1,6 @@
 site_name: Framework
+site_description: ONEm's micro-app framework offers web developers the ability to build amazing multi-channel micro-apps capable of functioning over web, SMS, Facebook and more using a single code base.
+site_author: ONEm Communications Ltd
 nav:
     - Introduction: index.md
 
@@ -118,3 +120,4 @@ markdown_extensions:
         linenums: true
     - markdown_include.include:
         base_path: docs
+    - meta

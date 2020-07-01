@@ -1,4 +1,3 @@
-<!-- <img src="/assets/onem-logo.svg" width=150 style="float:left;margin-right:15px;" /> -->
 ONEm's micro-app framework offers web developers the ability to build amazing multi-channel micro-apps capable of functioning over web, SMS, Facebook and more using a single code base.
 
 <div style="text-align:center">

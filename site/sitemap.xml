@@ -1,107 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://developer-docs.onem.zone/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/how-it-works/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/getting-started/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/getting_started/nodejs/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/getting_started/python_prereq/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/getting_started/python_run_local/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/getting_started/running-in-production/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/ids-profile/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/core/menus/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/core/forms/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/core/verbs/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/core/web_verbs/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/core/paging/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/core/accessing-sms/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/core/reserved_verbs/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/guides/moviedb/part1/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/guides/moviedb/part2/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/use_case/post_demo_app_intro/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/use_case/postv1/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/use_case/postv2/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/building/card/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/building/form/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/building/menu/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/building/response/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/building/snackbar/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://developer-docs.onem.zone/building/html-tags/</loc>
-     <lastmod>2020-06-18</lastmod>
+     <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
