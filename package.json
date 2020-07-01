@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd site && static-server",
-    "start:docker": "cd site && static-server"
+    "start": "cd site && http-server --port 9080",
+    "start:docker": "cd site && http-server --port 9080"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/ONEmCommunications/documents#readme",
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "static-server": "^2.2.1"
+    "eslint": "^5.16.0"
+  },
+  "dependencies": {
+    "http-server": "^0.12.3"
   }
 }
